@@ -1,6 +1,6 @@
 ---
 title: "Trabajo Práctico Nº1: Regresión lineal"
-author: "Renso Gil"
+author: "Renso Gil y Leandro Morinigo"
 date: "14/10/2022"
 output:
   html_document:
