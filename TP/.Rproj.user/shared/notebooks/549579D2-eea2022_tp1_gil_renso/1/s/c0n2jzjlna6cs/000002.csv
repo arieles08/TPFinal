@@ -1,0 +1,7 @@
+"0","```r
+# ajustamos modelo lineal múltiple
+modelo_inicial <- lm(peso ~ altura + edad + genero + dias_actividad_fisica_semanal + consumo_diario_alcohol, data = datos_salud_train)
+# Resumen del modelo
+tidy_inicial <- tidy(modelo_inicial, conf.int = TRUE)
+tidy_inicial
+```"

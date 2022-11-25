@@ -1,0 +1,15 @@
+"0","```r
+g <- ggpairs(datos_salud_train %>% select(c(edad, altura, peso, dias_consumo_comida_rapida, dias_actividad_fisica_semanal, consumo_diario_alcohol)), aes(color = datos_salud_train$genero), 
+          upper = list(continuous = wrap(\"cor\", size = 3, hjust=0.5)), legend = 25, progress=FALSE) + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position = \"bottom\") + 
+  theme_bw()
+for(i in 1:g$nrow) {
+  for(j in 1:g$ncol){
+    g[i,j] <- g[i,j] + 
+      scale_fill_brewer(palette=\"Dark2\") +  
+      scale_color_brewer(palette=\"Dark2\")
+        }
+}
+
+g 
+```"

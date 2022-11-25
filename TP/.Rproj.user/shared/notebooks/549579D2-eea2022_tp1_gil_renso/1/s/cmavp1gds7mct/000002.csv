@@ -1,0 +1,8 @@
+"0","```r
+frecuencia_hambre_mensual_consumo_verdura<-table(datos_salud_train$frecuencia_hambre_mensual, datos_salud_train$consumo_semanal_verdura)
+
+mosaicplot(frecuencia_hambre_mensual_consumo_verdura,col=c(\"gold\",\"ivory4\"),ylab=\"Consumo semanal de verdura\",xlab=\"Frecuencia de hambre mensual\",cex=0.8
+           ,las=2)
+
+
+```"

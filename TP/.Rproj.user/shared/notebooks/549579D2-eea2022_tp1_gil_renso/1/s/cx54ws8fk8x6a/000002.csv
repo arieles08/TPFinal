@@ -1,0 +1,7 @@
+"0","```r
+modelo_inicial_m6_robusto <- lmrob(peso ~ altura + edad + genero + dias_actividad_fisica_semanal + consumo_diario_alcohol, data = datos_salud_modelo6)
+# Resumen del modelo
+tidy_inicial_m6_robusto <- tidy(modelo_inicial_m6_robusto, conf.int = TRUE)
+tidy_inicial_m6
+tidy_inicial_m6_robusto
+```"

@@ -1,0 +1,146 @@
+---
+title: "Trabajo Práctico Nº1: Regresión lineal"
+author: "Renso Gil y Leandro Morinigo"
+date: "14/10/2022"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    df_print: paged
+    theme: united
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+## Carga de librerías y datasets
+### Librerías a utiliza
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+
+```
+Se cargan las librerías necesarias para el trabajo práctico.
+###Librerias
+```{r}
+library(tidyverse)
+library(tidymodels)
+library(rsample)
+library(ggplot2)
+library(GGally)
+```
+
+
+### Cargar archivo
+```{r}
+datos_properati <- read.csv("properati_preprocesado_2022.csv")
+# creamos nueva variable de superficie descubierta
+
+datos_properati = datos_properati %>%
+  mutate(surface_uncovered = surface_total - surface_covered)
+
+glimpse(datos_properati)
+
+```
+
+## Correlación entre variables
+```{r}
+# graficamos con ggpairs coloreando por property type
+g <- ggpairs(datos_properati %>% select(-c(id,l3)), aes(color = property_type), 
+          upper = list(continuous = wrap("cor", size = 3, hjust=0.5)), legend = 25, progress=FALSE) + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position = "bottom") + 
+  theme_bw()
+# hacemos un loop para cambiar los colores del gráfico
+for(i in 1:g$nrow) {
+  for(j in 1:g$ncol){
+    g[i,j] <- g[i,j] + 
+      scale_fill_brewer(palette="Dark2") +  
+      scale_color_brewer(palette="Dark2")
+        }
+}
+g 
+```
+
+### Particionar el dataset en entrenamiento y test
+
+```{r}
+# fijamos semilla
+set.seed(22)
+# Partición Train y Test, indicando proporción
+train_test <- initial_split(datos_properati, prop = 0.75)
+train_data <- training(train_test)
+test_data <- testing(train_test)
+# vemos las dimensiones de cada partición
+train_data %>%
+  dim_desc() 
+```
+#### Nuevas variables
+
+Variables creadas a partir de los metros cuadradas por barrio
+```{r}
+# Creamos una nueva variable  de precios por metro cuadrado
+train_data = train_data %>% 
+  mutate(pxm2 = round(price/surface_total,0))
+# Armamos un dataframe que muestre los promedios de pxm2 en cada barrio
+AVG_pxm2_l3 = train_data %>% 
+  group_by(l3) %>%
+  summarise(AVG_pxm2_l3 = mean(pxm2))
+AVG_pxm2_l3
+```
+
+Distribución del precio promedio por m2
+```{r}
+# boxplot de precios por metro cuadrado
+ggplot(data = AVG_pxm2_l3, aes(x = AVG_pxm2_l3)) + 
+  geom_boxplot(alpha = 0.75, fill="firebrick") +
+  labs(title = "Boxplot de precios promedio de barrios por m2") +
+  labs(x = "Precios promedio de barrios por m2") +
+  theme_bw()
+```
+Aplicaremos el siguiente criterio para agrupar los barrios en:
+
+* precio_bajo: barrios cuyo precio promedio por m2 sea menor al Q1
+* precio_medio: barrios cuyo precio promedio se encuentre en el RI
+* precio_alto: barrios cuyo precio promedio por m2 sea mayor al Q3
+
+```{r}
+# armamos nueva variable siguiendo tales criterios
+AVG_pxm2_l3 = AVG_pxm2_l3 %>%
+  mutate(tipo_barrio = case_when(
+    AVG_pxm2_l3 < quantile(AVG_pxm2_l3)[2] ~ "precio_bajo",
+    AVG_pxm2_l3 >= quantile(AVG_pxm2_l3)[2] & AVG_pxm2_l3 < quantile(AVG_pxm2_l3)[4] ~ "precio_medio",
+    TRUE ~ "precio_alto"
+                                 )
+         )
+write.csv(AVG_pxm2_l3, 'AVG_pxm2_l3.csv')
+
+# unimos esta clasificación al dataset original
+train_data = train_data %>% left_join(AVG_pxm2_l3[c("l3","tipo_barrio")], by = 'l3') 
+test_data = test_data %>% left_join(AVG_pxm2_l3[c("l3","tipo_barrio")], by = 'l3') 
+head(train_data)
+
+
+```
+
+
+
+
+### Modelo de regresión multiple
+
+$E(precio)=\beta_0+\beta_1surface\_covered+\beta_2tipo\_barrio$
+
+```{r}
+# Modelo ultiple
+# Modelo varias + barrios
+modelo_varias_l3 <- lm(price ~ surface_covered + surface_uncovered + rooms + property_type + l3, data = train_data)
+tidy_sc_tb <- tidy(modelo_sc_tb, conf.int = TRUE)
+tidy_sc_tb
+```
+
+#### Significado de los coeficientes estimados 
+
+* $\hat{\beta_o}$ : (categoría basal de la variable categórica): es la media del precio para los barrios de precio alto sin superficie.
+* $\hat{\beta_{surface\_covered}}$ : es la pendiente de incremento de precio por superficie para cada tipo de barrio. 
+* $\hat{\beta_{tipo\_barrioprecio\_bajo}}$ : es la diferencia en los niveles medios de precios de los barrios de precio bajos  respecto de los barrios de precio alto (categoría basal)
+* $\hat{\beta_{tipo\_barrioprecio\_medio}}$ : es la diferencia en los niveles medios de precios de los barrios de precio medios  respecto de los barrios de precio alto (categoría basal)
+

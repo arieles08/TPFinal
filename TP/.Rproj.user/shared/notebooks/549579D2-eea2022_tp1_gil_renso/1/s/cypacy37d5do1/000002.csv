@@ -1,0 +1,8 @@
+"0","```r
+# calculamos las métricas para todos los modelos
+df_evaluacion_train_iniciales = map_df(modelos_iniciales, glance, .id = \"modelos\") %>%
+  # ordenamos por R2 ajustado
+  arrange(desc(adj.r.squared))
+
+df_evaluacion_train_iniciales
+```"

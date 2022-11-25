@@ -1,0 +1,6 @@
+"0","```r
+# Aplicamos la función augment a los 4 modelos con el set de testing
+lista_predicciones_testing = map(.x = modelos, .f = augment, newdata = datos_salud_test) 
+# Obtenemos el RMSE para los 4 modelos
+map_dfr(.x = lista_predicciones_testing, .f = rmse, truth = peso, estimate = .fitted, .id=\"modelo\") %>% arrange(.estimate)
+```"

@@ -1,0 +1,13 @@
+"0","```r
+# se crea la nueva variable
+
+datos_salud_train = datos_salud_train %>%
+  mutate(IMC = peso*10000/((altura)^2))
+# Se genera una tabla con los promedios por edad
+
+AVG_IMC = datos_salud_train %>%
+  group_by(edad) %>%
+  summarise(AVG_IMC = mean(IMC))
+AVG_IMC
+
+```"

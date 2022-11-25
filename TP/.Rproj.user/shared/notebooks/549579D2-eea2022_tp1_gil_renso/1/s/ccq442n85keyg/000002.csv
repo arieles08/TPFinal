@@ -1,0 +1,4 @@
+"0","```r
+# Lista con todos los modelos
+modelos <- list(modelo_inicial = modelo_inicial, modelo_categoricas = modelo_categoricas, modelo_propio_1 = modelo_propio_1, modelo_propio_2 = modelo_propio_2)
+```"

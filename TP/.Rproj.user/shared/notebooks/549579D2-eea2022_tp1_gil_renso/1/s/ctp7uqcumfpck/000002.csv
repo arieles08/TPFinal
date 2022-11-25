@@ -1,0 +1,7 @@
+"0","```r
+# Se une a la tabla original
+
+datos_salud_train = datos_salud_train %>% left_join(AVG_Peso_Edad, by='edad')
+head(datos_salud_train)
+
+```"

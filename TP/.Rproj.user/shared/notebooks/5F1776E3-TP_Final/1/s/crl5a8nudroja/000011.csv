@@ -1,0 +1,8 @@
+"0","# Creamos una nueva variable  de precios por metro cuadrado"
+"0","train_data = train_data %>% "
+"0","  mutate(pxm2 = round(price/surface_total,0))"
+"0","# Armamos un dataframe que muestre los promedios de pxm2 en cada barrio"
+"0","AVG_pxm2_l3 = train_data %>% "
+"0","  group_by(l3) %>%"
+"0","  summarise(AVG_pxm2_l3 = mean(pxm2))"
+"0","AVG_pxm2_l3"

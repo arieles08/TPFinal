@@ -1,0 +1,4 @@
+"0","```r
+#Se carga el archivo de test
+datos_salud_test <- read.csv(\"encuesta_salud_test.csv\")
+```"

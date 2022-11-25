@@ -1,0 +1,8 @@
+"0","```r
+#Modelo inicial entrenado con el dataset modelo6
+modelo_inicial_m6 <- lm(peso ~ altura + edad + genero + dias_actividad_fisica_semanal + consumo_diario_alcohol, data = datos_salud_modelo6)
+# Resumen del modelo
+tidy_inicial_m6 <- tidy(modelo_inicial_m6, conf.int = TRUE)
+tidy_inicial
+tidy_inicial_m6
+```"

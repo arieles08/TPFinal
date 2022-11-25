@@ -1,0 +1,850 @@
+---
+title: "Trabajo Práctico Nº1: Regresión lineal"
+author: "Renso Gil"
+date: "14/10/2022"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    df_print: paged
+    theme: united
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+## Carga de librerías y datasets
+### Librerías a utiliza
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+
+```
+Se cargan las librerías necesarias para el trabajo práctico.
+```{r}
+library(tidyverse)
+library(tidymodels)
+library(rsample)
+library(ggplot2)
+library(GGally)
+library(robustbase)
+```
+### Cargar archivo
+Se cargan los dataset que utilizan en el trabajo práctico .
+```{r}
+# Carga de archivo encuenta de salud train
+datos_salud_train <- read.csv("encuesta_salud_train.csv")
+
+#Se carga el archivo de encuesta de salud test
+datos_salud_test <- read.csv("encuesta_salud_test.csv")
+
+#Se carga el archivo de encuesta modelo6
+datos_salud_modelo6 <- read.csv("encuesta_salud_modelo6.csv")
+
+```
+
+## Análisis exploratorios
+Se observa el contenido del dataset utilizando la función  `glimpse()`.
+
+```{r}
+glimpse(datos_salud_train)
+```
+También se observa los primeros valores del dataset. 
+```{r}
+datos_salud_train %>%
+  head()
+```
+EL dataset es compuesto por 7024 filas y las variables en total son 16. Las variables numéricas son record, edad, altura, peso, dias_consumo_comida_rapida, consumo_diario_alcohol,dias_actividad_fisica_semanal. Las categóricas son genero, nivel_educativo, frecuencia_hambre_mensual, edad_consumo_alcohol,
+consumo_semanal_frutas, consumo_semanal_verdura, consumo_semanal_gaseosa, consumo_semanal_snacks y consumo_semanal_comida_grasa.
+
+Se realiza una tabla explorativa donde se analiza la cantidad de valores unicos y el procentaje de faltantes.
+```{r}
+tabla_exploratorios =  datos_salud_train %>%
+                                      gather(., 
+                                            key = "variables", 
+                                            value = "valores") %>% # agrupamos por las variables del set
+                                      group_by(variables) %>% 
+                                      summarise(valores_unicos = n_distinct(valores),
+                                      porcentaje_faltantes = sum(is.na(valores))/nrow(datos_salud_train)*100) %>% 
+                                      arrange(desc(porcentaje_faltantes), valores_unicos) # ordenamos por porcentaje de faltantes y valores unicos
+tabla_exploratorios
+```
+El dataset no tiene faltantes. La variable que tiene 2 valores unicos es genero. Las que tienen 6 son frecuencia_hambre_mensual y nivel educativo. Las que tienen 7 son consumo_diario_alcohol y edad. Las que tienen 8 son consumo_semanal_comida_grasa, consumo_semanal_frutas, consumo_semanal_gaseosas, consumo_semanal_snacks, consumo_semanal_verdura, dias_actividad_fisica_semanal, dias_consumo_comida_rapida y edad_consumo_alcohol. En el caso de altura tiene 68 valores unicos y peso 91.
+
+### Gráfico de correlaciones
+
+Se utiliza `ggpairs()` para graficar las variables númericas y encontrar la correlacción entre dichas variables. Se agrupa por genero. 
+```{r}
+graficos <- ggpairs(datos_salud_train %>% select(c(edad, altura, peso, dias_consumo_comida_rapida, dias_actividad_fisica_semanal, consumo_diario_alcohol)), aes(color = datos_salud_train$genero), 
+          upper = list(continuous = wrap("cor", size = 2, hjust=0.5)), legend = 25, progress=FALSE) + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position = "bottom") + 
+  theme_bw()
+
+
+graficos 
+```
+
+En el gráfico anterior se muestra que la correlación de peso con altura es significativa (0.576), principalmente en genero masculino. La correlación entre peso y
+edad es de 0.285. Con respecto al genero es más alta en masculinos que en femenino. En el caso de la correalacion de peso con las variables consumo_comidad_rapida, dias_actividad_fisica y consumo_diario_alcohol es baja. Inferior a 0.1. En el caso particular del consumo diario de alcohol en masculino la correlaciòn es de 0.132.
+
+### Análisis de la varible frecuencia de hambre respecto al consumo de verdura 
+Primero se realiza una tabla de frecuencias de las distintas categorias entre la frecuencia de hambre y consumo de verdura. Luego se realiza un gráfico de mosaico para analizar la distribución relatica de la frecuencia de hambre respecto al consumo de verdura
+```{r}
+# Tabla de frecuencias
+frecuencia_hambre_mensual_consumo_verdura<-table(datos_salud_train$frecuencia_hambre_mensual, datos_salud_train$consumo_semanal_verdura)
+
+# Gráfico de mosaico
+mosaicplot(frecuencia_hambre_mensual_consumo_verdura,col=c("gold","ivory4"),ylab="Consumo semanal de verdura",xlab="Frecuencia de hambre mensual",cex=0.8
+           ,las=2)
+
+
+```
+
+Se observa que la mayor frecuencia de dada cuando nunca tienen hambre y comieron verdura de 1 o 3 veces durante los ultimos 7 día. También el caso de que nunca tuvieron hambre y consumieron 4 a 6 veces en los últimos 7 días. Los que tienen menor frecuencia sin tomar los datos perdidos se da cuando la frecuencia de hambre mensual es siempre y el consumo de verdura es de dos veces al día.
+
+### Análisis de la varible frecuencia de hambre respecto al consumo de grasa 
+Primero se realiza una tabla de frecuencias de las distintas categorias entre la frecuencia de hambre y consumo de grasa. Luego se realiza un gráfico de mosaico para analizar la distribución relatica de la frecuencia de hambre respecto al consumo de grasa
+```{r}
+#Tabla de frecuencia
+frecuencia_hambre_mensual_consumo_grasa<-table(datos_salud_train$frecuencia_hambre_mensual, datos_salud_train$consumo_semanal_comida_grasa)
+
+#Gráfico de mosaico
+mosaicplot(frecuencia_hambre_mensual_consumo_grasa,col=c("gold","ivory4"),ylab="Consumo semanal de grasa",xlab="Frecuencia de hambre mensual",cex=0.7,las=2)
+
+
+```
+
+Se observa que la mayor frecuencia se da para frecuencia de hambre mensual es nunca y el consumo de grasa es de 1 a 3 veces durante los últimos 7 días. Las que tienen menor frecuencia sin tener en cuenta los datos perdidos se da cuando la frecuencia de hambre mensual es siempre y el consumo de grasa es de 2 veces al día o 3 veces al día.
+
+## Modelo inicial
+Se plantea la primer alternativa a  modelar  para explicar el peso de los adolecentes. El modelo es el siguiente:
+
+$E(peso)=\beta_0+\beta_1altura+\beta_2edad+\beta_3genero+B_4diasActividadFisicaSemanal+B_5consumoDiarioAlcohol$
+```{r}
+# Modelo lineal multiple para la primer alternativa
+modelo_inicial <- lm(peso ~ altura + edad + genero + dias_actividad_fisica_semanal + consumo_diario_alcohol, data = datos_salud_train)
+# Resumen del modelo
+tidy_inicial <- tidy(modelo_inicial, conf.int = TRUE)
+tidy_inicial
+```
+
+
+
+#### Significado de los coeficientes estimados 
+
+* $\hat{\beta_o}$ : (categoría basal de la variable categórica) corresponde a la media del peso del genero femenino para edad cero, altura cero (no tiene sentido) y consumo_diario de alcohol cero.
+* $\hat{\beta_{altura}}$ : indica que si se mantiene la edad, los días de actividad física semanal y el consumo diario de alcohol, el incremento del peso es de 0.65 para genero femenino y masculino.
+* $\hat{\beta_{edad}}$ : indica que si se mantiene la edad, los días de actividad física semanal y el consumo diario de alcohol, el incremento del peso es de 1.41 para genero femenino y masculino.
+* $\hat{\beta_{generoMasculino}}$ : es la diferencia en los niveles medios del peso del genero masculino
+respecto del genero femenino (categoria basal). 
+*  $\hat{\beta_{dias\_actividad\_fisica\_semanal}}$ : indica que si se mantiene la edad, la altura y el consumo diario de alcohol, el descenso del peso  es de 0.09 para genero femenino y masculino.
+* $\hat{\beta_{consumo\_diario\_alcohol}}$ : indica que si se mantiene la altura, la edad y los días de actividad física semanal el incremento es de 1.41 para genero femenino y masculino.
+
+#### Significatividad individual
+
+Test para las $\beta_k$
+Se pretende probar si el coeficiente de regresón de la variable es distinto de cero. 
+
+Hipótesis:
+
+* $H_0:\beta_k = 0$
+* $H_1:\beta_k ≠ 0$
+
+```{r}
+options("scipen"=1)
+tidy_inicial %>%
+  select(term, statistic, p.value, conf.low, conf.high)
+```
+Se grafica los coeficientes estimados y sus intervalos de confianza.
+```{r}
+# Gráfico de los Coeficientes
+ggplot(tidy_inicial, aes(estimate, term, color=p.value < 0.05, xmin = conf.low, xmax = conf.high, height = 0)) +
+  geom_point() +
+  geom_vline(xintercept = 0, lty = 4, color = "black") +
+  geom_errorbarh() +
+  scale_color_manual(values=c('firebrick', 'forestgreen')) +
+  guides(color="none") +
+  theme_bw() +
+  labs(y = "Coeficientes β", x = "Estimación")
+```
+
+* Se observa que las variables altura, edad y  la categoría generoMasculino son significativos porque el p-valor es inferior a 0,05. En el caso de dias_actividad_fisica_semanal y consumo_diario no son significativos por el p-valor el mayor a 0.05.
+* Se observa que los intervalos de confianza del 95% para los coeficientes estimados de altura, edad y generoMasculino no contienen al cero.   
+
+#### Test F : evaluar significatividad global
+
+Hipótesis:
+
+* $H_0: β_1 = β_2 = · · · = β_{p−1} = 0$
+
+* $H_1:$ no todos los $β_k$ ($k = 1, 2,..., p−1$) son iguales a 0. 
+
+```{r}
+glance(modelo_inicial)
+```
+
+```{r}
+summary(modelo_inicial)
+```
+
+El modelo resulta significativo para explicar el peso ya que el p-valor
+es inferior a 0.05. De acuerdo al valor Adjusted R-squared el porcentaje
+de variabilidad que esplica el modeloes de 0,35.
+
+## Modelo categóricas
+
+Primero se reordena la variable consumo semanal de snack para que la categoria "No comí comida salada o snacks en los últimos 7 días sea la primera. Para esto se utiliza la función `relevel()`. 
+
+Utilizamos la función `table()` para ver que orden tiene dicha categoría. 
+
+```{r}
+#Tabla de frecuencia
+table(as.factor(datos_salud_train$consumo_semanal_snacks))
+```
+
+```{r}
+#Tabla de frecuencia solamente con el indice 8.
+table(as.factor(datos_salud_train$consumo_semanal_snacks))[8]
+```
+Se coloca como ref =8 porque es que corresponde a "No comí comida salada o snacks en los últimos 7 días".
+```{r}
+datos_salud_train$consumo_semanal_snacks <- relevel(as.factor(datos_salud_train$consumo_semanal_snacks), ref = 8)
+```
+
+Se plantea el modelo categóricas propuesto:
+
+$E(peso)=\beta_0+\beta_1altura+\beta_2edad+\beta_3genero+B_4consumoSemanalSnacks+B_5genero\cdot edad$
+
+```{r}
+# Modelo lineal múltiple para el modelo categóricas
+modelo_categoricas <- lm(peso ~ altura + edad + genero + consumo_semanal_snacks + genero*edad, data = datos_salud_train)
+# Resumen del modelo
+tidy_categoricas <- tidy(modelo_categoricas, conf.int = TRUE)
+tidy_categoricas
+```
+
+#### Significado de los coeficientes estimados 
+
+* $\hat{\beta_o}$ : (categoría basal de la variable categórica) corresponde a la media del peso del genero femenino y consumo semanal de snack "No comí comida salada o snacks en los últimos 7 días" para edad cero, altura cero (no tiene sentido).
+* $\hat{\beta_{altura}}$ : indica que si se mantiene la edad, el incremento del peso es de o.64 para genero femenino y masculino y para cualquier categoría de consumo de snaks.
+* $\hat{\beta_{edad}}$ : indica que si se mantiene la altura, el incremento del peso es de 1.22 para genero femenino y masculino y para cualquier categoría de consumo de snaks.
+* $\hat{\beta_{generoMasculino}}$ : es la diferencia en los niveles medios del peso del genero masculino respecto del genero femenino (categoria basal). 
+* $\hat{\beta_{consumo\_semanal\_snacks1 a 3 veces durante los últimos 7 días}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks 1 a 3 veces durante los últimos 7 días	respecto del consumo_semanal_snacks "No comí comida salada o snacks en los últimos 7 días" (categoria basal). 
+* $\hat{\beta_{consumo\_semanal\_snacks1 vez al día}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks 1 vez al día	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacks2 veces al día}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks 2 veces al día	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacks3 veces al día}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks 3 veces al día	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacks4 a 6 veces durante los últimos 7 días}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks4 a 6 veces durante los últimos 7 días	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacks4 o más veces al día}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks4 o más veces al día	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacksDato perdido}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacksDato perdido	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{edad:generoMasculino}}$ : es el coeficiente estimado de iteración entre edad y genero. Representa la pendiente entre el peso y la edad en el genero masculino con respecto al genero femenino. 
+
+
+#### Significatividad individual
+
+Hipótesis:
+
+* $H_0:\beta_k = 0$
+* $H_1:\beta_k ≠ 0$
+
+```{r}
+options("scipen"=1)
+tidy_categoricas %>%
+  select(term, statistic, p.value, conf.low, conf.high)
+
+```
+Se grafica los coeficientes estimados y sus intervalos de confianza.
+```{r}
+# Gráfico de los Coeficientes
+ggplot(tidy_categoricas, aes(estimate, term, color=p.value < 0.05, xmin = conf.low, xmax = conf.high, height = 0)) +
+  geom_point() +
+  geom_vline(xintercept = 0, lty = 4, color = "black") +
+  geom_errorbarh() +
+  scale_color_manual(values=c('firebrick', 'forestgreen')) +
+  guides(color="none") +
+  theme_bw() +
+  labs(y = "Coeficientes β", x = "Estimación")
+```
+
+* Se observa que las variables altura, edad, las categorías  consumo de snacks datos perdidos, 4 o más veces al día, 4 a 6 veces durante los ùltimos 7 días, 1 a 3 veces durante losíultimos 7 días y edad:generoMasculino son individualmente significativos porque el p-valor es inferior a 0,05. En el caso de las categorias generoMasculino, Consumo de snacks 1 vez al dia, 2 veces al dia y 3 veces al día no son  individualmente significativos por el p-valor el mayor a 0.05.
+* Se observa que los intervalos de confianza del 95% para los coeficientes estimados de variables altura, edad, las categorías  consumo de snacks datos perdidos, 4 o más veces al día, 4 a 6 veces durante los ùltimos 7 días, 1 a 3 veces durante los últimos 7 días y edad:generoMasculino no contienen al cero. 
+
+#### Test F para evaluar significatividad conjunta de la varibles categoricas
+Se aplica el F para responder la pregunta si la variable categórica consumo de snack es significativa en su conjunto 
+
+Hipótesis:
+
+* $H_0: β_q = β_{q+1} = · · · = β_{p−1} = 0$
+
+* $H_1:$ nal menos uno de los  $β_k$(Con$k$ entre $q$ y $p-1$) es tal que $\beta_k≠0$  
+
+```{r}
+tidy(anova(modelo_categoricas))
+```
+Según el resultado del test F, la varible consumo semanal de snacks en su conjunto resulta estadisticamente significativa para expicar el peso porque el p-valor < 0.05.
+
+#### Test F : evaluar significatividad global
+
+Hipótesis:
+
+* $H_0: β_1 = β_2 = · · · = β_{p−1} = 0$
+
+* $H_1:$ no todos los $β_k$ ($k = 1, 2,..., p−1$) son iguales a 0. 
+
+```{r}
+glance(modelo_categoricas)
+```
+
+```{r}
+summary(modelo_categoricas)
+```
+El modelo resulta significativo para explicar el peso ya que el p-valor es inferior a 0.05. Tanto en `glance()` como en `summary`se obseva que el porcentaje de la variabilidad que explica al modelo es de 0.36.
+
+
+Como existe categorías de consumo semanal de Snaks no significativas ya
+que el p-valor da mayor a 0.05 y la variable en su conjunto es
+significativa, se propone juntar las categorías que consumen por lo
+menos una vez al día snacks. Ya que son las que dan no significativas.
+
+```{r}
+#se juntan las categorias 1,2, y 3 veces al día.
+datos_salud_train <- datos_salud_train %>% 
+  mutate(Consumo_snacks = case_when(consumo_semanal_snacks == "1 vez al día" ~ as.character("Por lo menos una vez al día"),
+                                   consumo_semanal_snacks == "2 veces al día" ~ as.character("Por lo menos una vez al día"),
+                                   consumo_semanal_snacks == "3 veces al día" ~ as.character("Por lo menos una vez al día"),
+                                   TRUE ~ as.character(consumo_semanal_snacks))) 
+```
+
+Se observa el nuevo indice de "No comí comida salada o snacks en los últimos 7 días"
+```{r}
+table(as.factor(datos_salud_train$Consumo_snacks))[5]
+```
+Se coloca como ref =5 porque es que corresponde a "No comí comida salada o snacks en los últimos 7 días".
+```{r}
+datos_salud_train$Consumo_snacks <- relevel(as.factor(datos_salud_train$Consumo_snacks), ref = 5)
+```
+
+Se vuelve a entrenar el modelo 
+```{r}
+# Modelo lineal múltiple para modelo categoricas 
+modelo_categoricas <- lm(peso ~ altura + edad + genero + Consumo_snacks + genero*edad, data = datos_salud_train)
+# Resumen del modelo
+tidy_categoricas <- tidy(modelo_categoricas, conf.int = TRUE)
+tidy_categoricas
+```
+
+#### Significado de los coeficientes estimados 
+
+* $\hat{\beta_o}$ : (categoría basal de la variable categórica) corresponde a la media del peso del genero femenino y consumo semanal de snack "No comí comida salada o snacks en los últimos 7 días" para edad cero, altura cero (no tiene sentido).
+* $\hat{\beta_{altura}}$ : indica que si se mantiene la edad, el incremento del peso es de o.64 para genero femenino y masculino y para cualquier categoría de consumo de snaks.
+* $\hat{\beta_{edad}}$ : indica que si se mantiene la altura, el incremento del peso es de 1.22 para genero femenino y masculino y para cualquier categoría de consumo de snaks.
+* $\hat{\beta_{generoMasculino}}$ : es la diferencia en los niveles medios del peso del genero masculino respecto del genero femenino (categoria basal). 
+* $\hat{\beta_{consumo\_semanal\_snacks1 a 3 veces durante los últimos 7 días}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks 1 a 3 veces durante los últimos 7 días	respecto del consumo_semanal_snacks "No comí comida salada o snacks en los últimos 7 días" (categoria basal). 
+* $\hat{\beta_{consumo\_semanal\_snacks por lo menos una vez al día}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks por lo menos una vez al día	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacks4 a 6 veces durante los últimos 7 días}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks4 a 6 veces durante los últimos 7 días	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacks4 o más veces al día}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks4 o más veces al día	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacksDato perdido}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacksDato perdido	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{edad:generoMasculino}}$ : es el coeficiente estimado de iteración entre edad y genero. Representa la pendiente entre el peso y la edad en el genero masculino con respecto al genero femenino. 
+
+
+#### Significatividad individual
+
+Hipótesis:
+
+* $H_0:\beta_k = 0$
+* $H_1:\beta_k ≠ 0$
+
+```{r}
+options("scipen"=1)
+tidy_categoricas %>%
+  select(term, statistic, p.value, conf.low, conf.high)
+
+```
+
+Se grafica los coeficientes estimados y sus intervalos de confianza.
+```{r}
+# Gráfico de los Coeficientes
+ggplot(tidy_categoricas, aes(estimate, term, color=p.value < 0.05, xmin = conf.low, xmax = conf.high, height = 0)) +
+  geom_point() +
+  geom_vline(xintercept = 0, lty = 4, color = "black") +
+  geom_errorbarh() +
+  scale_color_manual(values=c('firebrick', 'forestgreen')) +
+  guides(color="none") +
+  theme_bw() +
+  labs(y = "Coeficientes β", x = "Estimación")
+```
+
+Con la modificación de juntar las categorías consumo semanal de snacks, por lo menos una vez al día, todas son dignificativas.
+
+#### Test F para evaluar significatividad conjunta de la varibles categoricas
+
+Hipótesis:
+
+* $H_0: β_q = β_{q+1} = · · · = β_{p−1} = 0$
+
+* $H_1:$ nal menos uno de los  $β_k$(Con$k$ entre $q$ y $p-1$) es tal que $\beta_k≠0$  
+
+```{r}
+tidy(anova(modelo_categoricas))
+```
+Se sigue manteniendo la significatividad conjunta de la variable categórica consumo semanal de snacks. 
+
+#### Test F : evaluar significatividad global
+Hipótesis:
+
+* $H_0: β_1 = β_2 = · · · = β_{p−1} = 0$
+
+* $H_1:$ no todos los $β_k$ ($k = 1, 2,..., p−1$) son iguales a 0. 
+
+```{r}
+glance(modelo_categoricas)
+```
+
+```{r}
+summary(modelo_categoricas)
+```
+
+Con el cambio proporcionado todas las categòrias son significativas individualmente. Pero no existe un gran cambio en la variabilidad
+explicada. El valor adj.r.squared cambia de 0.357516 a 0.3576383. Esto se debe a que solamente se realizó un agrupamiento de las categorías. 
+
+## Modelos propios
+
+### Primer modelo propio
+
+En el primer modelo se pretende incorporar el peso promedio por edad.
+
+```{r}
+#Dataset Peso promedio por edad
+AVG_Peso_Edad = datos_salud_train %>%
+   group_by(edad) %>%
+   summarise(AVG_Peso_Edad = mean(peso))
+AVG_Peso_Edad
+```
+
+
+```{r}
+# Se une al dataset datos_salud_train el peso proedio por edad
+datos_salud_train = datos_salud_train %>% left_join(AVG_Peso_Edad, by='edad')
+head(datos_salud_train)
+
+```
+Se plante el modelo propio_1 como:
+$E(peso)=\beta_0+\beta_1altura+\beta_2AVG\_Peso\_Edad+\beta_3genero+B_4consumoSemanalSnacks+B_5genero\cdot AVG\_Peso\_Edad$
+
+```{r}
+#  Modelo lineal múltiple propio_1
+modelo_propio_1 <- lm(peso ~ altura + AVG_Peso_Edad + genero + Consumo_snacks + genero*AVG_Peso_Edad, data = datos_salud_train)
+# Resumen del modelo
+tidy_propio_1 <- tidy(modelo_propio_1, conf.int = TRUE)
+tidy_propio_1
+```
+
+#### Significado de los coeficientes estimados 
+
+* $\hat{\beta_o}$ : (categoría basal de la variable categórica) corresponde a la media del peso del genero femenino y consumo semanal de snack "No comí comida salada o snacks en los últimos 7 días" para edad cero, altura cero (no tiene sentido).
+* $\hat{\beta_{altura}}$ : indica que si se mantiene el AVG_Peso_Edad, el incremento del peso  para genero femenino y masculino y para cualquier categoría de consumo de snaks.
+* $\hat{\beta_{AVG_Peso_Edad}}$ : indica que si se mantiene la altura, el incremento del peso para genero femenino y masculino y para cualquier categoría de consumo de snaks.
+* $\hat{\beta_{generoMasculino}}$ : es la diferencia en los niveles medios del peso del genero masculino respecto del genero femenino (categoria basal). 
+* $\hat{\beta_{consumo\_semanal\_snacks1 a 3 veces durante los últimos 7 días}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks 1 a 3 veces durante los últimos 7 días	respecto del consumo_semanal_snacks "No comí comida salada o snacks en los últimos 7 días" (categoria basal). 
+* $\hat{\beta_{consumo\_semanal\_snacks por lo menos una vez al día}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks por lo menos una vez al día	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacks4 a 6 veces durante los últimos 7 días}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks4 a 6 veces durante los últimos 7 días	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacks4 o más veces al día}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks4 o más veces al día	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacksDato perdido}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacksDato perdido	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{AVG_Peso_Edad:generoMasculino}}$ : es el coeficiente estimado de iteración entre AVG_Peso_Edad y genero. Representa la pendiente entre el peso y la AVG_Peso_Edad  en el genero masculino con respecto al genero femenino. 
+
+#### Significatividad individual
+
+Hipótesis:
+
+* $H_0:\beta_k = 0$
+* $H_1:\beta_k ≠ 0$
+
+```{r}
+options("scipen"=1)
+tidy_propio_1 %>%
+  select(term, statistic, p.value, conf.low, conf.high)
+
+```
+
+```{r}
+# Grafica de los Coeficientes
+ggplot(tidy_propio_1, aes(estimate, term, color=p.value < 0.05, xmin = conf.low, xmax = conf.high, height = 0)) +
+  geom_point() +
+  geom_vline(xintercept = 0, lty = 4, color = "black") +
+  geom_errorbarh() +
+  scale_color_manual(values=c('forestgreen', 'firebrick')) +
+  guides(color="none") +
+  theme_bw() +
+  labs(y = "Coeficientes β", x = "Estimación")
+```
+
+Para el modelo propio_1 todas las variables son significativas individualemnte porque sus p-valor< 0.05
+
+#### Test F para evaluar significatividad conjunta de la varibles categoricas
+
+Hipótesis:
+
+* $H_0: β_q = β_{q+1} = · · · = β_{p−1} = 0$
+
+* $H_1:$ nal menos uno de los  $β_k$(Con$k$ entre $q$ y $p-1$) es tal que $\beta_k≠0$  
+```{r}
+tidy(anova(modelo_propio_1))
+```
+Todas las variables categóricas son significativas en su conjunto  porque los correspondientes p-valor < 0.05
+
+#### Test F : evaluar significatividad global
+Hipótesis:
+
+* $H_0: β_1 = β_2 = · · · = β_{p−1} = 0$
+
+* $H_1:$ no todos los $β_k$ ($k = 1, 2,..., p−1$) son iguales a 0. 
+
+```{r}
+glance(modelo_propio_1)
+```
+
+```{r}
+summary(modelo_propio_1)
+```
+El modelo es significativo para explicar el peso (p-valor <0.05)
+
+
+### Segundo Modelo propio
+
+En el segundo modelo se pretende incorporar el índice  de masa corporal por edad promedio.
+
+Primero se crea la variable de índice de masa corporal por edad
+
+```{r}
+# se crea la nueva variable
+datos_salud_train = datos_salud_train %>%
+  mutate(IMC = peso*10000/((altura)^2))
+# Se genera una tabla con los promedios de IMC
+AVG_IMC = datos_salud_train %>%
+  group_by(edad) %>%
+  summarise(AVG_IMC = mean(IMC))
+AVG_IMC
+
+```
+
+Se une al dataset datos_salud_train la variable promedio de IMC por edad
+```{r}
+#Se une la variable AVG_IMC al Dateset original
+datos_salud_train = datos_salud_train %>% left_join(AVG_IMC, by='edad')
+head(datos_salud_train)
+```
+
+Se plante el modelo propio_2 como:
+
+$E(peso)=\beta_0+\beta_1altura+\beta_2AVG\_IMC+\beta_3genero+B_4consumoSemanalSnacks+B_5genero\cdot AVG\_IMC$
+```{r}
+# Modelo lineal múltiple propio_2
+modelo_propio_2 <- lm(peso ~ altura + AVG_IMC + genero + Consumo_snacks + genero*AVG_IMC, data = datos_salud_train)
+# Resumen del modelo
+tidy_propio_2 <- tidy(modelo_propio_2, conf.int = TRUE)
+tidy_propio_2
+```
+
+#### Significado de los coeficientes estimados 
+
+* $\hat{\beta_o}$ : (categoría basal de la variable categórica) corresponde a la media del peso del genero femenino y consumo semanal de snack "No comí comida salada o snacks en los últimos 7 días" para edad cero, altura cero (no tiene sentido).
+* $\hat{\beta_{altura}}$ : indica que si se mantiene el AVG\_IMC, el incremento del peso para genero femenino y masculino y para cualquier categoría de consumo de snaks.
+* $\hat{\beta_{AVG\_IMC}}$ : indica que si se mantiene la altura, el incremento del peso para genero femenino y masculino y para cualquier categoría de consumo de snaks.
+* $\hat{\beta_{generoMasculino}}$ : es la diferencia en los niveles medios del peso del genero masculino respecto del genero femenino (categoria basal). 
+* $\hat{\beta_{consumo\_semanal\_snacks1 a 3 veces durante los últimos 7 días}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks 1 a 3 veces durante los últimos 7 días	respecto del consumo_semanal_snacks "No comí comida salada o snacks en los últimos 7 días" (categoria basal). 
+* $\hat{\beta_{consumo\_semanal\_snacks por lo menos una vez al día}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks por lo menos una vez al día	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacks4 a 6 veces durante los últimos 7 días}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks4 a 6 veces durante los últimos 7 días	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacks4 o más veces al día}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacks4 o más veces al día	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{consumo\_semanal\_snacksDato perdido}}$ : es la diferencia en los niveles medios del peso del consumo_semanal_snacksDato perdido	respecto del consumo_semanal_snacks No comí comida salada o snacks en los últimos 7 días (categoria basal).
+* $\hat{\beta_{AVG\_IMC:generoMasculino}}$ : es el coeficiente estimado de iteración entre AVG_Peso_Edad y genero. Representa la pendiente entre el peso y el AVG_IMC en el genero masculino con respecto al genero femenino. 
+
+
+#### Significatividad individual
+
+Hipótesis:
+
+* $H_0:\beta_k = 0$
+* $H_1:\beta_k ≠ 0$
+
+```{r}
+options("scipen"=1)
+tidy_propio_2 %>%
+  select(term, statistic, p.value, conf.low, conf.high)
+
+```
+
+```{r}
+# Plot de los Coeficientes
+ggplot(tidy_propio_2, aes(estimate, term, color=p.value < 0.05, xmin = conf.low, xmax = conf.high, height = 0)) +
+  geom_point() +
+  geom_vline(xintercept = 0, lty = 4, color = "black") +
+  geom_errorbarh() +
+  scale_color_manual(values=c('forestgreen', 'firebrick')) +
+  guides(color="none") +
+  theme_bw() +
+  labs(y = "Coeficientes β", x = "Estimación")
+```
+
+Para el modelo propio_2 todas las variables son significativas individualemnte porque sus p-valor< 0.05
+
+#### Test F para evaluar significatividad conjunta de la varibles categoricas
+
+Hipótesis:
+
+* $H_0: β_q = β_{q+1} = · · · = β_{p−1} = 0$
+
+* $H_1:$ nal menos uno de los  $β_k$(Con$k$ entre $q$ y $p-1$) es tal que $\beta_k≠0$  
+
+```{r}
+tidy(anova(modelo_propio_2))
+```
+Todas las variables categóricas son significativas en su conjunto  porque los correspondientes p-valor < 0.05
+
+#### Test F : evaluar significatividad global
+Hipótesis:
+
+* $H_0: β_1 = β_2 = · · · = β_{p−1} = 0$
+
+* $H_1:$ no todos los $β_k$ ($k = 1, 2,..., p−1$) son iguales a 0. 
+
+```{r}
+glance(modelo_propio_2)
+```
+
+```{r}
+summary(modelo_propio_2)
+```
+El modelo es significativo para explicar el peso (p-valor <0.05)
+
+## Evaluación
+
+Se agregan las mismas varibles adicionales en test que en Train.
+
+```{r}
+
+#Se agrega la variable Consumo_snacks
+datos_salud_test <- datos_salud_test %>% 
+  mutate(Consumo_snacks = case_when(consumo_semanal_snacks == "1 vez al día" ~ as.character("Por lo menos una vez al día"),
+                                   consumo_semanal_snacks == "2 veces al día" ~ as.character("Por lo menos una vez al día"),
+                                   consumo_semanal_snacks == "3 veces al día" ~ as.character("Por lo menos una vez al día"),
+                                   TRUE ~ as.character(consumo_semanal_snacks))) 
+
+
+# Se agrega la variable AVG_Peso_edad
+datos_salud_test = datos_salud_test %>% left_join(AVG_Peso_Edad, by='edad')
+
+
+#Se agrega la variable AVG_IMC en test
+datos_salud_test = datos_salud_test %>% left_join(AVG_IMC, by='edad')
+
+```
+
+Lista de modelos
+
+```{r}
+# Lista con todos los modelos
+modelos <- list(modelo_inicial = modelo_inicial, modelo_categoricas = modelo_categoricas, modelo_propio_1 = modelo_propio_1, modelo_propio_2 = modelo_propio_2)
+```
+
+### Coeficiente de determinación $R^2$
+
+```{r}
+# calculamos las métricas para todos los modelos
+df_evaluacion_train = map_df(modelos, glance, .id = "model") %>%
+  # ordenamos por R2 ajustado
+  arrange(desc(adj.r.squared))
+
+df_evaluacion_train
+```
+
+### RMSE
+
+```{r}
+# Aplicamos la función augment a los modelos
+lista_predicciones_training = map(.x = modelos, .f = augment) 
+```
+
+#### Para Train
+
+```{r}
+# Obtenemos el RMSE para los 4 modelos
+map_dfr(.x = lista_predicciones_training, .f = rmse, truth = peso, estimate = .fitted, .id="modelo") %>% arrange(.estimate)
+```
+
+#### Para Test
+
+```{r}
+# Aplicamos la función augment a los 4 modelos con el set de testing
+lista_predicciones_testing = map(.x = modelos, .f = augment, newdata = datos_salud_test) 
+# Obtenemos el RMSE para los 4 modelos
+map_dfr(.x = lista_predicciones_testing, .f = rmse, truth = peso, estimate = .fitted, .id="modelo") %>% arrange(.estimate)
+```
+
+### MAE
+
+#### Para Train
+
+```{r}
+# Obtenemos el RMSE para los 4 modelos
+map_dfr(.x = lista_predicciones_training, .f = mae, truth = peso, estimate = .fitted, .id="modelo") %>% arrange(.estimate)
+```
+
+#### Para Test
+
+```{r}
+# Aplicamos la función augment a los 4 modelos con el set de testing
+lista_predicciones_testing = map(.x = modelos, .f = augment, newdata = datos_salud_test) 
+# Obtenemos el RMSE para los 4 modelos
+map_dfr(.x = lista_predicciones_testing, .f = mae, truth = peso, estimate = .fitted, .id="modelo") %>% arrange(.estimate)
+```
+
+Para el set de entrenamiento el mejor modelo es el modelo propip_2 porque tiene el valor más alto de $R^2$ ajustado, el menor valor de RMSE y menos valor de MAE. En el caso de datos nuevos, set de test, el mejor modelo es el modelo categòricas porque obtuvo menor valor de RMSE y menor valor de MAE
+
+
+## Diagnóstico del Modelo
+
+Se pretende diagnosticar si los errores tienen distribución normal con media cero y varianza
+constante y son independientes entre sí.
+
+```{r}
+plot(modelo_inicial)
+```
+
+* Residuos vs valores predichos: en este caso la distribución de residuos
+no parece tener una forma que indique que sigue a la variable predicha
+sino que parece más bien una nube de puntos sin demasiada forma.
+
+* Normal QQ plot: El extremo superior derecho no se ajusta a la
+distribución teórica, por lo que no parecen seguir una distribución
+normal.
+
+* Residual vs leverage: Se observa en la gràfica algunos puntos con alto leverage.
+
+Por lo tanto, el modelo inicial no cumple con los supuestos de modelo lineal, dado que se detecta heterocedasticidad, falta de normalidad y presencia de puntos con alto leverage.
+
+## Modelo Robusto
+
+Primero se compara el peso y la altura en el dataset original y el dataset modelo_6.
+
+Se grafica la relación entre el peso y altura del modelo original.
+
+```{r}
+library(ggplot2)
+g <- ggplot(data=datos_salud_train, aes(x = peso , altura, color=genero))+
+  geom_point()
+g
+```
+
+Se grafica la relación entre el peso y la altura del modelo_6.
+
+```{r}
+library(ggplot2)
+g <- ggplot(data=datos_salud_modelo6, aes(x = peso , altura, color=genero))+
+  geom_point()
+g
+```
+
+Se observa la presencia de outliers en el modelo6 principalmente para alto peso y baja estatura.
+
+
+Se entrena el modelo inicial con el nuevo dataset modelo_6.
+```{r}
+#Modelo inicial entrenado con el dataset modelo6
+modelo_inicial_m6 <- lm(peso ~ altura + edad + genero + dias_actividad_fisica_semanal + consumo_diario_alcohol, data = datos_salud_modelo6)
+# Resumen del modelo
+tidy_inicial_m6 <- tidy(modelo_inicial_m6, conf.int = TRUE)
+tidy_inicial
+tidy_inicial_m6
+```
+
+Existe una variación en los coeficientes estimados. La presencia de los valores outliers provoca dicha variación. Aumenta el valor de $\hat{\beta_o}$ por la presencia de valores con mayor peso. Tambien disminuye el valor de $\hat{\beta_{altura}}$ y aumenta el valor de $\hat{\beta_{edad}}$ y $\hat{\beta_{generoMasculino}}$. 
+
+Se realiza una Lista de modelo para comparar el modelo incial con datos originales y datos del modelo_6.
+
+```{r}
+# Lista con todos los modelos
+modelos_iniciales <- list(modelo_inicial = modelo_inicial, modelo_inicial_m6 = modelo_inicial_m6)
+```
+
+#### Coeficiente de determinación $R^2$
+
+```{r}
+# calculamos las métricas para todos los modelos
+df_evaluacion_train_iniciales = map_df(modelos_iniciales, glance, .id = "modelos") %>%
+  # ordenamos por R2 ajustado
+  arrange(desc(adj.r.squared))
+
+df_evaluacion_train_iniciales
+```
+
+#### RMSE
+```{r}
+# Aplicamos la función augment a los modelos
+lista_predicciones_training_iniciales = map(.x = modelos_iniciales, .f = augment) 
+```
+
+```{r}
+# Obtenemos el RMSE para los 2 modelos
+map_dfr(.x = lista_predicciones_training_iniciales, .f = rmse, truth = peso, estimate = .fitted, .id="modelo") %>% arrange(.estimate)
+```
+
+#### MAE
+```{r}
+# Obtenemos el Mae para los 2  modelos
+map_dfr(.x = lista_predicciones_training_iniciales, .f = mae, truth = peso, estimate = .fitted, .id="modelo") %>% arrange(.estimate)
+```
+
+La presencia de outliers tambíen provoca que baje el valor de $R^2$, disminuya el valor de RMSE y MAE bajando la performance del modelo. 
+
+
+Entrenar el modelo6 con el método robusto
+
+```{r}
+modelo_inicial_m6_robusto <- lmrob(peso ~ altura + edad + genero + dias_actividad_fisica_semanal + consumo_diario_alcohol, data = datos_salud_modelo6)
+# Resumen del modelo
+tidy_inicial_m6_robusto <- tidy(modelo_inicial_m6_robusto, conf.int = TRUE)
+tidy_inicial_m6
+tidy_inicial_m6_robusto
+```
+
+El modelo Robusto corrige la variación de los coeficientes estimados que provoca la presencia de los nuevos datos outliers. Los valores de los coeficientes del modelo robusto se asemejan a los valores del modelo inicial con el dataset original.
+
+```{r}
+summary(modelo_inicial_m6_robusto)
+```
+
+
+Se realiza una Lista de modelo  modelo incial y el modelo robusto con los datos del modelo_6
+
+```{r}
+# Lista con todos los modelos
+modelos_iniciales_m6 <- list(modelo_inicial_m6 = modelo_inicial_m6, modelo_inicial_m6_robusto = modelo_inicial_m6_robusto)
+```
+
+
+#### RMSE
+```{r}
+# Aplicamos la función augment a los modelos
+lista_predicciones_training_iniciales_m6 = map(.x = modelos_iniciales_m6, .f = augment) 
+```
+
+```{r}
+# Obtenemos el RMSE para los 2 modelos
+map_dfr(.x = lista_predicciones_training_iniciales_m6, .f = rmse, truth = peso, estimate = .fitted, .id="modelo") %>% arrange(.estimate)
+```
+
+#### MAE
+```{r}
+# Obtenemos el RMSE para los 2 modelos
+map_dfr(.x = lista_predicciones_training_iniciales_m6, .f = mae, truth = peso, estimate = .fitted, .id="modelo") %>% arrange(.estimate)
+```
+
+ RMSE el mejor modelo es el no robusto porque tiene en cuenta en la evaluación la distancia entre el valor real y  el modelado al cuadrado.  Por lo tanto para los valores outlier el valor de RMSE aumenta para el modelo robusto que quiere ajustarse al modelo sin outliers. En el caso de MAE por muy poco el mejor modelo es el robusto que a diferencia del RMSE tiene en cuenta las distancia sin elevar al cuadrado por lo tanto no tiene tanto impacto las de los valores outliers. 
+ 
+## Conclusiones 
+* De acuerdo al estudio de correlación se observa que las dos variables que tiene mayor correlación con el peso son la altura y la edad.  
+
+* Con respecto a los modelos propuestos, para el set de entrenamiento el modelo que tiene mejor performance es el modelo propio_2 ya que es la que tiene mayor valor de $R^2$ y menor valor de RMSE y MAE. De todos modos no se obtiene una diferencia significativa respecto a los otros modelos. Al evaluar el set de test con datos nuevos el mejor modelo fue el modelo categoricas al dar el menor valor de RMSE y MAE. Del mismo modo no se obtiene una diferencia significativa con el resto de los modelos.
+
+* Al analizar los supuestos se puede decir que en el modelo inicial no se cumplen porque se observa heterocedasticidad, falta de normalidad y presencia de puntos con alto leverage.
+
+* Al incorporar el modelo_6 se observa outlier de alto valor de peso y baja estatura. Al comparar los valores de coeficiente estimados se observa una variación respecto al dataset original. También baja la performance del modelo porque disminuye  $R^2$ y aumenta el valor de RMSE y MAE. Cuando se compara el modelo inicial con un modelo Robusto para el dataset modelo_6 se observa que se corrige los valores de los coeficientes estimados, se asemejan al valor del dataset original (sin outliers). Pero si se compara la performance del modelo robusto con la del modelo inicial utilizando RMSE se observa que aumenta su valor porque  tiene en cuenta las distancias al cuadrado entre el valor real y el predicho. El metodo robusto ajusta solamente los coeficiente de estimación. En el caso de MAE por muy poco el  mejor modelo es el Robusto porque a diferencia de RMSE tiene en cuenta solamente la sumatoria de las diferencia y no al cuadrado. 

@@ -1,0 +1,4 @@
+"0","```r
+
+table(as.factor(datos_salud_train$consumo_semanal_snacks))
+```"

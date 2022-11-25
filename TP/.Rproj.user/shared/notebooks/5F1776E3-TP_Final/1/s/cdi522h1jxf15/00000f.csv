@@ -1,0 +1,6 @@
+"0","# boxplot de precios por metro cuadrado"
+"0","ggplot(data = AVG_pxm2_l3, aes(x = AVG_pxm2_l3)) + "
+"0","  geom_boxplot(alpha = 0.75, fill=""firebrick"") +"
+"0","  labs(title = ""Boxplot de precios promedio de barrios por m2"") +"
+"0","  labs(x = ""Precios promedio de barrios por m2"") +"
+"0","  theme_bw()"

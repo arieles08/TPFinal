@@ -1,0 +1,18 @@
+"0","```r
+
+#Se agrega la variable Consumo_snacks
+datos_salud_test <- datos_salud_test %>% 
+  mutate(Consumo_snacks = case_when(consumo_semanal_snacks == \"1 vez al día\" ~ as.character(\"Por lo menos una vez al día\"),
+                                   consumo_semanal_snacks == \"2 veces al día\" ~ as.character(\"Por lo menos una vez al día\"),
+                                   consumo_semanal_snacks == \"3 veces al día\" ~ as.character(\"Por lo menos una vez al día\"),
+                                   TRUE ~ as.character(consumo_semanal_snacks))) 
+
+
+# Se agrega la variable AVG_Peso_edad
+datos_salud_test = datos_salud_test %>% left_join(AVG_Peso_Edad, by='edad')
+
+
+#Se agrega la variable AVG_IMC en test
+datos_salud_test = datos_salud_test %>% left_join(AVG_IMC, by='edad')
+
+```"

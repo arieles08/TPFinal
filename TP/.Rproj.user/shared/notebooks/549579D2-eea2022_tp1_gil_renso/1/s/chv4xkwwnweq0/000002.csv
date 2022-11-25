@@ -1,0 +1,11 @@
+"0","```r
+# Plot de los Coeficientes
+ggplot(tidy_propio_1, aes(estimate, term, color=p.value < 0.05, xmin = conf.low, xmax = conf.high, height = 0)) +
+  geom_point() +
+  geom_vline(xintercept = 0, lty = 4, color = \"black\") +
+  geom_errorbarh() +
+  scale_color_manual(values=c('forestgreen', 'firebrick')) +
+  guides(color=\"none\") +
+  theme_bw() +
+  labs(y = \"Coeficientes β\", x = \"Estimación\")
+```"

@@ -1,0 +1,4 @@
+"0","```r
+# Obtenemos el RMSE para los 4 modelos
+map_dfr(.x = lista_predicciones_training, .f = rmse, truth = peso, estimate = .fitted, .id=\"modelo\") %>% arrange(.estimate)
+```"

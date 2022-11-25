@@ -1,0 +1,6 @@
+"0","```r
+AVG_Peso_Edad = datos_salud_train %>%
+   group_by(edad) %>%
+   summarise(AVG_Peso_Edad = mean(peso))
+AVG_Peso_Edad
+```"

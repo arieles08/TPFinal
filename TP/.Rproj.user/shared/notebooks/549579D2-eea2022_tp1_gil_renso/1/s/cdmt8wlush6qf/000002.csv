@@ -1,0 +1,31 @@
+"0","```r
+summary(modelo_propio_1)
+```"
+"1","
+Call:
+lm(formula = peso ~ altura + AVG_Peso_Edad + genero + Consumo_snacks + 
+    genero * AVG_Peso_Edad, data = datos_salud_train)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-28.561  -6.436  -1.122   5.041  75.652 
+
+Coefficients:
+                                                      Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                          -72.66599    3.41799 -21.260  < 2e-16 ***
+altura                                                 0.63988    0.01459  43.865  < 2e-16 ***
+AVG_Peso_Edad                                          0.45991    0.04567  10.071  < 2e-16 ***
+generoMasculino                                       -8.07869    4.00474  -2.017  0.04370 *  
+Consumo_snacks1 a 3 veces durante los últimos 7 días  -1.34996    0.27640  -4.884 1.06e-06 ***
+Consumo_snacks4 a 6 veces durante los últimos 7 días  -2.28471    0.44979  -5.079 3.88e-07 ***
+Consumo_snacks4 o más veces al día                    -2.59048    0.88091  -2.941  0.00329 ** 
+Consumo_snacksDato perdido                            -4.46840    1.95079  -2.291  0.02202 *  
+Consumo_snacksPor lo menos una vez al día             -0.81069    0.38763  -2.091  0.03653 *  
+AVG_Peso_Edad:generoMasculino                          0.15784    0.06767   2.333  0.01970 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 9.884 on 7014 degrees of freedom
+Multiple R-squared:  0.3586,	Adjusted R-squared:  0.3578 
+F-statistic: 435.8 on 9 and 7014 DF,  p-value: < 2.2e-16
+"

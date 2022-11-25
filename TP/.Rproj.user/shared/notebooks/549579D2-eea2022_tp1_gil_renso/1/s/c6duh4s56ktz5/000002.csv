@@ -1,0 +1,8 @@
+"0","```r
+library(tidyverse)
+
+library(tidymodels)
+library(rsample)
+library(ggplot2)
+library(GGally)
+```"

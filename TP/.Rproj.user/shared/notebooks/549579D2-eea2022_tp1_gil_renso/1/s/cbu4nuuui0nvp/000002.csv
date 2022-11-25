@@ -1,0 +1,6 @@
+"0","```r
+options(\"scipen\"=1)
+tidy_categoricas %>%
+  select(term, statistic, p.value, conf.low, conf.high)
+
+```"

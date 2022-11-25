@@ -1,0 +1,7 @@
+"0","```r
+# ajustamos modelo lineal múltiple
+modelo_propio_2 <- lm(peso ~ altura + AVG_IMC + genero + Consumo_snacks + genero*AVG_IMC, data = datos_salud_train)
+# Resumen del modelo
+tidy_propio_2 <- tidy(modelo_propio_2, conf.int = TRUE)
+tidy_propio_2
+```"

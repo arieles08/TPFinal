@@ -1,0 +1,4 @@
+"0","```r
+# Lista con todos los modelos
+modelos_iniciales_m6 <- list(modelo_inicial_m6 = modelo_inicial_m6, modelo_inicial_m6_robusto = modelo_inicial_m6_robusto)
+```"

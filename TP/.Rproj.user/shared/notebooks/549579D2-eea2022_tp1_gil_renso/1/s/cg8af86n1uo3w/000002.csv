@@ -1,0 +1,7 @@
+"0","```r
+# Modelo lineal múltiple
+modelo_categoricas <- lm(peso ~ altura + edad + genero + consumo_semanal_snacks + genero*edad, data = datos_salud_train)
+# Resumen del modelo
+tidy_categoricas <- tidy(modelo_categoricas, conf.int = TRUE)
+tidy_categoricas
+```"

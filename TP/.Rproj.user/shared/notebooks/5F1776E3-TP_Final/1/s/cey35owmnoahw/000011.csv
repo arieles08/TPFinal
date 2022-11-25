@@ -1,0 +1,5 @@
+"0","# Modelo ultiple"
+"0","# Modelo varias + barrios"
+"0","modelo_varias_l3 <- lm(price ~ surface_covered + surface_uncovered + rooms + property_type + l3, data = train_data)"
+"0","tidy_sc_tb <- tidy(modelo_sc_tb, conf.int = TRUE)"
+"0","tidy_sc_tb"

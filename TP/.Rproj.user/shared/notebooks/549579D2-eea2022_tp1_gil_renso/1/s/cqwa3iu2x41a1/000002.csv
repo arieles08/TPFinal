@@ -1,0 +1,7 @@
+"0","```r
+frecuencia_hambre_mensual_consumo_grasa<-table(datos_salud_train$frecuencia_hambre_mensual, datos_salud_train$consumo_semanal_comida_grasa)
+
+mosaicplot(frecuencia_hambre_mensual_consumo_grasa,col=c(\"gold\",\"ivory4\"),ylab=\"Consumo semanal de grasa\",xlab=\"Frecuencia de hambre mensual\",cex=0.7,las=2)
+
+
+```"

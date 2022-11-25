@@ -1,0 +1,6 @@
+"0","```r
+library(ggplot2)
+g <- ggplot(data=datos_salud_modelo6, aes(x = peso , altura, color=genero))+
+  geom_point()
+g
+```"

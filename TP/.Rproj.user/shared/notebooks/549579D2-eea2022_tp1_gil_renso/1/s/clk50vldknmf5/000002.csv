@@ -1,0 +1,4 @@
+"0","```r
+datos_salud_train = datos_salud_train %>% left_join(AVG_IMC, by='edad')
+head(datos_salud_train)
+```"

@@ -1,0 +1,5 @@
+"0","```r
+options(\"scipen\"=1)
+tidy_inicial %>%
+  select(term, statistic, p.value, conf.low, conf.high)
+```"

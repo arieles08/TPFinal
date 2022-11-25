@@ -1,0 +1,4 @@
+"0","```r
+# Aplicamos la función augment a los modelos
+lista_predicciones_training_iniciales = map(.x = modelos_iniciales, .f = augment) 
+```"
