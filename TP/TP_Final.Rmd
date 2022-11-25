@@ -130,7 +130,7 @@ head(train_data)
 $E(precio)=\beta_0+\beta_1surface\_covered+\beta_2tipo\_barrio$
 
 ```{r}
-# Modelo ultiple
+# Modelo multiple
 # Modelo varias + barrios
 modelo_varias_l3 <- lm(price ~ surface_covered + surface_uncovered + rooms + property_type + l3, data = train_data)
 tidy_sc_tb <- tidy(modelo_sc_tb, conf.int = TRUE)
