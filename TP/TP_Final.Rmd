@@ -34,7 +34,13 @@ library(GGally)
 ### Cargar archivo
 ```{r}
 datos_properati <- read.csv("properati_preprocesado_2022.csv")
+# creamos nueva variable de superficie descubierta
+
+datos_properati = datos_properati %>%
+  mutate(surface_uncovered = surface_total - surface_covered)
+
 glimpse(datos_properati)
+
 ```
 
 ## Correlación entre variables
@@ -109,9 +115,15 @@ AVG_pxm2_l3 = AVG_pxm2_l3 %>%
 write.csv(AVG_pxm2_l3, 'AVG_pxm2_l3.csv')
 
 # unimos esta clasificación al dataset original
-train_data = train_data %>% left_join(AVG_pxm2_l3, by = 'l3') 
+train_data = train_data %>% left_join(AVG_pxm2_l3[c("l3","tipo_barrio")], by = 'l3') 
+test_data = test_data %>% left_join(AVG_pxm2_l3[c("l3","tipo_barrio")], by = 'l3') 
 head(train_data)
+
+
 ```
+
+
+
 
 ### Modelo de regresión multiple
 
@@ -119,7 +131,8 @@ $E(precio)=\beta_0+\beta_1surface\_covered+\beta_2tipo\_barrio$
 
 ```{r}
 # Modelo ultiple
-modelo_sc_tb <- lm(price ~ surface_covered + tipo_barrio, data = train_data)
+# Modelo varias + barrios
+modelo_varias_l3 <- lm(price ~ surface_covered + surface_uncovered + rooms + property_type + l3, data = train_data)
 tidy_sc_tb <- tidy(modelo_sc_tb, conf.int = TRUE)
 tidy_sc_tb
 ```
