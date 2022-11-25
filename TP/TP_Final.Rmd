@@ -1,15 +1,40 @@
 ---
-title: "Trafajo FInal"
-output: html_notebook
+title: "Trabajo Práctico Nº1: Regresión lineal"
+author: "Renso Gil"
+date: "14/10/2022"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    df_print: paged
+    theme: united
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
+## Carga de librerías y datasets
+### Librerías a utiliza
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
 
-
+```
+Se cargan las librerías necesarias para el trabajo práctico.
+###Librerias
 ```{r}
-plot(cars)
+library(tidyverse)
+library(tidymodels)
+library(rsample)
+library(ggplot2)
+library(GGally)
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+### Cargar archivo
+```{r}
+datos_properati <- read.csv("properati_preprocesado_2022.csv")
+glimpse(datos_properati)
+```
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+

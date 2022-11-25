@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Renso Gil" />
 
 
-<title>Trafajo FInal</title>
+<title>Trabajo Práctico Nº1: Regresión lineal</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1762,31 +1763,62 @@ pre code {
 
 
 
-<h1 class="title toc-ignore">Trafajo FInal</h1>
+<h1 class="title toc-ignore">Trabajo Práctico Nº1: Regresión lineal</h1>
+<h4 class="author">Renso Gil</h4>
+<h4 class="date">14/10/2022</h4>
 
 </div>
 
 
 <!-- rnb-text-begin -->
+<div id="carga-de-librerías-y-datasets" class="section level2">
+<h2>Carga de librerías y datasets</h2>
+<div id="librerías-a-utiliza" class="section level3">
+<h3>Librerías a utiliza</h3>
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+<p>Se cargan las librerías necesarias para el trabajo práctico.
+###Librerias</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KHRpZHltb2RlbHMpXG5saWJyYXJ5KHJzYW1wbGUpXG5saWJyYXJ5KGdncGxvdDIpXG5saWJyYXJ5KEdHYWxseSlcbmBgYCJ9 -->
+<pre class="r"><code>library(tidyverse)
+library(tidymodels)
+library(rsample)
+library(ggplot2)
+library(GGally)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the
-toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and
-output will be saved alongside it (click the <em>Preview</em> button or
-press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the
-editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not
-run any R code chunks. Instead, the output of the chunk when it was last
-run in the editor is displayed.</p>
+</div>
+<div id="cargar-archivo" class="section level3">
+<h3>Cargar archivo</h3>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0b3NfcHJvcGVyYXRpIDwtIHJlYWQuY3N2KFwicHJvcGVyYXRpX3ByZXByb2Nlc2Fkb18yMDIyLmNzdlwiKVxuZ2xpbXBzZShkYXRvc19wcm9wZXJhdGkpXG5gYGAifQ== -->
+<pre class="r"><code>datos_properati &lt;- read.csv(&quot;properati_preprocesado_2022.csv&quot;)
+glimpse(datos_properati)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMjgsNzczXG5Db2x1bW5zOiA5XG4kIGlkICAgICAgICAgICAgICA8Y2hyPiBcIjFaSFlKZ3lBYkdVY1grdjFHZ2oxckE9PVwiLCBcIkJjQUhoN1VNTFFwUS9heHl5dXdxa1E9PVwiLCBcIkxsbVZUQ3doRnNxZWk1NHhvQ2J5TEE9PeKAplxuJCBsMyAgICAgICAgICAgICAgPGNocj4gXCJQYWxlcm1vXCIsIFwiQ2FiYWxsaXRvXCIsIFwiRmxvcmVzXCIsIFwiRmxvcmVzXCIsIFwiUmV0aXJvXCIsIFwiQWxtYWdyb1wiLCBcIlBhbGVybW9cIiwgXCJQYWxl4oCmXG4kIHJvb21zICAgICAgICAgICA8aW50PiAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCAxLCDigKZcbiQgYmF0aHJvb21zICAgICAgIDxpbnQ+IDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIDEsIOKAplxuJCBzdXJmYWNlX3RvdGFsICAgPGludD4gMzgsIDU1LCAzNywgMzcsIDI5LCA0MSwgMzYsIDMxLCAzMCwgMzYsIDMyLCAzNCwgMjcsIDMwLCAzMSwgNDAsIDM1LCAzNywgMzcsIDM3LCAz4oCmXG4kIHN1cmZhY2VfY292ZXJlZCA8aW50PiAzNSwgMzYsIDMyLCAzMywgMjYsIDM4LCAzMiwgMjksIDI4LCAzMywgMzIsIDI3LCAyNywgMzAsIDI3LCAzNiwgMzEsIDMzLCAzMywgMzMsIDPigKZcbiQgcHJpY2UgICAgICAgICAgIDxpbnQ+IDEyNTAwMCwgNzQ1MDAsIDc5OTAwLCA1MzcwMCwgNTcwMDAsIDk5MDAwLCA5MzAwMCwgNjgwMDAsIDg0OTAwLCA2NTAwMCwgNjIwMDAsIDY2N+KAplxuJCBwcm9wZXJ0eV90eXBlICAgPGNocj4gXCJEZXBhcnRhbWVudG9cIiwgXCJEZXBhcnRhbWVudG9cIiwgXCJEZXBhcnRhbWVudG9cIiwgXCJEZXBhcnRhbWVudG9cIiwgXCJEZXBhcnRhbWVudG9cIiwgXCLigKZcbiQgcHJlY2lvX2VuX21pbGVzIDxpbnQ+IDEyNSwgNzQsIDgwLCA1NCwgNTcsIDk5LCA5MywgNjgsIDg1LCA2NSwgNjIsIDY3LCA0NSwgNTgsIDQ1LCA3OCwgNzcsIDUzLCA1NCwgNTQsIOKAplxuIn0= -->
+<pre><code>Rows: 28,773
+Columns: 9
+$ id              &lt;chr&gt; &quot;1ZHYJgyAbGUcX+v1Ggj1rA==&quot;, &quot;BcAHh7UMLQpQ/axyyuwqkQ==&quot;, &quot;LlmVTCwhFsqei54xoCbyLA==…
+$ l3              &lt;chr&gt; &quot;Palermo&quot;, &quot;Caballito&quot;, &quot;Flores&quot;, &quot;Flores&quot;, &quot;Retiro&quot;, &quot;Almagro&quot;, &quot;Palermo&quot;, &quot;Pale…
+$ rooms           &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
+$ bathrooms       &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
+$ surface_total   &lt;int&gt; 38, 55, 37, 37, 29, 41, 36, 31, 30, 36, 32, 34, 27, 30, 31, 40, 35, 37, 37, 37, 3…
+$ surface_covered &lt;int&gt; 35, 36, 32, 33, 26, 38, 32, 29, 28, 33, 32, 27, 27, 30, 27, 36, 31, 33, 33, 33, 3…
+$ price           &lt;int&gt; 125000, 74500, 79900, 53700, 57000, 99000, 93000, 68000, 84900, 65000, 62000, 667…
+$ property_type   &lt;chr&gt; &quot;Departamento&quot;, &quot;Departamento&quot;, &quot;Departamento&quot;, &quot;Departamento&quot;, &quot;Departamento&quot;, &quot;…
+$ precio_en_miles &lt;int&gt; 125, 74, 80, 54, 57, 99, 93, 68, 85, 65, 62, 67, 45, 58, 45, 78, 77, 53, 54, 54, …</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+</div>
+</div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlRyYWZham8gRkluYWwiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCmBgYHtyfQ0KcGxvdChjYXJzKQ0KYGBgDQoNCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDdHJsK0FsdCtJKi4NCg0KV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDdHJsK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuDQoNClRoZSBwcmV2aWV3IHNob3dzIHlvdSBhIHJlbmRlcmVkIEhUTUwgY29weSBvZiB0aGUgY29udGVudHMgb2YgdGhlIGVkaXRvci4gQ29uc2VxdWVudGx5LCB1bmxpa2UgKktuaXQqLCAqUHJldmlldyogZG9lcyBub3QgcnVuIGFueSBSIGNvZGUgY2h1bmtzLiBJbnN0ZWFkLCB0aGUgb3V0cHV0IG9mIHRoZSBjaHVuayB3aGVuIGl0IHdhcyBsYXN0IHJ1biBpbiB0aGUgZWRpdG9yIGlzIGRpc3BsYXllZC4NCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlRyYWJham8gUHLDoWN0aWNvIE7CujE6IFJlZ3Jlc2nDs24gbGluZWFsIg0KYXV0aG9yOiAiUmVuc28gR2lsIg0KZGF0ZTogIjE0LzEwLzIwMjIiDQpvdXRwdXQ6DQogIGh0bWxfZG9jdW1lbnQ6DQogICAgdG9jOiB5ZXMNCiAgICB0b2NfZmxvYXQ6IHllcw0KICAgIGRmX3ByaW50OiBwYWdlZA0KICAgIHRoZW1lOiB1bml0ZWQNCmVkaXRvcl9vcHRpb25zOiANCiAgbWFya2Rvd246IA0KICAgIHdyYXA6IDcyDQotLS0NCiMjIENhcmdhIGRlIGxpYnJlcsOtYXMgeSBkYXRhc2V0cw0KIyMjIExpYnJlcsOtYXMgYSB1dGlsaXphDQpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0NCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkNCmtuaXRyOjpvcHRzX2NodW5rJHNldChtZXNzYWdlID0gRkFMU0UpDQprbml0cjo6b3B0c19jaHVuayRzZXQod2FybmluZyA9IEZBTFNFKQ0KDQpgYGANClNlIGNhcmdhbiBsYXMgbGlicmVyw61hcyBuZWNlc2FyaWFzIHBhcmEgZWwgdHJhYmFqbyBwcsOhY3RpY28uDQojIyNMaWJyZXJpYXMNCmBgYHtyfQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KHRpZHltb2RlbHMpDQpsaWJyYXJ5KHJzYW1wbGUpDQpsaWJyYXJ5KGdncGxvdDIpDQpsaWJyYXJ5KEdHYWxseSkNCmBgYA0KDQoNCiMjIyBDYXJnYXIgYXJjaGl2bw0KYGBge3J9DQpkYXRvc19wcm9wZXJhdGkgPC0gcmVhZC5jc3YoInByb3BlcmF0aV9wcmVwcm9jZXNhZG9fMjAyMi5jc3YiKQ0KZ2xpbXBzZShkYXRvc19wcm9wZXJhdGkpDQpgYGANCg0KDQo=</div>
 
 
 
