@@ -28,6 +28,7 @@ library(tidymodels)
 library(rsample)
 library(ggplot2)
 library(GGally)
+require(lightgbm)
 ```
 
 
@@ -115,11 +116,19 @@ AVG_pxm2_l3 = AVG_pxm2_l3 %>%
 write.csv(AVG_pxm2_l3, 'AVG_pxm2_l3.csv')
 
 # unimos esta clasificación al dataset original
-train_data = train_data %>% left_join(AVG_pxm2_l3[c("l3","tipo_barrio")], by = 'l3') 
-test_data = test_data %>% left_join(AVG_pxm2_l3[c("l3","tipo_barrio")], by = 'l3') 
+train_data = train_data %>% left_join(AVG_pxm2_l3[c("l3","tipo_barrio","AVG_pxm2_l3")], by = 'l3') 
+test_data = test_data %>% left_join(AVG_pxm2_l3[c("l3","tipo_barrio", "AVG_pxm2_l3")], by = 'l3') 
 head(train_data)
 
 
+```
+
+```{r}
+head(test_data)
+```
+
+```{r}
+head(AVG_pxm2_l3)
 ```
 
 
@@ -132,15 +141,72 @@ $E(precio)=\beta_0+\beta_1surface\_covered+\beta_2tipo\_barrio$
 ```{r}
 # Modelo multiple
 # Modelo varias + barrios
-modelo_varias_l3 <- lm(price ~ surface_covered + surface_uncovered + rooms + property_type + l3, data = train_data)
-tidy_sc_tb <- tidy(modelo_sc_tb, conf.int = TRUE)
-tidy_sc_tb
+modelo_varias <- lm(price ~ surface_covered + surface_uncovered + rooms + bathrooms + property_type + l3, data = train_data)
+tidy_varias <- tidy(modelo_varias, conf.int = TRUE)
+tidy_varias
 ```
 
 #### Significado de los coeficientes estimados 
 
-* $\hat{\beta_o}$ : (categoría basal de la variable categórica): es la media del precio para los barrios de precio alto sin superficie.
+* $\hat{\beta_o}$ : (categoría basal de la variable categórica): es la media del precio para las casas sin superficie.
 * $\hat{\beta_{surface\_covered}}$ : es la pendiente de incremento de precio por superficie para cada tipo de barrio. 
 * $\hat{\beta_{tipo\_barrioprecio\_bajo}}$ : es la diferencia en los niveles medios de precios de los barrios de precio bajos  respecto de los barrios de precio alto (categoría basal)
 * $\hat{\beta_{tipo\_barrioprecio\_medio}}$ : es la diferencia en los niveles medios de precios de los barrios de precio medios  respecto de los barrios de precio alto (categoría basal)
+
+#### Significatividad individual
+
+Test para las $\beta_k$
+Se pretende probar si el coeficiente de regresón de la variable es distinto de cero. 
+
+Hipótesis:
+
+* $H_0:\beta_k = 0$
+* $H_1:\beta_k ≠ 0$
+
+```{r}
+options("scipen"=1)
+tidy_varias %>%
+  select(term, statistic, p.value, conf.low, conf.high)
+```
+Se grafica los coeficientes estimados y sus intervalos de confianza.
+```{r}
+# Gráfico de los Coeficientes
+ggplot(tidy_varias, aes(estimate, term, color=p.value < 0.05, xmin = conf.low, xmax = conf.high, height = 0)) +
+  geom_point() +
+  geom_vline(xintercept = 0, lty = 4, color = "black") +
+  geom_errorbarh() +
+  scale_color_manual(values=c('firebrick', 'forestgreen')) +
+  guides(color="none") +
+  theme_bw() +
+  labs(y = "Coeficientes β", x = "Estimación")
+```
+
+#### Test F : evaluar significatividad global
+
+Hipótesis:
+
+* $H_0: β_1 = β_2 = · · · = β_{p−1} = 0$
+
+* $H_1:$ no todos los $β_k$ ($k = 1, 2,..., p−1$) son iguales a 0. 
+
+```{r}
+glance(modelo_varias)
+```
+
+```{r}
+summary(modelo_varias)
+```
+
+### Evaluación del modelo
+
+```{r}
+# Agregamos la predicciones al dataset de testeo
+pred_varias = augment(modelo_varias, newdata = test_data) 
+pred_varias %>% select(l3,rooms, surface_covered, surface_uncovered, property_type, .fitted, .resid)
+```
+
+```{r}
+rmse(data = pred_varias, truth = price, estimate = .fitted)
+```
+
 
