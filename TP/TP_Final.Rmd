@@ -212,6 +212,23 @@ pred_varias %>% select(l3,rooms, surface_covered, surface_uncovered, property_ty
 rmse(data = pred_varias, truth = price, estimate = .fitted)
 ```
 
+```{r}
+# Listado de modelos
+modelos_lineales = list(modelo_lineal_basico = modelo_varias)
+
+# Realizamos predicciones en test
+lista_predicciones_testing = map(.x = modelos_lineales, .f = augment, newdata = test_data) 
+
+# Obtenemos las métricas de performance en test
+performance_modelos_lineales_test <- map_dfr(.x = lista_predicciones_testing, .f = metrics, truth = price, estimate = .fitted, .id="modelo") %>%
+                                              filter(.metric!="rsq") %>% 
+                                              arrange(.metric, modelo) %>% 
+                                              mutate(.estimate= round(.estimate, digits = 2))
+performance_modelos_lineales_test
+```
+
+
+
 ### Aplicación de Random Forest
 
 ```{r}
@@ -219,9 +236,41 @@ modelo_randomForest <- randomForest(price ~ surface_covered + surface_uncovered 
 ```
 
 ```{r}
-# Agregamos la predicciones al dataset de testeo
-pred_randomForest = predict(modelo_randomForest, test_data)
+variables_train <- train_data %>% select(-price)
+variables_test <- test_data %>% select(-price)
+```
 
+```{r}
+precio_train <- train_data %>% select(price) %>% as.matrix()
+precio_test <- test_data %>% select(price) %>% as.matrix() 
+```
+
+
+
+```{r}
+# Agregamos la predicciones al dataset de testeo
+pred_randomForest = predict(modelo_randomForest, variables_test)
+
+```
+
+```{r}
+# Función augment para RF
+augment_RF <- function(modelo_red, matriz_variables, variable_target) {
+  y_pred <- predict(modelo_red, matriz_variables, verbose=0) %>% as.vector()
+  df_predicciones <- tibble(y = as.vector(variable_target), y_pred = y_pred) %>% 
+                      mutate(residuo=y-y_pred)
+  return(df_predicciones)
+}
+```
+
+
+```{r}
+performance_RF<-augment_RF(modelo_randomForest, variables_test, precio_test) %>%
+  metrics(truth = y, estimate = y_pred) %>% 
+  filter(.metric!="rsq") %>% 
+  arrange(.metric) %>% 
+  mutate(.estimate= round(.estimate, digits = 2))
+performance_RF
 ```
 
 
