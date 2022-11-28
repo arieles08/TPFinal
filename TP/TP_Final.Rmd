@@ -151,8 +151,9 @@ tidy_varias
 
 #### Significado de los coeficientes estimados 
 
-* $\hat{\beta_o}$ : (categoría basal de la variable categórica): es la media del precio para las casas sin superficie.
-* $\hat{\beta_{surface\_covered}}$ : es la pendiente de incremento de precio por superficie para cada tipo de barrio. 
+* $\hat{\beta_o}$ : (categoría basal de la variable categórica): es la media del precio para las casas de abasto sin superficie, sin baño y sin habitaciones
+* $\hat{\beta_{surface\_covered}}$ : es la pendiente de incremento de precio por superficie para cada tipo de barrio y tipo de propiedad
+* $\hat{\beta_{surface\_uncovered}}$ : es la pendiente de incremento de precio por superficie descubierta para cada tipo de barrio y tipo de propiedad
 * $\hat{\beta_{tipo\_barrioprecio\_bajo}}$ : es la diferencia en los niveles medios de precios de los barrios de precio bajos  respecto de los barrios de precio alto (categoría basal)
 * $\hat{\beta_{tipo\_barrioprecio\_medio}}$ : es la diferencia en los niveles medios de precios de los barrios de precio medios  respecto de los barrios de precio alto (categoría basal)
 
@@ -273,5 +274,25 @@ performance_RF<-augment_RF(modelo_randomForest, variables_test, precio_test) %>%
 performance_RF
 ```
 
+### Break down
 
+```{r}
+explain_rf <- DALEX::explain(model = modelo_randomForest,  
+                        data = variables_train,
+                           y = precio_train, 
+                       label = "Random Forest")
+```
+
+###Predict_parts
+
+```{r}
+bd_rf <- predict_parts(explainer = explain_rf,
+                 new_observation = variables_test,
+                            type = "break_down")
+bd_rf 
+```
+
+```{r}
+plot(bd_rf)
+```
 
