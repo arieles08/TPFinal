@@ -1,7 +1,7 @@
 ---
-title: "Trabajo Práctico Nº1: Regresión lineal"
+title: "Trabajo Práctico Breakdown con RandonForest en Dataset Properaty"
 author: "Renso Gil y Leandro Morinigo"
-date: "14/10/2022"
+date: "04/12/2022"
 output:
   html_document:
     toc: yes
@@ -13,9 +13,9 @@ editor_options:
     wrap: 72
 ---
 
-## Carga de librerías y datasets
+### Carga de librerías y datasets
 
-### Librerías a utiliza
+#### Librerías a utiliza
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -25,7 +25,7 @@ knitr::opts_chunk$set(warning = FALSE)
 ```
 
 Se cargan las librerías necesarias para el trabajo práctico.
-###Librerias
+#### Librerias
 
 ```{r}
 
@@ -34,12 +34,18 @@ library(tidymodels)
 library(rsample)
 library(ggplot2)
 library(GGally)
-library(DALEX)
+
+#Libreria Random Forest
 library(randomForest)
+
+# Librerías BreakDown
+library(DALEX)
 library(iBreakDown)
 ```
 
 ### Cargar archivo
+
+Se utiliza el dataset ya prosedado en la catedra de EEA : https://github.com/eea-uba/EEA-2022
 
 ```{r}
 datos_properati <- read.csv("properati_preprocesado_2022.csv")
@@ -52,7 +58,7 @@ glimpse(datos_properati)
 
 ```
 
-## Correlación entre variables
+### Correlación entre variables
 
 ```{r}
 # graficamos con ggpairs coloreando por property type
@@ -70,7 +76,7 @@ for(i in 1:g$nrow) {
 }
 g 
 ```
-
+```
 ### Particionar el dataset en entrenamiento y test
 
 ```{r}
@@ -85,68 +91,12 @@ train_data %>%
   dim_desc() 
 ```
 
-#### Nuevas variables
-
-Variables creadas a partir de los metros cuadradas por barrio
-
-```{r}
-# Creamos una nueva variable  de precios por metro cuadrado
-train_data = train_data %>% 
-  mutate(pxm2 = round(price/surface_total,0))
-# Armamos un dataframe que muestre los promedios de pxm2 en cada barrio
-AVG_pxm2_l3 = train_data %>% 
-  group_by(l3) %>%
-  summarise(AVG_pxm2_l3 = mean(pxm2))
-AVG_pxm2_l3
-```
-
-Distribución del precio promedio por m2
-
-```{r}
-# boxplot de precios por metro cuadrado
-ggplot(data = AVG_pxm2_l3, aes(x = AVG_pxm2_l3)) + 
-  geom_boxplot(alpha = 0.75, fill="firebrick") +
-  labs(title = "Boxplot de precios promedio de barrios por m2") +
-  labs(x = "Precios promedio de barrios por m2") +
-  theme_bw()
-```
-
-Aplicaremos el siguiente criterio para agrupar los barrios en:
-
--   precio_bajo: barrios cuyo precio promedio por m2 sea menor al Q1
--   precio_medio: barrios cuyo precio promedio se encuentre en el RI
--   precio_alto: barrios cuyo precio promedio por m2 sea mayor al Q3
-
-```{r}
-# armamos nueva variable siguiendo tales criterios
-AVG_pxm2_l3 = AVG_pxm2_l3 %>%
-  mutate(tipo_barrio = case_when(
-    AVG_pxm2_l3 < quantile(AVG_pxm2_l3)[2] ~ "precio_bajo",
-    AVG_pxm2_l3 >= quantile(AVG_pxm2_l3)[2] & AVG_pxm2_l3 < quantile(AVG_pxm2_l3)[4] ~ "precio_medio",
-    TRUE ~ "precio_alto"
-                                 )
-         )
-write.csv(AVG_pxm2_l3, 'AVG_pxm2_l3.csv')
-
-# unimos esta clasificación al dataset original
-train_data = train_data %>% left_join(AVG_pxm2_l3[c("l3","tipo_barrio","AVG_pxm2_l3")], by = 'l3') 
-test_data = test_data %>% left_join(AVG_pxm2_l3[c("l3","tipo_barrio", "AVG_pxm2_l3")], by = 'l3') 
-head(train_data)
-
-
-```
-
-```{r}
-head(test_data)
-```
-
-```{r}
-head(AVG_pxm2_l3)
-```
 
 ### Modelo de regresión multiple
 
-$E(precio)=\beta_0+\beta_1surface\_covered+\beta_2tipo\_barrio$
+Se tomo como referencia El modelo de regresión lineal multiple de properati de la catedra: https://github.com/eea-uba/EEA-2022
+
+$E(precio)=\beta_0+\beta_1surface\_covered+\beta_2surface\_uncovered+\beta_3rooms+\beta_4bathrooms+\beta_5property_type+\beta_6l3$
 
 ```{r}
 # Modelo multiple
@@ -156,22 +106,22 @@ tidy_varias <- tidy(modelo_varias, conf.int = TRUE)
 tidy_varias
 ```
 
-#### Significado de los coeficientes estimados
 
--   $\hat{\beta_o}$ : (categoría basal de la variable categórica): es la
-    media del precio para las casas de abasto sin superficie, sin baño y
-    sin habitaciones
--   $\hat{\beta_{surface\_covered}}$ : es la pendiente de incremento de
-    precio por superficie para cada tipo de barrio y tipo de propiedad
--   $\hat{\beta_{surface\_uncovered}}$ : es la pendiente de incremento
-    de precio por superficie descubierta para cada tipo de barrio y tipo
-    de propiedad
--   $\hat{\beta_{tipo\_barrioprecio\_bajo}}$ : es la diferencia en los
-    niveles medios de precios de los barrios de precio bajos respecto de
-    los barrios de precio alto (categoría basal)
--   $\hat{\beta_{tipo\_barrioprecio\_medio}}$ : es la diferencia en los
-    niveles medios de precios de los barrios de precio medios respecto
-    de los barrios de precio alto (categoría basal)
+#### Test F : evaluar significatividad global
+
+Hipótesis:
+
+-   $H_0: β_1 = β_2 = · · · = β_{p−1} = 0$
+
+-   $H_1:$ no todos los $β_k$ ($k = 1, 2,..., p−1$) son iguales a 0.
+
+```{r}
+glance(modelo_varias)
+```
+
+```{r}
+summary(modelo_varias)
+```
 
 #### Significatividad individual
 
@@ -203,21 +153,6 @@ ggplot(tidy_varias, aes(estimate, term, color=p.value < 0.05, xmin = conf.low, x
   labs(y = "Coeficientes β", x = "Estimación")
 ```
 
-#### Test F : evaluar significatividad global
-
-Hipótesis:
-
--   $H_0: β_1 = β_2 = · · · = β_{p−1} = 0$
-
--   $H_1:$ no todos los $β_k$ ($k = 1, 2,..., p−1$) son iguales a 0.
-
-```{r}
-glance(modelo_varias)
-```
-
-```{r}
-summary(modelo_varias)
-```
 
 ### Evaluación del modelo
 
@@ -225,10 +160,6 @@ summary(modelo_varias)
 # Agregamos la predicciones al dataset de testeo
 pred_varias = augment(modelo_varias, newdata = test_data) 
 pred_varias %>% select(l3,rooms, surface_covered, surface_uncovered, property_type, .fitted, .resid)
-```
-
-```{r}
-rmse(data = pred_varias, truth = price, estimate = .fitted)
 ```
 
 ```{r}
@@ -299,9 +230,31 @@ explain_rf <- DALEX::explain(model = modelo_randomForest,
 ###Predict_parts
 
 ```{r}
+variable_ya<-filter(variables_test, l3 == "Puerto Madero") 
+
+variable_y<-variable_ya[9,]
+variable_y
+```
+
+
+```{r}
 bd_rf <- predict_parts(explainer = explain_rf,
-                 new_observation = variables_test,
+                 new_observation = variable_y,
                             type = "break_down")
+bd_rf 
+```
+
+```{r}
+plot(bd_rf)
+```
+
+#### Cambiar el orden 
+
+```{r}
+bd_rf <- predict_parts(explainer = explain_rf,
+                 new_observation = variable_y,
+                 order = c("surface_uncovered","bathrooms","surface_covered","l3","property_type" , "rooms"),
+                 type = "break_down")
 bd_rf 
 ```
 
@@ -313,24 +266,11 @@ plot(bd_rf)
 
 ```{r}
 ibd_rf <- predict_parts(explainer = explain_rf,
-                 new_observation = variables_test,
+                 new_observation = variable_y,
                             type = "break_down_interactions")
 ibd_rf 
 ```
 
 ```{r}
 plot(ibd_rf)
-```
-
-### Shapley Values
-
-```{r}
-shap_rf <- predict_parts(explainer = explain_rf,
-                 new_observation = variables_test,
-                            type = "shap")
-shap_rf
-```
-
-```{r}
-plot(shap_rf)
 ```
