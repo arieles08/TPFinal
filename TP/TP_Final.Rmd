@@ -253,7 +253,7 @@ modelo_randomForest <- randomForest(price ~ surface_covered + surface_uncovered 
 ```
 
 ```{r}
-variables_train <- train_data %>% select(-price)
+variables_train <- train_data %>% select(surface_covered, surface_uncovered, rooms, bathrooms, property_type,l3)
 variables_test <- test_data %>% select(-price)
 ```
 
