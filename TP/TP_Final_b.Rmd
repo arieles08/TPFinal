@@ -249,10 +249,6 @@ performance_modelos_lineales_test
 ### Aplicación de Random Forest
 
 ```{r}
-modelo_randomForest <- randomForest(price ~ surface_covered + surface_uncovered + rooms + bathrooms + property_type + l3, data = train_data)
-```
-
-```{r}
 variables_train <- train_data %>% select(surface_covered, surface_uncovered, rooms, bathrooms, property_type,l3)
 variables_test <- test_data %>% select(surface_covered, surface_uncovered, rooms, bathrooms, property_type,l3)
 ```
@@ -261,6 +257,12 @@ variables_test <- test_data %>% select(surface_covered, surface_uncovered, rooms
 precio_train <- train_data %>% select(price) %>% as.matrix()
 precio_test <- test_data %>% select(price) %>% as.matrix() 
 ```
+
+
+```{r}
+modelo_randomForest <- randomForest(price ~ surface_covered + surface_uncovered + rooms + bathrooms + property_type + l3, data = train_data)
+```
+
 
 ```{r}
 # Agregamos la predicciones al dataset de testeo
@@ -300,8 +302,20 @@ explain_rf <- DALEX::explain(model = modelo_randomForest,
 
 ```{r}
 bd_rf <- predict_parts(explainer = explain_rf,
-                 new_observation = variables_test,
+                 new_observation = variable_y,
                             type = "break_down")
+bd_rf 
+```
+
+```{r}
+plot(bd_rf)
+```
+
+```{r}
+bd_rf <- predict_parts(explainer = explain_rf,
+                 new_observation = variable_y,
+                 order = c("surface_uncovered","bathrooms","surface_covered","l3","property_type" , "rooms"),
+                 type = "break_down")
 bd_rf 
 ```
 
@@ -312,8 +326,25 @@ plot(bd_rf)
 ### iBreak down
 
 ```{r}
+variable_ya<-filter(variables_test, l3 == "Puerto Madero") 
+variable_ya
+```
+
+
+```{r}
+variable_ya<-filter(variables_test, l3 == "Puerto Madero") 
+
+variable_y<-variable_ya[9,]
+variable_y
+```
+```{r}
+mean(pred_randomForest[variables_test$l3 == "Puerto Madero"]
+```
+
+
+```{r}
 ibd_rf <- predict_parts(explainer = explain_rf,
-                 new_observation = variables_test,
+                 new_observation = variable_y,
                             type = "break_down_interactions")
 ibd_rf 
 ```
