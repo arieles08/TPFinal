@@ -9,6 +9,8 @@ library("stringr")
 
 #carga:
 datos_properati <- read.csv("properati_preprocesado_2022.csv")
+datos_properati = datos_properati %>%
+  mutate(surface_uncovered = surface_total - surface_covered)
 
 # Create dummy variable
 datos_properati_d <- dummy_cols(datos_properati, 
@@ -47,13 +49,19 @@ explain_rf <- DALEX::explain(model = modelo_randomForest,
                              label = "Random Forest")
 
 #selecciono observacion
-variables_test <- test_data_d %>% select(-c(l3, surface_total, price, precio_en_miles))
+#variables_test <- test_data_d %>% select(-c(l3, surface_total, price, precio_en_miles))
 
-variable_ya<-filter(variables_test, l3_PuertoMadero == 1) #filtra el barrio
+variable_ya<-filter(test_data_d, l3_PuertoMadero == 1) #filtra el barrio
 
 variable_y<-variable_ya[9,] #selecciona la n° 9 de ese barrio
-str(variables_test)
+str(variable_y)
 
+#breakdown
+bd_rf <- predict_parts(explainer = explain_rf,
+                        new_observation = variable_y,
+                        type = "break_down")
+bd_rf
+plot(bd_rf)
 
 #ibreakdown
 ibd_rf <- predict_parts(explainer = explain_rf,
