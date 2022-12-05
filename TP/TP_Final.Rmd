@@ -1,5 +1,5 @@
 ---
-title: "Trabajo Práctico Breakdown con RandonForest en Dataset Properaty"
+title: "Trabajo FInal: IBreakdown con RandomForest en Dataset Properaty"
 author: "Renso Gil y Leandro Morinigo"
 date: "04/12/2022"
 output:
@@ -45,7 +45,7 @@ library(iBreakDown)
 
 ### Cargar archivo
 
-Se utiliza el dataset ya prosedado en la catedra de EEA : https://github.com/eea-uba/EEA-2022
+Se utiliza el dataset ya procesado en la cátedra de EEA : https://github.com/eea-uba/EEA-2022
 
 ```{r}
 datos_properati <- read.csv("properati_preprocesado_2022.csv")
@@ -76,8 +76,10 @@ for(i in 1:g$nrow) {
 }
 g 
 ```
-```
+
 ### Particionar el dataset en entrenamiento y test
+
+Partición en train 75% y test 25%
 
 ```{r}
 # fijamos semilla
@@ -185,7 +187,7 @@ modelo_randomForest <- randomForest(price ~ surface_covered + surface_uncovered 
 
 ```{r}
 variables_train <- train_data %>% select(surface_covered, surface_uncovered, rooms, bathrooms, property_type,l3)
-variables_test <- test_data %>% select(surface_covered, surface_uncovered, rooms, bathrooms, property_type,l3)
+variables_test <- test_data %>% select(surface_covered, surface_uncovered, rooms, bathrooms, property_type,l3,id)
 ```
 
 ```{r}
@@ -220,6 +222,7 @@ performance_RF
 
 ### Break down
 
+
 ```{r}
 explain_rf <- DALEX::explain(model = modelo_randomForest,  
                         data = variables_train,
@@ -227,7 +230,7 @@ explain_rf <- DALEX::explain(model = modelo_randomForest,
                        label = "Random Forest")
 ```
 
-###Predict_parts
+#### Predict_parts
 
 ```{r}
 variable_ya<-filter(variables_test, l3 == "Puerto Madero") 
@@ -274,3 +277,28 @@ ibd_rf
 ```{r}
 plot(ibd_rf)
 ```
+
+### Otra librería
+
+```{r}
+
+library("breakDown")
+explain_5 <- broken( modelo_randomForest, new_observation = variable_y ,
+data = variables_train  ,
+baseline = "intercept" ,
+direction = "up " )
+```
+```{r}
+explain_5
+```
+
+```{r}
+plot(explain_5)
+```
+
+
+
+
+
+
+
