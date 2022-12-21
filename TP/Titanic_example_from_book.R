@@ -23,6 +23,17 @@ johnny_d$sibsp    <- 0
 johnny_d$parch    <- 0 
 
 
+#johnny_d from book:
+johnny_d <- data.frame(
+  class = factor("1st", levels = c("1st", "2nd", "3rd", 
+                                   "deck crew", "engineering crew", 
+                                   "restaurant staff", "victualling crew")),
+  gender = factor("male", levels = c("female", "male")),
+  age = 8, sibsp = 0, parch = 0, fare = 72,
+  embarked = factor("Southampton", levels = c("Belfast",
+                                              "Cherbourg","Queenstown","Southampton")))
+
+titanic_imputed[1,1:8]
 
 #Modelo Random Forest -> titanic_rf 
 titanic_rf <- archivist:: aread("pbiecek/models/4e0fc")
@@ -40,8 +51,8 @@ explain_rf <- DALEX::explain(model = titanic_rf,
 #Paso 2.1: breakdown a Johnny_D:
 bd_rf1 <- predict_parts(explainer = explain_rf,
                        new_observation = johnny_d,
-                       type = "break_down",
-                       order = c("age", "class", "fare", "gender", "embarked", "sibsp", "parch"))
+                       type = "break_down")
+                       #,order = c("age", "class", "fare", "gender", "embarked", "sibsp", "parch"))
 bd_rf1
 
 plot(bd_rf1)
