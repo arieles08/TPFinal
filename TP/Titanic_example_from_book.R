@@ -37,10 +37,20 @@ explain_rf <- DALEX::explain(model = titanic_rf,
                              y = titanic_imputed$survived == "yes", 
                              label = "Random Forest")
 
-#Paso 2: breakdown a henry
-bd_rf <- predict_parts(explainer = explain_rf,
+#Paso 2.1: breakdown a Johnny_D:
+bd_rf1 <- predict_parts(explainer = explain_rf,
+                       new_observation = johnny_d,
+                       type = "break_down",
+                       order = c("age", "class", "fare", "gender", "embarked", "sibsp", "parch"))
+bd_rf1
+
+plot(bd_rf1)
+
+#Paso 2.2: breakdown a henry
+bd_rf2 <- predict_parts(explainer = explain_rf,
                        new_observation = henry,
                        type = "break_down")
-bd_rf
+bd_rf2
 
-plot(bd_rf)
+plot(bd_rf2)
+
