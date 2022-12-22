@@ -7,21 +7,14 @@ library("DALEX")
 #install.packages("archivist")
 
 #Carga el Dataset train: titanic_imputed
-titanic_imputed <- archivist::aread("pbiecek/models/27e5c")
-
-#Explora Dataset Train
-dim(titanic_imputed) #2207 filas y 9 cols
-
-str(titanic_imputed)
+titanic_imputed <- archivist::aread("pbiecek/models/27e5c") #2207 filas y 9 cols
 
 #Modelo Random Forest -> titanic_rf 
 titanic_rf <- archivist:: aread("pbiecek/models/4e0fc")
 
 
-#Genera el Henry 
-henry <- archivist::aread("pbiecek/models/a6538")
-
-#Create johnny_d from book:
+#--------------Johnny D----------------------------
+#Crea Johnny D (identico al libro):
 johnny_d <- data.frame(
   class = factor("1st", levels = c("1st", "2nd", "3rd", 
                                    "deck crew", "engineering crew", 
@@ -33,11 +26,6 @@ johnny_d <- data.frame(
 
 #prediccion para johnny_d --> tiene que dar  yes= 0.422
 predict(titanic_rf, johnny_d2, type = "prob")
-
-johnny_d2 <- johnny_d
-johnny_d2$age <- 90
-
-table(titanic_imputed$age)
 
 #Paso 1: explain al random forest
 explain_rf <- DALEX::explain(model = titanic_rf,  
@@ -99,7 +87,7 @@ mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.422 --> LLEGAMOS AL
 
 #----------------------------------
 
-
+#--------------Henry----------------------------
 #Paso 2.2: breakdown a henry
 bd_rf2 <- predict_parts(explainer = explain_rf,
                        new_observation = henry,
@@ -110,29 +98,3 @@ plot(bd_rf2)
 
 
 
-#-----------------------------------------------------------------
-#pruebas previas:
-
-#Genero a Johnny_D:
-johnny_d <- henry
-johnny_d$gender   <- 'male'
-johnny_d$age      <- 8
-johnny_d$class    <- '1st'
-johnny_d$embarked <- 'Southampton'
-johnny_d$fare     <- 72 
-johnny_d$sibsp    <- 0 
-johnny_d$parch    <- 0 
-
-filtro1 = (explain_rf[["data"]]$age == 8)  
-df_fitro1 <- explain_rf[["data"]][filtro1,]
-
-mean(explain_rf[["y_hat"]][filtro1]) #-> 0.472 (-0.033) || 10 registros #--> contribucion: +0.2366905
-
-#2: class = 1st:  0.591 = 0.235 + 0.27 + 0.086
-filtro2 = (explain_rf[["data"]]$class == '1st')  
-df_fitro2 <- explain_rf[["data"]][filtro2,]
-
-mean(explain_rf[["y_hat"]][filtro2]) #-> 0.5762963 (-0.0147) || 324 registros #--> contribucion: +0.2366905
-
-
-sum(filtro2)
