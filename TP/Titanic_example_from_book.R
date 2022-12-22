@@ -59,23 +59,45 @@ plot(bd_rf1)
 data <- explain_rf[["data"]] #2207 registros y 9 cols
 pred <- explain_rf[["y_hat"]]
 
-#0: intercept    -> 0.235
+#0: intercept              -> 0.235
 mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.2353095
 
 
-#1: age = 8:     -> 0.505 = +0.27 + (0.235)
+#1: age = 8:               -> 0.505 = +0.27 + (0.235)
 data$age <- johnny_d[,3]
 mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.505121
 
 
-#2: class = 1st  -> 0.591 = +0.086 + (0.235 + 0.27)    
+#2: class = 1st            -> 0.591 = +0.086 + (0.235 + 0.27)    
 data$class <- johnny_d[,1]
 mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.5906969
 
 
-#3: fare = 72  -> 0.544= -0.046 + (0.235 + 0.27 + 0.086)
+#3: fare = 72              -> 0.544 = -0.046 + (0.235 + 0.27 + 0.086)
 data$fare <- johnny_d[,6]
 mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.5443561
+
+
+#4: gender = male          -> 0.461 = -0.083 + (0.235 + 0.27 + 0.086 - 0.046)
+data$gender <- johnny_d[,2]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.4611518
+
+
+#5: embarked = Southampton -> 0.458 = -0.003 + (0.235 + 0.27 + 0.086 - 0.046 - 0.083)
+data$embarked <- johnny_d[,7]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.4584422
+
+
+#6: sibsp = 0              -> 0.452 = -0.006 + (0.235 + 0.27 + 0.086 - 0.046 - 0.083 - 0.003)
+data$sibsp <- johnny_d[,4]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.4523398
+
+
+#6: parch = 0              -> 0.422 = -0.03 + (0.235 + 0.27 + 0.086 - 0.046 - 0.083 - 0.003 - 0.006)
+data$parch <- johnny_d[,5]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.422 --> LLEGAMOS AL VALOR DE LA PREDICCION
+
+#----------------------------------
 
 
 #Paso 2.2: breakdown a henry
