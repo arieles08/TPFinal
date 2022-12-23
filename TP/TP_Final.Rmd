@@ -233,9 +233,9 @@ explain_rf <- DALEX::explain(model = modelo_randomForest,
 #### Predict_parts
 
 ```{r}
-variable_ya<-filter(variables_test, l3 == "Puerto Madero") 
+variable_ya<-filter(variables_test, l3 == "Almagro") 
 
-variable_y<-variable_ya[9,]
+variable_y<-variable_ya[5,]
 variable_y
 ```
 
@@ -277,28 +277,5 @@ ibd_rf
 ```{r}
 plot(ibd_rf)
 ```
-
-### Otra librería
-
-```{r}
-
-library("breakDown")
-explain_5 <- broken( modelo_randomForest, new_observation = variable_y ,
-data = variables_train  ,
-baseline = "intercept" ,
-direction = "up " )
-```
-```{r}
-explain_5
-```
-
-```{r}
-plot(explain_5)
-```
-
-
-
-
-
 
 
