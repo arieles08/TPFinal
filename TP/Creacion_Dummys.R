@@ -6,6 +6,11 @@ install.packages("stringr")
 library(fastDummies)
 require(data.table)
 library("stringr") 
+library("dplyr")
+library("rsample")
+library(randomForest)
+library(DALEX)
+library(iBreakDown)
 
 #carga:
 datos_properati <- read.csv("properati_preprocesado_2022.csv")
@@ -42,19 +47,33 @@ test_data_d <- testing(train_test_d)
 #opcion: modelo_randomForest <- randomForest(price ~.-id -l3 -precio_en_miles -surface_total, data = train_data_d)
 modelo_randomForest <- randomForest(price ~.-id, data = train_data_d)
 
-importance(modelo_randomForest)
+#Feature Importance
+FI <- data.frame(importance(modelo_randomForest))
+FI <- cbind(rownames(FI),FI)
+FI[order(FI$IncNodePurity, decreasing = TRUE), ][2]
+
 
 #explain
 explain_rf <- DALEX::explain(model = modelo_randomForest,  
                              label = "Random Forest")
 
-#selecciono observacion
+#selecciono observacion_1: en Puerto Madero
 #variables_test <- test_data_d %>% select(-c(l3, surface_total, price, precio_en_miles))
 
 variable_ya<-filter(test_data_d, l3_PuertoMadero == 1) #filtra el barrio
 
 variable_y<-variable_ya[9,] #selecciona la n° 9 de ese barrio
-str(variable_y)
+
+
+#selecciono observacion_2: en Almagro
+variable_ya2 <-filter(variables_test, l3_Almagro == 1 ) 
+variable_y2 <-variable_ya2[5,]
+variable_y2
+
+#prediccion para la observacion seleccionada:
+predict(modelo_randomForest, variable_y) #420695.9
+predict(modelo_randomForest, var_y_small)
+
 
 #breakdown
 bd_rf <- predict_parts(explainer = explain_rf,
@@ -63,8 +82,11 @@ bd_rf <- predict_parts(explainer = explain_rf,
 bd_rf
 plot(bd_rf)
 
+
 #ibreakdown
 ibd_rf <- predict_parts(explainer = explain_rf,
                         new_observation = variable_y,
                         type = "break_down_interactions")
 ibd_rf 
+
+plot(ibd_rf)
