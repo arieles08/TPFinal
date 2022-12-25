@@ -66,27 +66,42 @@ variable_y<-variable_ya[9,] #selecciona la n° 9 de ese barrio
 
 
 #selecciono observacion_2: en Almagro
-variable_ya2 <-filter(variables_test, l3_Almagro == 1 ) 
+variable_ya2 <-filter(test_data_d, l3_Almagro == 1 ) 
 variable_y2 <-variable_ya2[5,]
 variable_y2
 
 #prediccion para la observacion seleccionada:
 predict(modelo_randomForest, variable_y) #420695.9
-predict(modelo_randomForest, var_y_small)
+predict(modelo_randomForest, variable_y2)#158209.3
 
 
-#breakdown
+#breakdown observacion_1
 bd_rf <- predict_parts(explainer = explain_rf,
                         new_observation = variable_y,
                         type = "break_down")
 bd_rf
 plot(bd_rf)
 
-
-#ibreakdown
+#ibreakdown observacion_1
 ibd_rf <- predict_parts(explainer = explain_rf,
                         new_observation = variable_y,
                         type = "break_down_interactions")
 ibd_rf 
 
 plot(ibd_rf)
+
+
+#breakdown observacion_2
+bd_rf2 <- predict_parts(explainer = explain_rf,
+                       new_observation = variable_y2,
+                       type = "break_down")
+bd_rf2
+plot(bd_rf2)
+
+#ibreakdown observacion_2
+ibd_rf2 <- predict_parts(explainer = explain_rf,
+                        new_observation = variable_y2,
+                        type = "break_down_interactions")
+ibd_rf2 
+
+plot(ibd_rf2)

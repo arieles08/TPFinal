@@ -25,7 +25,7 @@ johnny_d <- data.frame(
                                               "Cherbourg","Queenstown","Southampton")))
 
 #prediccion para johnny_d --> tiene que dar  yes= 0.422
-predict(titanic_rf, johnny_d2, type = "prob")
+predict(titanic_rf, johnny_d, type = "prob")
 
 #Paso 1: explain al random forest
 explain_rf <- DALEX::explain(model = titanic_rf,  
@@ -86,6 +86,64 @@ data$parch <- johnny_d[,5]
 mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.422 --> LLEGAMOS AL VALOR DE LA PREDICCION
 
 #----------------------------------
+# Entendiendo la interpretación de las predicciones que usa para las contribuciones
+dt <- explain_rf[["data"]]
+dt <- data.table(dt)
+data <- explain_rf[["data"]] #21579 registros y 8 cols
+
+#0: intercept              -> 0.235
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.2353095
+dt[,pred0 := predict(titanic_rf, data, type = "prob")[,'yes']]
+
+#1: age = 8:               -> 0.505 = +0.27 + (0.235)
+data$age <- johnny_d[,3]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.505121
+
+dt[,age_2 := johnny_d[,3]]
+dt[,pred1 := predict(titanic_rf, data, type = "prob")[,'yes']]
+
+#2: class = 1st            -> 0.591 = +0.086 + (0.235 + 0.27)    
+data$class <- johnny_d[,1]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.5906969
+dt[,class_2 := johnny_d[,1]]
+dt[,pred2 := predict(titanic_rf, data, type = "prob")[,'yes']]
+
+#3: fare = 72              -> 0.544 = -0.046 + (0.235 + 0.27 + 0.086)
+data$fare <- johnny_d[,6]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.5443561
+dt[,fare_2 := johnny_d[,6]]
+dt[,pred3 := predict(titanic_rf, data, type = "prob")[,'yes']]
+
+#4: gender = male          -> 0.461 = -0.083 + (0.235 + 0.27 + 0.086 - 0.046)
+data$gender <- johnny_d[,2]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.4611518
+dt[,gender_2 := johnny_d[,2]]
+dt[,pred4 := predict(titanic_rf, data, type = "prob")[,'yes']]
+
+
+#5: embarked = Southampton -> 0.458 = -0.003 + (0.235 + 0.27 + 0.086 - 0.046 - 0.083)
+data$embarked <- johnny_d[,7]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.4584422
+dt[,embarked_2 := johnny_d[,7]]
+dt[,pred5 := predict(titanic_rf, data, type = "prob")[,'yes']]
+
+#6: sibsp = 0              -> 0.452 = -0.006 + (0.235 + 0.27 + 0.086 - 0.046 - 0.083 - 0.003)
+data$sibsp <- johnny_d[,4]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.4523398
+dt[,sibsp_2 := johnny_d[,4]]
+dt[,pred6 := predict(titanic_rf, data, type = "prob")[,'yes']]
+
+
+#7: parch = 0              -> 0.422 = -0.03 + (0.235 + 0.27 + 0.086 - 0.046 - 0.083 - 0.003 - 0.006)
+data$parch <- johnny_d[,5]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.422 --> LLEGAMOS AL VALOR DE LA PREDICCION
+dt[,parch_2 := johnny_d[,5]]
+dt[,pred7 := predict(titanic_rf, data, type = "prob")[,'yes']]
+
+#exporto archivo:
+fwrite(dt, file= "BD_johnnyd_step-by-step.csv", sep = ",")
+
+getwd()
 
 #--------------Henry----------------------------
 #Paso 2.2: breakdown a henry

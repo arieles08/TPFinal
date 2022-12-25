@@ -44,11 +44,11 @@ importance(modelo_randomForest)
 explain_rf <- DALEX::explain(model = modelo_randomForest,  
                              label = "Random Forest")
 
-#selecciono observacion
-
+#selecciono observacion_1: en Puerto Madero
 variable_ya <- filter(test_data_d, l3 == "Puerto Madero") #filtra el barrio
 
 variable_y<-variable_ya[9,] #selecciona la n° 9 de ese barrio (saca id y price para prediccion)
+
 
 #breakdown
 bd_rf <- predict_parts(explainer = explain_rf,
@@ -99,6 +99,11 @@ mean(predict(modelo_randomForest, data)) #-> 240551.4 --> LLEGAMOS AL VALOR DE L
 
 #verificación:
 predict(modelo_randomForest, variable_y) #-> 240551.4 --> VALOR PREDICCION COINCIDE
+
+
+
+
+
 
 #--------------------------------------------------------------------
 # Entendiendo la interpretación de las predicciones que usa para las contribuciones
