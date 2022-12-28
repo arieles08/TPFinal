@@ -221,10 +221,6 @@ Se entrenan los datos con RandomForest
 modelo_randomForest <- randomForest(price ~.-id, data = train_data_d)
 ```
 
-```{r}
-variables_train <- train_data_d %>% select(surface_covered, surface_uncovered, rooms, bathrooms, property_type,l3)
-variables_test <- test_data %>% select(surface_covered, surface_uncovered, rooms, bathrooms, property_type,l3,id)
-```
 
 ```{r}
 precio_train <- train_data_d %>% select(price) %>% as.matrix()
@@ -706,11 +702,8 @@ ibd_i_rf
 plot(ibd_i_rf)
 ```
 
-```{r}
-plot(ibd_rf, max_features = 7, plot_distributions = TRUE)
-```
 
-El orden de las variables lo realiza de forma similar a BreakDown, lo único diferente es que tiene en cuenta una iteración entre variables cuando la score de la iteración es mayor al de las variables por separado y a la suma de las misma. Para que se entienda vamos a comparar los valores del score de las varibles que tienen iteración que es el caso de superficie cubierta y baño. 
+El orden de las variables lo realiza de forma similar a BreakDown, lo único diferente es que tiene en cuenta una iteración entre variables cuando la score de la iteración es mayor al de las variables por separado y a la suma de las misma. Para que se entienda vamos a comparar los valores del score de las variables que tienen iteración que es el caso de superficie cubierta y baño. 
 
 surface_covered
 ```{r}
