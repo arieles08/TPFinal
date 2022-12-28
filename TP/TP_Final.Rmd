@@ -1,5 +1,5 @@
 ---
-title: "Trabajo FInal: IBreakdown con RandomForest en Dataset Properaty"
+title: "Trabajo Final: IBreakdown con RandomForest en Dataset Properaty"
 author: "Renso Gil y Leandro Morinigo"
 date: "04/12/2022"
 output:
@@ -258,10 +258,13 @@ explain_rf <- DALEX::explain(model = modelo_randomForest,
                        label = "Random Forest")
 ```
 
+<img src="https://drive.google.com/file/d/1sJbupZdzX4LaI7JKZ6pwag5vwpQLYYhp/view?usp=share_link" alt="JuveR" width="300px">
+<img src="https://drive.google.com/file/d/1wjKODH0hvvWtWmRUdwS0UDtvAI4l_3Y2/view?usp=share_link" alt="JuveR" width="300px">
+
 #### Predict_parts
 
 
-Primero se selecciona una nueva observación del test_data. En este caso un barrio de Puerto Madero, de 90 metros cuadrados, 55 descubiertos, con 3 habitaciones y 2 baños. 
+Primero se selecciona una nueva observación del test_data. En este caso un barrio de Puerto Madero, de 90 metros cuadrados cubiertos, 55 descubiertos, con 3 habitaciones y 2 baños. 
 ```{r}
 #selecciono observacion_1: en Puerto Madero
 #variables_test <- test_data_d %>% select(-c(l3, surface_total, price, precio_en_miles))
@@ -291,7 +294,7 @@ Valor del intercept: se obtiene a partir del promedio de las predicciones de los
 #0: intercept: El valor medio de la predicción de daata train
 mean(predict(modelo_randomForest, train_data_d)) 
 ```
-Score de cada variable en particular fijando el valor de la variable de la nueva observación en todo el data train. Se obtiene el promedio de de las predicciones del train al cambiar los valores de la variable por el de la nueva observacón. Después se obtiene la diferencia entre dicha promedio de predicción y el promedio de las predicciones de llos datos de entrenamiento originales. Se repite para cada variable y se las ordena de forma decreciente, 
+El score de cada variable en particular se obtiene fijando el valor de la variable de la nueva observación en todo el data train. Se obtiene el promedio de de las predicciones del train al cambiar los valores de la variable por el de la nueva observacón. Después se obtiene la diferencia entre dicho promedio de predicción y el promedio de las predicciones de los datos de entrenamiento originales en valor absoluto. Se repite para cada variable y se las ordena de forma decreciente, 
 
 l3_PuertoMadero
 ```{r}
@@ -431,6 +434,24 @@ score[['l3_Flores']]<-delta_l3_Flores
 
 ```
 
+l3_Balvanera
+```{r}
+data_train_l3_Balvanera<- train_data_d
+data_train_l3_Balvanera$l3_Balvanera<-variable_y$l3_Balvanera # Se coloca el valor de la variable l3_Puerto madero de la nueva obvervación en todos los datos del data train
+mean(predict(modelo_randomForest, data_train_l3_Balvanera))#El promedio de las predicciones al fijar la variable
+
+```
+
+```{r}
+delta_l3_Balvanera<-abs(mean(predict(modelo_randomForest, data_train_l3_Balvanera))-mean(predict(modelo_randomForest, train_data_d)))
+delta_l3_Balvanera # Score para l3_Flores
+```
+
+```{r}
+score[['l3_Balvanera']]<-delta_l3_Balvanera
+
+```
+
 rooms   
 ```{r}
 data_train_rooms<- train_data_d
@@ -448,30 +469,10 @@ score[['rooms']]<-delta_rooms
 
 ```
 
-l3_Almagro
-```{r}
-data_train_l3_Almagro<- train_data_d
-data_train_l3_Almagro$l3_Almagro<-variable_y$l3_Almagro # Se coloca el valor de la variable l3_Puerto madero de la nueva obvervación en todos los datos del data train.
-mean(predict(modelo_randomForest, data_train_l3_Almagro))# El promedio de las predicciones al fijar la variable
 
-```
+El  segundo paso es obtener las contribuciones de acuerdo al orden ya establecido. Para esto vamos a fijar los valores de las variables de a una a la vez con el valor de la variable en la nueva observación. Obtenemos las predicciones condicionada a la variable y  el promedio de las mismas. Luego tambien se fija la segunda variable y manteniendo fija la anterior también. Se obtiene la contribución de forma aditiva. Se repite el procedimiento para todas las variables. Al final vamos a obtener que todas las predicciones del train son iguales a la nueva observación. Por lo tanto converge en el valor de la predicción de la nueva observación.
 
-```{r}
-delta_l3_Almagro<-abs(mean(predict(modelo_randomForest, data_train_l3_Almagro))-mean(predict(modelo_randomForest, train_data_d)))
-delta_l3_Almagro# Score para l3_Almagro
-```
-
-```{r}
-score[['l3_Almagro']]<-delta_l3_Almagro
-```
-
-```{r}
-score
-```
-
-El  segundo paso es obtener las contribuciones de acuerdo al orden ya establcido. Para esto vamos a fijar los valores de las variables de a una a la vez con el valor de la variable en la nueva observación. Obtenemos las predicciones condicionada a la variable y  el promedio de las mismas. Luego tambien se fija la segunda variable y manteniendo fija la anterior tambien. Se obtiene la contribución de forma aditiva. Se repite el procedimiento para todas las variables. Al final vamos a obtener que todas las predicciones del train son iguales a la nueva observación. Por lo tanto converge en el valor de la predicción de la nueva observación.
-
-Contribuciòn de l3_PuertoMadero
+Contribución de l3_PuertoMadero
 
 ```{r}
 Contribuciones<-{}
@@ -606,6 +607,7 @@ data_train_breakdown$l3_Nuñez<-variable_y$l3_Nuñez
 data_train_breakdown$l3_BarrioNorte<-variable_y$l3_BarrioNorte
 data_train_breakdown$l3_Caballito<-variable_y$l3_Caballito
 data_train_breakdown$l3_VillaUrquiza<-variable_y$l3_VillaUrquiza
+data_train_breakdown$l3_Colegiales<-variable_y$l3_Colegiales
 Acc<-mean(predict(modelo_randomForest, data_train_breakdown))
 data_train_breakdown$l3_Flores<-variable_y$l3_Flores # Fijo el valor de la variable l3_Puerto madero de la nueva obvervación en el data train
 mean(predict(modelo_randomForest, data_train_breakdown))
@@ -622,11 +624,59 @@ delta_l3_Flores# Contribución de l3_flores
 Contribuciones[['l3_Flores']]<-delta_l3_Flores
 ```
 
+Contribución de l3_Balvanera
+```{r}
+
+data_train_breakdown$l3_VillaDevoto<-variable_y$l3_VillaDevoto
+Acc<-mean(predict(modelo_randomForest, data_train_breakdown))
+data_train_breakdown$l3_Balvanera<-variable_y$l3_Balvanera # Fijo el valor de la variable l3_Puerto madero de la nueva obvervación en el data train
+mean(predict(modelo_randomForest, data_train_breakdown))
+```
+
+```{r}
+delta_l3_Balvanera<-mean(predict(modelo_randomForest, data_train_breakdown))-Acc
+Acc<-mean(predict(modelo_randomForest, data_train_breakdown))
+delta_l3_Balvanera# Contribución de l3_almagro 
+
+```
+
+```{r}
+Contribuciones[['Balvanera']]<-delta_l3_Balvanera
+```
+
 Contribución de rooms
 ```{r}
-data_train_breakdown$l3_Colegiales<-variable_y$l3_Colegiales
-data_train_breakdown$l3_VillaDevoto<-variable_y$l3_VillaDevoto
-data_train_breakdown$l3_Balvanera<-variable_y$l3_Balvanera
+data_train_breakdown$l3_Retiro<-variable_y$l3_Retiro
+data_train_breakdown$l3_VillaCrespo<-variable_y$l3_VillaCrespo
+data_train_breakdown$l3_Saavedra<-variable_y$l3_Saavedra
+data_train_breakdown$l3_SanCristobal<-variable_y$l3_SanCristobal
+data_train_breakdown$l3_Floresta<-variable_y$l3_Floresta
+data_train_breakdown$l3_Monserrat<-variable_y$l3_Monserrat
+data_train_breakdown$l3_Almagro<-variable_y$l3_Almagro
+data_train_breakdown$l3_Coghlan<-variable_y$l3_Coghlan
+data_train_breakdown$l3_Constitución<-variable_y$l3_Constitución
+data_train_breakdown$l3_Mataderos<-variable_y$l3_Mataderos
+data_train_breakdown$l3_Boca<-variable_y$l3_Boca
+data_train_breakdown$l3_Congreso<-variable_y$l3_Congreso
+data_train_breakdown$l3_ParquePatricios<-variable_y$l3_ParquePatricios
+data_train_breakdown$l3_Once<-variable_y$l3_Once
+data_train_breakdown$l3_SanNicolás<-variable_y$l3_SanNicolás
+data_train_breakdown$l3_Paternal<-variable_y$l3_Paternal
+data_train_breakdown$l3_VillaLugano<-variable_y$l3_VillaLugano
+data_train_breakdown$l3_Chacarita<-variable_y$l3_Chacarita
+data_train_breakdown$l3_Boedo<-variable_y$l3_Boedo
+data_train_breakdown$l3_ParqueChacabuco<-variable_y$l3_ParqueChacabuco
+data_train_breakdown$l3_VelezSarsfield<-variable_y$l3_VelezSarsfield
+data_train_breakdown$l3_ParqueAvellaneda<-variable_y$l3_ParqueAvellaneda
+data_train_breakdown$l3_MonteCastro<-variable_y$l3_MonteCastro
+data_train_breakdown$l3_Barracas<-variable_y$l3_Barracas
+data_train_breakdown$l3_VillaSantaRita<-variable_y$l3_VillaSantaRita
+data_train_breakdown$l3_VilladelParque<-variable_y$l3_VilladelParque
+data_train_breakdown$l3_Liniers<-variable_y$l3_Liniers
+data_train_breakdown$l3_SanTelmo<-variable_y$l3_SanTelmo
+data_train_breakdown$l3_Pompeya<-variable_y$l3_Pompeya
+data_train_breakdown$l3_VillaPueyrredón<-variable_y$l3_VillaPueyrredón
+data_train_breakdown$l3_Versalles<-variable_y$l3_Versalles
 Acc<-mean(predict(modelo_randomForest, data_train_breakdown))
 data_train_breakdown$rooms<-variable_y$rooms # Fijo el valor de la variable l3_Puerto madero de la nueva obvervación en el data train
 mean(predict(modelo_randomForest, data_train_breakdown))
@@ -643,36 +693,13 @@ delta_rooms# Contribución de ambientes
 Contribuciones[['rooms']]<-delta_rooms
 ```
 
-Contribución de l3_Almagro
-```{r}
-data_train_breakdown$l3_Retiro<-variable_y$l3_Retiro 
-data_train_breakdown$l3_VillaCrespo<-variable_y$l3_VillaCrespo
-data_train_breakdown$l3_Saavedra<-variable_y$l3_Saavedra 
-data_train_breakdown$l3_SanCristobal<-variable_y$l3_SanCristobal
-data_train_breakdown$l3_Floresta<-variable_y$l3_Floresta
-data_train_breakdown$l3_Monserrat<-variable_y$l3_Monserrat
-Acc<-mean(predict(modelo_randomForest, data_train_breakdown))
-data_train_breakdown$l3_Almagro<-variable_y$l3_Almagro # Fijo el valor de la variable l3_Puerto madero de la nueva obvervación en el data train
-mean(predict(modelo_randomForest, data_train_breakdown))
-```
-
-```{r}
-delta_l3_Almagro<-mean(predict(modelo_randomForest, data_train_breakdown))-Acc
-Acc<-mean(predict(modelo_randomForest, data_train_breakdown))
-delta_l3_Almagro# Contribución de l3_almagro 
-
-```
-
-```{r}
-Contribuciones[['l3_Almagro']]<-delta_l3_Almagro
-```
 
 ```{r}
 Contribuciones
 ```
 #### Cambiar el orden 
 
-Se puede determinar el orden de las variables manualmente utilizando el parámetro "order". En este ejemplo al cambiar el orden de las variables cambia el valor de la contribuciones. Por lo tanto es aconsejable utilizar ibreakdown que tienen en cuenta las iteraciones entre varibles. 
+Se puede determinar el orden de las variables manualmente utilizando el parámetro "order". En este ejemplo al cambiar el orden de las variables cambia el valor de la contribuciones. Por lo tanto es aconsejable utilizar ibreakdown que tienen en cuenta las iteraciones entre variables. 
 
 ```{r}
 bd_o_rf <- predict_parts(explainer = explain_rf,
@@ -703,7 +730,7 @@ plot(ibd_i_rf)
 ```
 
 
-El orden de las variables lo realiza de forma similar a BreakDown, lo único diferente es que tiene en cuenta una iteración entre variables cuando la score de la iteración es mayor al de las variables por separado y a la suma de las misma. Para que se entienda vamos a comparar los valores del score de las variables que tienen iteración que es el caso de superficie cubierta y baño. 
+El orden de las variables lo realiza de forma similar a BreakDown, lo único diferente es que tiene en cuenta la iteración entre variables cuando el score de la iteración es mayor al de las variables por separado y a la suma de las misma. Para que se entienda vamos a comparar los valores del score de las variables que tienen iteración que es el caso de superficie cubierta y baño. 
 
 surface_covered
 ```{r}
@@ -856,6 +883,7 @@ data_train_breakdown$l3_Nuñez<-variable_y$l3_Nuñez
 data_train_breakdown$l3_BarrioNorte<-variable_y$l3_BarrioNorte
 data_train_breakdown$l3_Caballito<-variable_y$l3_Caballito
 data_train_breakdown$l3_VillaUrquiza<-variable_y$l3_VillaUrquiza
+data_train_breakdown$l3_Colegiales<-variable_y$l3_Colegiales
 Acc<-mean(predict(modelo_randomForest, data_train_breakdown))
 data_train_breakdown$l3_Flores<-variable_y$l3_Flores # Fijo el valor de la variable l3_Puerto madero de la nueva obvervación en el data train
 mean(predict(modelo_randomForest, data_train_breakdown))# El promedio de las predicciones al decir que todas las propiedades del train son de puerto madero, con superficie descubierta de 55 metros cuadrados, con superficie cubierta de 
@@ -874,7 +902,6 @@ Contribuciones[['l3_Flores']]<-delta_l3_Flores
 
 Contribución de l3_Balvanera
 ```{r}
-data_train_breakdown$l3_Colegiales<-variable_y$l3_Colegiales
 data_train_breakdown$l3_VillaDevoto<-variable_y$l3_VillaDevoto
 Acc<-mean(predict(modelo_randomForest, data_train_breakdown))
 data_train_breakdown$l3_Balvanera<-variable_y$l3_Balvanera # Fijo el valor de la variable l3_Puerto madero de la nueva obvervación en el data train
@@ -891,23 +918,6 @@ delta_l3_Balvanera# Contribución de l3_Balvanera
 
 ```{r}
 Contribuciones[['l3_balvanera']]<-delta_l3_Balvanera
-```
-
-Contribución de rooms
-```{r}
-data_train_breakdown$rooms<-variable_y$rooms # Fijo el valor de la variable l3_Puerto madero de la nueva obvervación en el data train
-mean(predict(modelo_randomForest, data_train_breakdown))
-```
-
-```{r}
-delta_rooms<-mean(predict(modelo_randomForest, data_train_breakdown))-Acc
-Acc<-mean(predict(modelo_randomForest, data_train_breakdown))
-delta_rooms# Contribución de ambientes 
-
-```
-
-```{r}
-Contribuciones[['rooms']]<-delta_rooms
 ```
 
 Contribución de l3_Almagro
@@ -932,6 +942,50 @@ delta_l3_Almagro# Contribución de l3_Almagro
 ```{r}
 Contribuciones[['l3_Almagro']]<-delta_l3_Almagro
 ```
+
+
+Contribución de rooms
+```{r}
+data_train_breakdown$l3_Coghlan<-variable_y$l3_Coghlan
+data_train_breakdown$l3_Constitución<-variable_y$l3_Constitución
+data_train_breakdown$l3_Mataderos<-variable_y$l3_Mataderos
+data_train_breakdown$l3_Boca<-variable_y$l3_Boca
+data_train_breakdown$l3_Congreso<-variable_y$l3_Congreso
+data_train_breakdown$l3_ParquePatricios<-variable_y$l3_ParquePatricios
+data_train_breakdown$l3_Once<-variable_y$l3_Once
+data_train_breakdown$l3_SanNicolás<-variable_y$l3_SanNicolás
+data_train_breakdown$l3_Paternal<-variable_y$l3_Paternal
+data_train_breakdown$l3_VillaLugano<-variable_y$l3_VillaLugano
+data_train_breakdown$l3_Chacarita<-variable_y$l3_Chacarita
+data_train_breakdown$l3_Boedo<-variable_y$l3_Boedo
+data_train_breakdown$l3_ParqueChacabuco<-variable_y$l3_ParqueChacabuco
+data_train_breakdown$l3_VelezSarsfield<-variable_y$l3_VelezSarsfield
+data_train_breakdown$l3_ParqueAvellaneda<-variable_y$l3_ParqueAvellaneda
+data_train_breakdown$l3_MonteCastro<-variable_y$l3_MonteCastro
+data_train_breakdown$l3_Barracas<-variable_y$l3_Barracas
+data_train_breakdown$l3_VillaSantaRita<-variable_y$l3_VillaSantaRita
+data_train_breakdown$l3_VilladelParque<-variable_y$l3_VilladelParque
+data_train_breakdown$l3_Liniers<-variable_y$l3_Liniers
+data_train_breakdown$l3_SanTelmo<-variable_y$l3_SanTelmo
+data_train_breakdown$l3_Pompeya<-variable_y$l3_Pompeya
+data_train_breakdown$l3_VillaPueyrredón<-variable_y$l3_VillaPueyrredón
+data_train_breakdown$l3_Versalles<-variable_y$l3_Versalles
+Acc<-mean(predict(modelo_randomForest, data_train_breakdown))
+data_train_breakdown$rooms<-variable_y$rooms # Fijo el valor de la variable l3_Puerto madero de la nueva obvervación en el data train
+mean(predict(modelo_randomForest, data_train_breakdown))
+```
+
+```{r}
+delta_rooms<-mean(predict(modelo_randomForest, data_train_breakdown))-Acc
+Acc<-mean(predict(modelo_randomForest, data_train_breakdown))
+delta_rooms# Contribución de ambientes 
+
+```
+
+```{r}
+Contribuciones[['rooms']]<-delta_rooms
+```
+
 
 ```{r}
 Contribuciones
