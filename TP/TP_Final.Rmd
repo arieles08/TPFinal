@@ -185,7 +185,7 @@ performance_modelos_lineales_test
 ### Aplicación de Random Forest
 
 
-Como feature engineering se aplica dummy a la variable barrios (l3) ya que al tomar solamente la bariable barrio arrojaba demasiado error en la predicción. Por ejemplo que los barrios al ser de Puerto MAdero bajaban de precio en la explicaciòn del BreakDown.
+Como feature engineering se aplica dummy a la variable barrios (l3) ya que al tomar solamente la variable barrio arrojaba demasiado error en la predicción. Por ejemplo que los barrios sean de Puerto Madero baja el precio de venta en dòlares en la explicaciòn del BreakDown.
 ```{r}
 
 
@@ -734,7 +734,7 @@ data_train_surface_bathrooms$bathrooms<-variable_y$bathrooms # Se coloca el valo
 delta_surface_bathrooms<-abs(mean(predict(modelo_randomForest, data_train_surface_bathrooms))-mean(predict(modelo_randomForest, train_data_d)))
 delta_surface_bathrooms# iteración de superficie cubierta y baño
 ```
-Como es más alto el valor de la iteración que cada variable individual y su suma. Solamamente se representa la iteración entre superficie cubierta y baño. Individualmente n se representan. 
+Como es más alto el valor de la iteración que cada variable individual y su suma, solamamente se representa la iteración entre superficie cubierta y baño. Individualmente no se representan. 
 
 #### Contribuciones de las variables
 
