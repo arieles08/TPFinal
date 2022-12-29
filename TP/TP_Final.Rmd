@@ -258,13 +258,11 @@ explain_rf <- DALEX::explain(model = modelo_randomForest,
                        label = "Random Forest")
 ```
 
-<img src="https://drive.google.com/file/d/1sJbupZdzX4LaI7JKZ6pwag5vwpQLYYhp/view?usp=share_link" alt="JuveR" width="300px">
-<img src="https://drive.google.com/file/d/1wjKODH0hvvWtWmRUdwS0UDtvAI4l_3Y2/view?usp=share_link" alt="JuveR" width="300px">
 
 #### Predict_parts
 
 
-Primero se selecciona una nueva observación del test_data. En este caso un barrio de Puerto Madero, de 90 metros cuadrados cubiertos, 55 descubiertos, con 3 habitaciones y 2 baños. 
+Primero se selecciona una nueva observación del test_data. En este caso un departamento del barrio de Puerto Madero, de 90 metros cuadrados cubiertos, 55 descubiertos, con 3 habitaciones y 2 baños. 
 ```{r}
 #selecciono observacion_1: en Puerto Madero
 #variables_test <- test_data_d %>% select(-c(l3, surface_total, price, precio_en_miles))
@@ -294,7 +292,7 @@ Valor del intercept: se obtiene a partir del promedio de las predicciones de los
 #0: intercept: El valor medio de la predicción de daata train
 mean(predict(modelo_randomForest, train_data_d)) 
 ```
-El score de cada variable en particular se obtiene fijando el valor de la variable de la nueva observación en todo el data train. Se obtiene el promedio de de las predicciones del train al cambiar los valores de la variable por el de la nueva observacón. Después se obtiene la diferencia entre dicho promedio de predicción y el promedio de las predicciones de los datos de entrenamiento originales en valor absoluto. Se repite para cada variable y se las ordena de forma decreciente, 
+En Primer lugar se ordenan las variables. EL criterio a utilizar es obtener un score y ordenarlos de forma decreciento. El score  de cada variable  se obtiene fijando el valor de la variable de la nueva observación en todo el data train. Se obtiene el promedio de de las predicciones del train al cambiar los valores de la variable por el de la nueva observacón. Después se obtiene la diferencia entre dicho promedio de predicción y el promedio de las predicciones de los datos de entrenamiento originales en valor absoluto. Se repite para cada variable y se las ordena de forma decreciente, 
 
 l3_PuertoMadero
 ```{r}
@@ -699,7 +697,7 @@ Contribuciones
 ```
 #### Cambiar el orden 
 
-Se puede determinar el orden de las variables manualmente utilizando el parámetro "order". En este ejemplo al cambiar el orden de las variables cambia el valor de la contribuciones. Por lo tanto es aconsejable utilizar ibreakdown que tienen en cuenta las iteraciones entre variables. 
+Se puede determinar el orden de las variables manualmente utilizando el parámetro "order". En este ejemplo al cambiar el orden de las variables cambia el valor de las contribuciones. Por lo tanto es aconsejable utilizar ibreakdown que tienen en cuenta las iteraciones entre variables. 
 
 ```{r}
 bd_o_rf <- predict_parts(explainer = explain_rf,
@@ -715,7 +713,7 @@ plot(bd_o_rf)
 
 ### iBreak down
 
-Se aplica de la misma forma que breakdown. Lo único que cambia es el parámetro "typy", el cual debe decir "break_down_interactions".
+Se aplica de la misma forma que breakdown. Lo único que cambia es el parámetro "type", el cual debe decir "break_down_interactions".
 
 ```{r}
 ibd_i_rf <- predict_parts(explainer = explain_rf,
@@ -730,7 +728,7 @@ plot(ibd_i_rf)
 ```
 
 
-El orden de las variables lo realiza de forma similar a BreakDown, lo único diferente es que tiene en cuenta la iteración entre variables cuando el score de la iteración es mayor al de las variables por separado y a la suma de las misma. Para que se entienda vamos a comparar los valores del score de las variables que tienen iteración que es el caso de superficie cubierta y baño. 
+El orden de las variables lo realiza de forma similar a BreakDown, lo único diferente es que tiene en cuenta la iteración entre variables cuando el score de la iteración es mayor al de las variables por separado y a la suma de las misma. Para que se entienda vamos a comparar los valores del score de las variables que tienen iteración, que es el caso de superficie cubierta y baño. 
 
 surface_covered
 ```{r}
