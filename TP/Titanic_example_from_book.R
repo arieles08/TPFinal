@@ -42,6 +42,35 @@ bd_rf1
 
 plot(bd_rf1)
 
+
+#Paso 2.2: Grafico de distribuciones (violin)
+bd_rf1 <- predict_parts(explainer = explain_rf,
+                        new_observation = johnny_d,
+                        type = "break_down",
+                        keep_distributions=TRUE)
+#,order = c("age", "class", "fare", "gender", "embarked", "sibsp", "parch"))
+
+plot(bd_rf1, plot_distributions=TRUE)
+
+
+#Paso 2.3: breakdown a Johnny_D (escenario2):
+bd_rf2 <- predict_parts(explainer = explain_rf,
+                        new_observation = johnny_d,
+                        type = "break_down",
+                        order = c("class", "fare", "gender","age", "embarked", "sibsp", "parch"))
+plot(bd_rf2)
+
+#Paso 3: ibreakdown a Johnny_D:
+ibd_rf1 <- predict_parts(explainer = explain_rf,
+                        new_observation = johnny_d,
+                        type = "break_down_interactions")
+                        #,order = c("age", "class", "fare", "gender", "embarked", "sibsp", "parch"))
+ibd_rf1
+
+plot(ibd_rf1)
+
+
+
 #----------------------------------
 # Replicamos los pasos del BreakDown para johnny_d:
 data <- explain_rf[["data"]] #2207 registros y 9 cols
@@ -50,7 +79,7 @@ pred <- explain_rf[["y_hat"]]
 #0: intercept              -> 0.235
 mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.2353095
 
-
+0.3785383 - 0.2353095 = 0.1432288
 #1: age = 8:               -> 0.505 = +0.27 + (0.235)
 data$age <- johnny_d[,3]
 mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.505121
@@ -58,11 +87,13 @@ mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.505121
 
 #2: class = 1st            -> 0.591 = +0.086 + (0.235 + 0.27)    
 data$class <- johnny_d[,1]
+data$fare <- johnny_d[,6]
 mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.5906969
 
-
+0.4844749 - 0.2353095 = 0.2491654
 #3: fare = 72              -> 0.544 = -0.046 + (0.235 + 0.27 + 0.086)
 data$fare <- johnny_d[,6]
+data$age <- johnny_d[,3]
 mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.5443561
 
 
@@ -145,14 +176,74 @@ fwrite(dt, file= "BD_johnnyd_step-by-step.csv", sep = ",")
 
 getwd()
 
-#--------------Henry----------------------------
-#Paso 2.2: breakdown a henry
-bd_rf2 <- predict_parts(explainer = explain_rf,
-                       new_observation = henry,
-                       type = "break_down")
-bd_rf2
+#----------------------------------
+# Replicamos los pasos ver calculo de interaccion con iBreakDown para johnny_d:
+dt <- explain_rf[["data"]]
+dt <- data.table(dt)
+data <- explain_rf[["data"]] #2207 registros y 9 cols
+pred <- explain_rf[["y_hat"]]
 
-plot(bd_rf2)
+#0: intercept              -> 0.235
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.2353095
+dt[,pred0 := predict(titanic_rf, data, type = "prob")[,'yes']]
 
+0.3785383 - 0.2353095 = 0.1432288
+#1: age = 8:               -> +0.27 = 0.505 - 0.235 (intercept)
+data$age <- johnny_d[,3]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) - 0.235  #-> +0.27
+dt[,pred_age8 := predict(titanic_rf, data, type = "prob")[,'yes']]
+
+#2: fare:class   #Contribución INTERACCIÓN      -> -0.2308 = 0.0981 - 0.1854 - 0.1435 (CONJUNTA - Separada1 - Separada2)  
+data <- explain_rf[["data"]] #se calcula siempre en el 1er paso, no es secuencial como antes
+data$class <- johnny_d[,1]
+data$fare <- johnny_d[,6]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) - 0.235 #-> 0.09814545 #Contribución1 CONJUNTA
+dt[,pred_fareclass := predict(titanic_rf, data, type = "prob")[,'yes']]
+0.0981 - 0.1854 - 0.1435
+
+#2.2:class = 1st  #Contribución1 por Separado    -> +0.185 = 0.420 - 0.235 (intercept)  
+data <- explain_rf[["data"]] #se calcula siempre en el 1er paso, no es secuencial como antes
+data$class <- johnny_d[,1]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) - 0.235 #-> 0.1854449
+dt[,pred_class1 := predict(titanic_rf, data, type = "prob")[,'yes']]
+
+#3: fare:age   #Contribución INTERACCIÓN      -> -0.164 = 0.2495 - 0.27 - 0.1435 (CONJUNTA - Separada1 - Separada2)  
+data <- explain_rf[["data"]] #se calcula siempre en el 1er paso, no es secuencial como antes
+data$age <- johnny_d[,3]
+data$fare <- johnny_d[,6]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) - 0.235 #-> 0.2494749 #Contribución1 CONJUNTA
+0.2495 - 0.27 - 0.1435
+
+#2.1: fare = 72  #Contribución1 por Separado      ->  +0.143 = 0.378 - 0.235 (intercept)
+data <- explain_rf[["data"]] #se calcula siempre en el 1er paso, no es secuencial como antes
+data$fare <- johnny_d[,6]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) - 0.235 #-> 0.1435383 
+dt[,pred_fare72 := predict(titanic_rf, data, type = "prob")[,'yes']]
+
+0.2495 - 0.27 - 0.1435
+#4: gender = male          -> 0.461 = -0.083 + (0.235 + 0.27 + 0.086 - 0.046)
+data$gender <- johnny_d[,2]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.4611518
+
+
+#5: embarked = Southampton -> 0.458 = -0.003 + (0.235 + 0.27 + 0.086 - 0.046 - 0.083)
+data$embarked <- johnny_d[,7]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.4584422
+
+
+#6: sibsp = 0              -> 0.452 = -0.006 + (0.235 + 0.27 + 0.086 - 0.046 - 0.083 - 0.003)
+data$sibsp <- johnny_d[,4]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.4523398
+
+
+#6: parch = 0              -> 0.422 = -0.03 + (0.235 + 0.27 + 0.086 - 0.046 - 0.083 - 0.003 - 0.006)
+data$parch <- johnny_d[,5]
+mean(predict(titanic_rf, data, type = "prob")[,'yes']) #-> 0.422 --> LLEGAMOS AL VALOR DE LA PREDICCION
+
+
+#exporto archivo:
+fwrite(dt, file= "iBD_johnnyd_1st_step.csv", sep = ",")
+
+getwd()
 
 

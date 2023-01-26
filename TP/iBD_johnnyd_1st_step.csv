@@ -1,0 +1,2208 @@
+gender,age,class,embarked,country,fare,sibsp,parch,pred_age8,pred_fare72,pred_class1,pred_fareclass
+male,42,3rd,Southampton,United States,7.11,0,0,0.528,0.418,0.21,0.032
+male,13,3rd,Southampton,United States,20.05,0,2,0.566,0.236,0.486,0.56
+male,16,3rd,Southampton,United States,20.05,1,1,0.476,0.132,0.39,0.39
+female,39,3rd,Southampton,England,20.05,1,1,0.486,0.408,0.882,0.984
+female,16,3rd,Southampton,Norway,7.13,0,0,0.712,0.424,0.888,0.958
+male,25,3rd,Southampton,United States,7.13,0,0,0.534,0.372,0.262,0.174
+male,30,2nd,Cherbourg,France,24,1,0,0.466,0.09,0.448,0.284
+female,28,2nd,Cherbourg,France,24,1,0,0.94,0.906,0.944,0.986
+male,27,3rd,Cherbourg,Lebanon,18.1509,0,0,0.408,0.398,0.526,0.434
+male,20,3rd,Southampton,Finland,7.1806,0,0,0.584,0.258,0.252,0.112
+male,30,3rd,Southampton,Sweden,7.05,0,0,0.516,0.404,0.182,0.106
+male,27,3rd,Southampton,England,8.01,0,0,0.578,0.358,0.244,0.176
+female,40,3rd,Southampton,Sweden,9.0906,1,0,0.416,0.436,0.758,0.97
+male,0.8333333333,3rd,Southampton,England,9.07,0,1,0.772,0.5,0.714,0.62
+female,18,3rd,Southampton,England,9.07,0,1,0.624,0.424,0.84,0.976
+male,35,2nd,Southampton,England,13,0,0,0.508,0.14,0.268,0.136
+male,25,3rd,Southampton,England,7.1709,0,0,0.558,0.372,0.256,0.174
+male,19,3rd,Southampton,Finland,7.1806,0,0,0.584,0.256,0.242,0.118
+male,24,3rd,Southampton,Argentina,7.01,0,0,0.506,0.368,0.23,0.172
+male,25,3rd,Southampton,Argentina,7.01,0,0,0.506,0.372,0.24,0.174
+female,29,1st,Southampton,United States,211.6009,0,0,0.904,0.974,0.984,0.974
+male,39,3rd,Southampton,England,8.01,0,0,0.578,0.472,0.204,0.036
+male,0.9166666667,1st,Southampton,Canada,151.16,1,2,0.744,0.78,0.786,0.78
+female,2,1st,Southampton,Canada,151.16,1,2,0.556,0.624,0.354,0.624
+male,30,1st,Southampton,Canada,151.16,1,2,0.744,0.372,0.242,0.372
+female,25,1st,Southampton,United States,151.16,1,2,0.556,0.836,0.49,0.836
+male,18,3rd,Southampton,England,8.06,0,0,0.578,0.256,0.232,0.118
+male,19,3rd,Cherbourg,Lebanon,7.0407,0,0,0.382,0.282,0.45,0.36
+female,19,3rd,Southampton,Denmark,7.1701,1,0,0.488,0.348,0.754,0.98
+male,33,3rd,Southampton,Norway,22.1006,0,0,0.428,0.52,0.254,0.13
+male,47,1st,Southampton,United States,26.11,0,0,0.574,0.08,0.438,0.08
+male,4,3rd,Southampton,Sweden,31.0506,4,2,0.02,0.16,0.524,0.554
+female,6,3rd,Southampton,Sweden,31.0506,4,2,0.036,0.182,0.65,0.638
+female,2,3rd,Southampton,Sweden,31.0506,4,2,0.036,0.206,0.578,0.566
+female,16,3rd,Southampton,Finland,7.1806,4,2,0.47,0.182,0.754,0.78
+female,38,3rd,Southampton,Sweden,7.1506,4,2,0.406,0.244,0.648,0.822
+female,9,3rd,Southampton,Sweden,31.0506,4,2,0.036,0.11,0.662,0.684
+female,11,3rd,Southampton,Sweden,31.0506,4,2,0.036,0.116,0.692,0.724
+male,39,3rd,Southampton,Sweden,31.0506,1,5,0.204,0.092,0.306,0.316
+male,26,3rd,Southampton,Sweden,7.1506,0,0,0.54,0.376,0.24,0.174
+female,39,3rd,Southampton,Sweden,31.0506,1,5,0.228,0.226,0.782,0.856
+male,20,3rd,Southampton,Sweden,7.1701,0,0,0.556,0.258,0.238,0.112
+male,17,2nd,Southampton,Argentina,11.1,0,0,0.524,0.028,0.252,0.148
+male,27,2nd,Southampton,England,10.1,0,0,0.518,0.07,0.262,0.176
+female,62,1st,Cherbourg,United States,77.1902,1,0,0.958,0.92,0.926,0.92
+male,39,1st,Belfast,Northern Ireland,89,0,0,0.362,0.06,0.04,0.06
+male,26,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.376,0.25,0.174
+female,36,2nd,Southampton,England,26,1,0,0.936,0.9,0.918,0.96
+male,31,2nd,Southampton,England,26,1,0,0.472,0.096,0.3,0.244
+female,53,1st,Southampton,United States,51.0907,2,0,0.912,0.966,0.982,0.966
+male,25,3rd,Southampton,Switzerland,17.16,1,0,0.432,0.286,0.344,0.352
+female,18,3rd,Southampton,Switzerland,17.16,1,0,0.392,0.346,0.798,0.97
+male,25,3rd,Southampton,Sweden,7.1506,0,0,0.54,0.372,0.248,0.174
+male,71,1st,Cherbourg,Argentina,49.1001,0,0,0.526,0.084,0.046,0.084
+male,57,2nd,Southampton,England,13,0,0,0.508,0.122,0.08,0.086
+male,35,3rd,Southampton,Argentina,7.01,0,0,0.506,0.508,0.24,0.136
+male,5,3rd,Southampton,Sweden,31.0709,4,2,0.046,0.098,0.506,0.522
+male,9,3rd,Southampton,Sweden,31.0709,4,2,0.046,0.064,0.478,0.5
+male,3,3rd,Southampton,Sweden,31.0709,4,2,0.046,0.256,0.618,0.568
+male,13,3rd,Southampton,Sweden,31.0709,4,2,0.046,0.034,0.444,0.442
+female,5,3rd,Southampton,Sweden,31.0709,4,2,0.136,0.278,0.706,0.66
+male,40,3rd,Southampton,Sweden,31.0709,1,5,0.212,0.07,0.296,0.308
+male,13,3rd,Southampton,Sweden,7.1511,0,0,0.586,0.38,0.452,0.316
+female,38,3rd,Southampton,Sweden,31.0709,1,5,0.286,0.358,0.798,0.866
+female,45,3rd,Cherbourg,Lebanon,7.0406,0,0,0.86,0.538,0.916,0.98
+male,23,3rd,Southampton,Argentina,7.01,0,0,0.506,0.276,0.222,0.122
+male,47,1st,Cherbourg,United States,247.1006,1,0,0.448,0.27,0.148,0.27
+female,18,1st,Cherbourg,United States,247.1006,1,0,0.936,0.988,0.98,0.988
+female,17,3rd,Cherbourg,Lebanon,14.0902,0,0,0.584,0.558,0.8,0.976
+male,27,3rd,Cherbourg,Canada,7.0406,0,0,0.366,0.398,0.442,0.434
+female,24,1st,Cherbourg,France,69.06,0,0,0.95,0.988,0.99,0.988
+male,23,3rd,Southampton,Sweden,7.1701,0,0,0.556,0.276,0.236,0.122
+female,15,3rd,Cherbourg,Lebanon,7.0407,0,0,0.866,0.592,0.914,0.97
+male,32,3rd,Southampton,Finland,15.17,1,0,0.452,0.408,0.32,0.264
+female,33,3rd,Southampton,Finland,15.17,3,0,0.436,0.494,0.9,0.936
+female,3,3rd,Cherbourg,Lebanon,19.0502,2,1,0.87,0.67,0.934,0.904
+female,0.75,3rd,Cherbourg,Lebanon,19.0502,2,1,0.87,0.662,0.928,0.894
+female,5,3rd,Cherbourg,Lebanon,19.0502,2,1,0.87,0.688,0.946,0.93
+female,23,3rd,Cherbourg,Lebanon,19.0502,0,3,0.86,0.63,0.954,0.982
+female,18,3rd,Southampton,England,8.01,0,0,0.632,0.418,0.89,0.968
+male,40,3rd,Cherbourg,Lebanon,7.0406,0,0,0.366,0.328,0.276,0.156
+male,18,2nd,Southampton,England,11.1,0,0,0.524,0.016,0.25,0.118
+male,22,2nd,Southampton,Channel Islands,10.1,0,0,0.518,0.02,0.26,0.11
+male,26,3rd,Southampton,Bosnia,7.1711,0,0,0.556,0.376,0.25,0.174
+female,36,2nd,Southampton,England,13,0,0,0.91,0.89,0.9,0.956
+male,28,2nd,Southampton,England,10.1,0,0,0.518,0.07,0.252,0.154
+female,31,3rd,Southampton,Hungary,8.1308,0,0,0.56,0.472,0.874,0.976
+female,18,3rd,Cherbourg,Lebanon,14.0901,0,1,0.636,0.588,0.78,0.992
+female,45,3rd,Cherbourg,Lebanon,14.0901,0,1,0.636,0.47,0.756,0.99
+female,27,1st,Southampton,X,78.17,0,0,0.924,0.976,0.986,0.976
+male,47,1st,Southampton,England,30,0,0,0.572,0.08,0.492,0.08
+female,33,3rd,Queenstown,Ireland,7.1707,0,0,0.73,0.544,0.844,0.956
+male,22,3rd,Southampton,England,8.01,0,0,0.578,0.258,0.246,0.11
+female,32,1st,Cherbourg,Italy,76.051,0,0,0.952,0.986,0.99,0.986
+male,52,2nd,Southampton,England,12.1006,0,0,0.526,0.16,0.264,0.21
+male,23,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.276,0.236,0.122
+male,60,1st,Cherbourg,United States,25.1806,0,0,0.58,0.12,0.056,0.12
+male,24,1st,Cherbourg,Canada,247.1005,0,1,0.702,0.488,0.282,0.488
+female,50,1st,Cherbourg,Canada,247.1005,0,1,0.95,0.984,0.994,0.984
+male,32,2nd,Southampton,England,26,1,0,0.472,0.144,0.338,0.264
+female,22,2nd,Southampton,England,26,1,0,0.936,0.882,0.95,0.986
+male,36,1st,Southampton,Canada,75.041,0,0,0.422,0.068,0.068,0.068
+male,44,2nd,Southampton,England,26,0,0,0.472,0.11,0.264,0.032
+male,20,3rd,Southampton,England,8.01,0,0,0.578,0.258,0.242,0.112
+male,1,2nd,Southampton,India,39,2,1,0.736,0.722,0.714,0.666
+female,4,2nd,Southampton,India,39,2,1,0.968,0.89,0.866,0.822
+female,12,2nd,Southampton,India,39,2,1,0.968,0.92,0.934,0.944
+female,35,2nd,Southampton,United States,39,0,3,0.964,0.93,0.948,0.958
+male,37,1st,Southampton,United States,52.1101,1,1,0.72,0.332,0.538,0.332
+female,46,1st,Southampton,United States,52.1101,1,1,0.904,0.984,0.996,0.984
+male,34,2nd,Southampton,England,13,0,0,0.508,0.142,0.274,0.132
+male,26,1st,Cherbourg,United States,30,0,0,0.638,0.446,0.6,0.446
+male,26,3rd,Southampton,Sweden,7.1506,0,0,0.54,0.376,0.24,0.174
+female,19,2nd,Southampton,United States,13,0,0,0.91,0.886,0.888,0.974
+male,22,3rd,Southampton,Finland,9.07,0,0,0.578,0.258,0.246,0.11
+male,23,2nd,Southampton,England,13,0,0,0.508,0.028,0.266,0.122
+female,39,1st,Cherbourg,United States,63.0702,0,0,0.948,0.984,0.986,0.984
+female,46,1st,Cherbourg,X,247.1006,0,0,0.942,0.976,0.978,0.976
+male,32,3rd,Southampton,X,56.0911,0,0,0.51,0.566,0.29,0.152
+female,31,1st,Southampton,England,221.1507,0,0,0.876,0.976,0.954,0.976
+male,21,3rd,Southampton,Norway,7.1506,0,0,0.54,0.26,0.236,0.11
+male,24,1st,Cherbourg,X,26,0,0,0.542,0.322,0.33,0.322
+male,25,1st,Cherbourg,United States,91.0107,1,0,0.52,0.374,0.442,0.374
+female,19,1st,Cherbourg,United States,91.0107,1,0,0.958,0.988,0.994,0.988
+male,18,3rd,Southampton,Sweden,7.15,0,0,0.536,0.256,0.208,0.118
+male,28,1st,Southampton,Sweden,26.11,0,0,0.574,0.154,0.466,0.154
+male,45,1st,Southampton,United States,35.1,0,0,0.532,0.04,0.23,0.04
+male,39,1st,Cherbourg,United States,31,0,0,0.606,0.16,0.28,0.16
+female,30,1st,Southampton,United States,164.1704,0,0,0.908,0.976,0.992,0.976
+female,61,1st,Southampton,England,26.11,0,0,0.926,0.94,0.884,0.94
+male,41,1st,Southampton,England,26.11,0,0,0.574,0.028,0.284,0.028
+male,26,3rd,Southampton,X,7.1711,0,0,0.556,0.376,0.25,0.174
+male,25,2nd,Southampton,United States,13,0,0,0.508,0.064,0.284,0.174
+female,40,3rd,Queenstown,Ireland,7.15,0,2,0.586,0.274,0.738,0.936
+male,42,3rd,Queenstown,Ireland,15.1,1,1,0.434,0.13,0.284,0.228
+female,32,3rd,Queenstown,Ireland,15.1,1,1,0.542,0.404,0.76,0.946
+female,45,1st,Cherbourg,United States,262.0706,0,0,0.944,0.98,0.978,0.98
+male,26,3rd,Southampton,Wales,16.02,0,0,0.504,0.376,0.286,0.174
+male,42,2nd,Southampton,X,13,0,0,0.508,0.11,0.226,0.032
+female,22,1st,Southampton,England,55,0,1,0.94,0.982,0.994,0.982
+male,30,2nd,Southampton,United States,13,0,0,0.508,0.078,0.222,0.106
+female,22,3rd,Queenstown,Ireland,7.1406,0,0,0.79,0.56,0.88,0.96
+male,41,1st,Southampton,United States,30.1,0,0,0.582,0.028,0.276,0.028
+female,20,3rd,Southampton,Sweden,7.1701,0,0,0.574,0.384,0.85,0.974
+male,24,2nd,Southampton,England,22,0,0,0.486,0.056,0.252,0.172
+male,48,1st,Cherbourg,United States,50.0911,0,0,0.524,0.178,0.132,0.178
+male,29,3rd,Southampton,England,7,1,0,0.436,0.286,0.268,0.204
+male,23,3rd,Southampton,England,7.05,1,0,0.442,0.222,0.292,0.286
+male,37,1st,Southampton,United States,26.11,0,0,0.574,0.044,0.364,0.044
+male,46,1st,Cherbourg,United States,39.12,0,0,0.598,0.116,0.178,0.116
+male,20,2nd,Southampton,France,22,0,0,0.486,0.018,0.25,0.112
+male,32,2nd,Southampton,X,13,0,0,0.508,0.142,0.256,0.152
+male,22,3rd,Southampton,Sweden,7.1511,0,0,0.586,0.258,0.254,0.11
+male,40,3rd,Southampton,England,8.01,0,0,0.578,0.452,0.212,0.036
+female,18,2nd,Southampton,England,13,0,0,0.91,0.882,0.89,0.968
+female,15,2nd,Southampton,South Africa,39,0,2,0.978,0.926,0.958,0.96
+female,59,1st,Southampton,United States,51.0907,2,0,0.912,0.942,0.96,0.942
+female,40,2nd,Southampton,South Africa,39,1,1,0.976,0.94,0.964,0.982
+female,44,1st,Cherbourg,United States,27.1405,0,0,0.93,0.982,0.932,0.982
+male,60,2nd,Southampton,South Africa,39,1,1,0.78,0.08,0.194,0.14
+female,20,2nd,Southampton,Sweden,26,1,0,0.936,0.9,0.946,0.98
+male,25,2nd,Southampton,Sweden,26,1,0,0.472,0.086,0.332,0.352
+female,22,3rd,Queenstown,Ireland,7.0508,0,0,0.658,0.56,0.834,0.96
+male,21,3rd,Queenstown,Ireland,7.1517,0,0,0.462,0.222,0.308,0.122
+female,58,1st,Cherbourg,India,76.051,0,0,0.952,0.968,0.972,0.968
+male,7,3rd,Cherbourg,Lebanon,15.0411,1,1,0.764,0.578,0.728,0.71
+female,10,3rd,Cherbourg,Lebanon,15.0411,1,1,0.706,0.574,0.794,0.952
+female,40,3rd,Cherbourg,Lebanon,15.0411,0,2,0.812,0.446,0.816,0.98
+male,19,3rd,Queenstown,Ireland,6.15,0,0,0.358,0.208,0.214,0.126
+female,41,1st,Cherbourg,X,134.1,0,0,0.948,0.986,0.99,0.986
+female,17,3rd,Queenstown,Ireland,7.1707,0,0,0.73,0.536,0.87,0.95
+female,36,2nd,Southampton,England,13,0,0,0.91,0.89,0.9,0.956
+male,26,2nd,Southampton,England,13,0,0,0.508,0.076,0.282,0.174
+male,21,3rd,Cherbourg,Lebanon,7.0407,0,0,0.382,0.29,0.46,0.354
+male,46,1st,Southampton,United States,26.11,0,0,0.574,0.03,0.358,0.03
+male,42,2nd,Southampton,England,13,0,0,0.508,0.11,0.226,0.032
+female,40,2nd,Southampton,United States,13,0,0,0.91,0.892,0.91,0.966
+female,21,3rd,Southampton,Croatia (Modern),8.1303,0,0,0.554,0.382,0.836,0.974
+female,30,3rd,Southampton,Croatia (Modern),8.1303,0,0,0.554,0.424,0.856,0.976
+male,18,3rd,Southampton,Croatia (Modern),8.1303,0,0,0.574,0.256,0.23,0.118
+male,38,3rd,Southampton,Croatia (Modern),8.1303,0,0,0.574,0.52,0.204,0.066
+male,28,1st,Southampton,Scotland,31,0,0,0.518,0.154,0.314,0.154
+male,42,1st,Southampton,United States,26.0509,0,0,0.618,0.032,0.464,0.032
+male,0.8333333333,2nd,Southampton,Siam,29,0,2,0.808,0.762,0.752,0.75
+male,26,2nd,Southampton,Siam,29,1,1,0.8,0.248,0.486,0.382
+female,28,2nd,Southampton,United States,29,1,1,0.982,0.94,0.934,0.97
+male,17,3rd,Southampton,Croatia (Modern),8.1303,0,0,0.574,0.256,0.228,0.148
+male,17,3rd,Southampton,Croatia (Modern),8.1303,0,0,0.574,0.256,0.228,0.148
+female,35,2nd,Southampton,England,21,0,0,0.816,0.896,0.912,0.972
+male,21,2nd,Belfast,Northern Ireland,22,0,0,0.434,0.02,0.276,0.116
+female,22,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.56,0.864,0.96
+male,21,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.222,0.26,0.122
+female,52,1st,Cherbourg,United States,27.0811,0,0,0.93,0.968,0.928,0.968
+male,29,3rd,Southampton,England,8.01,0,0,0.578,0.4,0.212,0.114
+male,28,3rd,Cherbourg,Canada,14.0902,1,0,0.432,0.25,0.454,0.274
+female,18,3rd,Cherbourg,Lebanon,14.0902,1,0,0.558,0.534,0.726,0.988
+male,19,2nd,Southampton,England,13,0,0,0.508,0.016,0.258,0.118
+female,58,1st,Cherbourg,United States,512.0607,0,1,0.952,0.98,0.99,0.98
+male,36,1st,Cherbourg,United States,512.0607,0,1,0.794,0.39,0.578,0.39
+male,28,3rd,Southampton,Sweden,7.1511,0,0,0.586,0.366,0.254,0.154
+male,24,3rd,Southampton,Sweden,7.1701,0,0,0.556,0.368,0.242,0.172
+male,33,1st,Southampton,United States,5,0,0,0.474,0.13,0.218,0.13
+male,17,1st,Southampton,Uruguay,47.02,0,0,0.376,0.148,0.092,0.148
+male,27,1st,Southampton,Uruguay,47.02,0,0,0.376,0.176,0.124,0.176
+female,45,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.452,0.83,0.946
+male,54,2nd,Southampton,England,26,1,0,0.472,0.122,0.276,0.238
+male,11,1st,Southampton,United States,120,1,2,0.826,0.712,0.812,0.712
+female,13,1st,Southampton,United States,120,1,2,0.83,0.902,0.91,0.902
+female,45,2nd,Southampton,England,26,1,0,0.936,0.836,0.852,0.97
+female,36,1st,Southampton,United States,120,1,2,0.83,0.928,0.936,0.928
+male,36,1st,Southampton,United States,120,1,2,0.826,0.436,0.594,0.436
+male,28,3rd,Southampton,England,7.05,0,0,0.516,0.366,0.222,0.154
+male,49,1st,Southampton,United States,26,0,0,0.486,0.214,0.186,0.214
+female,36,1st,Cherbourg,United States,27.1405,0,0,0.93,0.956,0.892,0.956
+female,25,1st,Southampton,United States,78.17,1,0,0.91,0.978,0.99,0.978
+male,36,1st,Southampton,England,78.17,1,0,0.514,0.168,0.186,0.168
+male,24,3rd,Southampton,X,8.01,0,0,0.578,0.368,0.24,0.172
+male,46,1st,Southampton,United States,61.0306,1,0,0.504,0.108,0.138,0.108
+female,47,1st,Southampton,United States,61.0306,1,0,0.906,0.976,0.988,0.976
+male,27,1st,Southampton,United States,53.02,1,0,0.518,0.316,0.488,0.316
+female,32,1st,Southampton,United States,53.02,1,0,0.906,0.978,0.99,0.978
+male,52,2nd,Southampton,United States,13.1,0,0,0.496,0.16,0.248,0.21
+male,37,2nd,Southampton,England,26,1,0,0.472,0.1,0.302,0.142
+female,29,2nd,Southampton,England,26,1,0,0.936,0.872,0.886,0.97
+male,20,3rd,Queenstown,Ireland,7.1408,0,0,0.384,0.21,0.244,0.122
+female,36,1st,Cherbourg,X,262.0706,0,0,0.944,0.956,0.974,0.956
+female,30,1st,Southampton,England,86.1,0,0,0.926,0.976,0.988,0.976
+male,45,1st,Cherbourg,Belgium,29.14,0,0,0.634,0.144,0.374,0.144
+female,48,1st,Southampton,England,55,0,1,0.94,0.97,0.98,0.97
+male,32,3rd,Southampton,X,56.0911,0,0,0.51,0.566,0.29,0.152
+male,43,1st,Belfast,Scotland,89,0,0,0.362,0.062,0.042,0.062
+male,29,3rd,Southampton,England,8.01,0,0,0.578,0.4,0.212,0.114
+female,25,2nd,Southampton,England,30,1,1,0.982,0.932,0.92,0.952
+female,52,2nd,Southampton,England,30,0,2,0.982,0.928,0.938,0.958
+male,26,3rd,Cherbourg,X,14.0901,1,0,0.438,0.29,0.474,0.376
+male,21,3rd,Cherbourg,X,14.0901,1,0,0.438,0.22,0.476,0.278
+male,29,2nd,Southampton,England,26,1,0,0.472,0.072,0.294,0.204
+male,28,2nd,Southampton,England,22,0,0,0.486,0.07,0.258,0.154
+female,28,2nd,Southampton,England,27,1,0,0.952,0.892,0.954,0.974
+female,26,1st,Cherbourg,United States,136.1507,1,0,0.952,0.99,0.986,0.99
+male,27,1st,Cherbourg,United States,136.1507,1,0,0.45,0.314,0.202,0.314
+female,22,1st,Southampton,England,151.16,0,0,0.9,0.974,0.966,0.974
+male,40,1st,Southampton,United States,52,0,0,0.392,0.036,0.022,0.036
+male,20,3rd,Southampton,X,7.01,0,0,0.506,0.258,0.222,0.112
+male,18,3rd,Southampton,England,8.01,0,0,0.578,0.256,0.242,0.118
+male,24,3rd,Queenstown,Ireland,7.05,0,0,0.37,0.334,0.264,0.168
+male,24,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.368,0.24,0.172
+male,29,2nd,Southampton,England,10.1,0,0,0.518,0.076,0.24,0.114
+male,27,2nd,Southampton,Finland,13,0,0,0.508,0.07,0.276,0.176
+male,25,2nd,Southampton,England,10.1,0,0,0.518,0.064,0.274,0.174
+male,37,1st,Southampton,Ireland,25.1109,0,0,0.506,0.044,0.21,0.044
+female,8,2nd,Southampton,England,26.05,0,2,0.988,0.918,0.922,0.9
+male,31,2nd,Southampton,England,26.05,1,1,0.754,0.156,0.342,0.326
+female,30,2nd,Southampton,England,26.05,1,1,0.974,0.934,0.938,0.97
+male,36,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.506,0.232,0.068
+female,39,1st,Cherbourg,United States,83.0302,1,1,0.952,0.99,0.992,0.99
+male,37,1st,Cherbourg,United States,83.0302,1,1,0.706,0.314,0.27,0.314
+female,64,1st,Cherbourg,United States,83.0302,0,2,0.966,0.924,0.946,0.924
+male,31,3rd,Queenstown,United States,7.1408,0,0,0.384,0.356,0.198,0.128
+male,40,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.322,0.198,0.044
+female,23,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.572,0.886,0.964
+female,41,3rd,Queenstown,Ireland,7.1207,0,0,0.678,0.456,0.808,0.948
+male,66,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.258,0.08,0.062
+male,43,3rd,Southampton,X,8.01,0,0,0.578,0.418,0.24,0.03
+female,22,2nd,Southampton,England,10.1,0,0,0.932,0.854,0.87,0.974
+female,30,2nd,Southampton,United States,13,0,0,0.91,0.878,0.888,0.976
+female,32,2nd,Southampton,X,21,0,0,0.816,0.876,0.856,0.972
+male,35,3rd,Southampton,Croatia (Modern),7.1711,0,0,0.556,0.508,0.25,0.136
+male,27,3rd,Southampton,Hungary,7.1711,0,0,0.556,0.358,0.244,0.176
+male,19,3rd,Southampton,Hungary,7.1711,0,0,0.556,0.256,0.232,0.118
+male,30,3rd,Southampton,Poland,8.01,0,0,0.578,0.404,0.194,0.106
+female,55,1st,Southampton,United States,25.141,2,0,0.89,0.958,0.934,0.958
+female,16,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.544,0.894,0.95
+male,21,2nd,Southampton,England,11.1,0,0,0.524,0.018,0.27,0.11
+male,3,3rd,Southampton,England,15.18,1,1,0.594,0.468,0.812,0.682
+male,9,3rd,Southampton,England,15.18,1,1,0.594,0.352,0.71,0.642
+female,36,3rd,Southampton,England,15.18,0,2,0.688,0.322,0.94,0.966
+male,58,3rd,Southampton,England,7.05,0,0,0.516,0.366,0.074,0.086
+male,59,1st,Southampton,United States,26.11,0,0,0.574,0.082,0.054,0.082
+male,20,3rd,Southampton,United States,8.0302,0,0,0.576,0.258,0.242,0.112
+female,16,3rd,Southampton,United States,16.02,0,1,0.742,0.418,0.964,0.976
+male,43,3rd,Southampton,Australia,16.02,0,1,0.678,0.262,0.214,0.108
+male,70,1st,Southampton,United States,71,1,1,0.666,0.078,0.08,0.078
+female,39,1st,Southampton,United States,26.11,0,2,0.922,0.972,0.97,0.972
+female,64,1st,Southampton,United States,71,1,1,0.9,0.834,0.836,0.834
+male,17,3rd,Southampton,Croatia (Modern),8.1303,0,0,0.574,0.256,0.228,0.148
+male,39,1st,Cherbourg,United States,71.0508,1,0,0.474,0.152,0.152,0.152
+female,35,1st,Cherbourg,Peru,71.0508,1,0,0.954,0.99,0.992,0.99
+male,22,2nd,Belfast,Northern Ireland,22,0,0,0.434,0.018,0.274,0.106
+male,28,3rd,Cherbourg,X,7.0407,0,0,0.382,0.37,0.436,0.41
+female,22,3rd,Southampton,Sweden,10.1004,0,0,0.584,0.396,0.864,0.974
+male,45,3rd,Southampton,X,8.01,0,0,0.578,0.418,0.244,0.04
+male,19,3rd,Southampton,X,10.0305,0,0,0.568,0.256,0.248,0.118
+female,33,3rd,Queenstown,Ireland,6.19,0,0,0.676,0.544,0.874,0.956
+male,29,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.302,0.224,0.12
+male,51,1st,Southampton,England,26.11,0,0,0.574,0.208,0.482,0.208
+male,0.3333333333,3rd,Southampton,Sweden,14.08,0,2,0.446,0.436,0.532,0.71
+male,34,3rd,Southampton,Sweden,14.08,1,1,0.336,0.226,0.318,0.358
+female,28,3rd,Southampton,Sweden,14.08,1,1,0.368,0.36,0.69,0.97
+male,27,1st,Southampton,United States,30.1,0,0,0.582,0.176,0.476,0.176
+female,36,1st,Southampton,England,151.16,0,0,0.9,0.956,0.982,0.956
+male,27,3rd,Southampton,X,7.1711,0,0,0.556,0.358,0.244,0.176
+female,27,1st,Cherbourg,Canada,52,1,2,0.942,0.974,0.984,0.974
+male,31,1st,Cherbourg,Canada,52,1,0,0.52,0.268,0.348,0.268
+male,8,2nd,Southampton,England,36.15,1,1,0.792,0.668,0.688,0.662
+male,24,3rd,Southampton,England,24.03,2,0,0.278,0.208,0.33,0.302
+male,19,2nd,Southampton,England,73.1,0,0,0.386,0.016,0.118,0.118
+male,22,3rd,Southampton,Wales,8.01,0,0,0.578,0.258,0.246,0.11
+male,22,3rd,Southampton,England,24.03,2,0,0.278,0.156,0.324,0.266
+male,17,3rd,Southampton,England,8.01,2,0,0.442,0.15,0.29,0.264
+female,48,2nd,Southampton,England,36.15,0,2,0.982,0.934,0.96,0.964
+female,28,2nd,Southampton,England,13,0,0,0.91,0.882,0.904,0.972
+female,34,3rd,Southampton,England,16.02,1,0,0.462,0.49,0.884,0.978
+male,32,3rd,Southampton,England,16.02,1,0,0.45,0.408,0.326,0.264
+male,18,2nd,Southampton,England,73.1,0,0,0.386,0.016,0.118,0.118
+male,1,3rd,Southampton,England,20.1106,1,2,0.434,0.432,0.794,0.768
+female,0.1666666667,3rd,Southampton,England,20.1106,1,2,0.51,0.354,0.774,0.682
+male,25,3rd,Southampton,England,20.1106,1,2,0.434,0.126,0.362,0.42
+female,32,3rd,Southampton,England,20.1106,1,2,0.51,0.312,0.85,0.932
+male,25,3rd,Southampton,Bosnia,7.1711,0,0,0.556,0.372,0.254,0.174
+female,24,2nd,Cherbourg,Italy,27.1405,1,0,0.956,0.912,0.96,0.99
+male,29,2nd,Cherbourg,Italy,27.1405,1,0,0.458,0.09,0.494,0.272
+male,36,3rd,Southampton,United States,17.08,1,0,0.45,0.368,0.346,0.168
+female,36,3rd,Southampton,United States,17.08,1,0,0.424,0.502,0.882,0.96
+male,30,3rd,Southampton,Belgium,9.1,0,0,0.572,0.404,0.216,0.106
+male,25,2nd,Southampton,Channel Islands,31.1,0,0,0.488,0.064,0.332,0.174
+male,30,3rd,Southampton,X,7.1711,0,0,0.556,0.404,0.194,0.106
+male,22,3rd,Southampton,England,7.05,0,0,0.516,0.258,0.23,0.11
+male,26,3rd,Southampton,England,7.05,0,0,0.516,0.376,0.238,0.174
+male,16,3rd,Southampton,Belgium,9.1,0,0,0.572,0.258,0.256,0.166
+female,19,3rd,Queenstown,Ireland,7.1707,0,0,0.73,0.552,0.884,0.96
+male,18,2nd,Southampton,England,73.1,0,0,0.386,0.016,0.118,0.118
+male,31,1st,Southampton,Canada,57,1,0,0.554,0.244,0.47,0.244
+female,17,1st,Southampton,United States,57,1,0,0.91,0.97,0.98,0.97
+male,17,3rd,Southampton,Croatia (Modern),7.1711,0,0,0.556,0.256,0.226,0.148
+male,42,3rd,Southampton,Hungary,8.1303,0,0,0.574,0.418,0.224,0.032
+male,43,3rd,Southampton,X,7.1711,0,0,0.556,0.418,0.234,0.03
+male,52,1st,Southampton,United States,81.1702,1,1,0.72,0.224,0.388,0.224
+male,4,1st,Southampton,United States,81.1702,0,2,0.786,0.754,0.814,0.754
+female,34,1st,Southampton,United States,81.1702,1,1,0.908,0.976,0.982,0.976
+female,18,2nd,Southampton,England,23,0,1,0.974,0.922,0.96,0.976
+female,34,2nd,Southampton,England,23,0,1,0.974,0.922,0.946,0.972
+female,21,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.536,0.862,0.962
+male,37,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.356,0.194,0.048
+male,18,3rd,Southampton,England,8.01,0,0,0.578,0.256,0.242,0.118
+male,22,3rd,Queenstown,Ireland,8.0902,0,0,0.424,0.212,0.252,0.114
+female,48,1st,Cherbourg,United States,106.0806,1,0,0.958,0.988,0.994,0.988
+female,27,1st,Cherbourg,Canada,247.1005,1,1,0.938,0.99,0.984,0.99
+male,50,1st,Cherbourg,United States,106.0806,1,0,0.464,0.264,0.186,0.264
+male,55,2nd,Southampton,England,26,0,0,0.472,0.122,0.078,0.078
+female,31,3rd,Southampton,United States,12.0906,0,0,0.68,0.472,0.906,0.976
+female,28,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.58,0.864,0.956
+male,33,3rd,Cherbourg,Croatia (Modern),7.1711,0,0,0.422,0.414,0.376,0.362
+male,8,2nd,Southampton,United States,32.1,0,2,0.838,0.69,0.72,0.726
+male,42,2nd,Southampton,England,32.1,1,1,0.788,0.106,0.274,0.274
+female,34,2nd,Southampton,United States,32.1,1,1,0.984,0.912,0.934,0.976
+female,27,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.614,0.914,0.964
+female,24,3rd,Southampton,England,8.01,0,0,0.632,0.426,0.884,0.976
+female,48,1st,Cherbourg,England,56.1807,1,0,0.958,0.988,0.992,0.988
+male,49,1st,Cherbourg,England,39.12,1,0,0.592,0.31,0.518,0.31
+male,39,1st,Cherbourg,United States,29.14,0,0,0.634,0.16,0.254,0.16
+male,24,3rd,Southampton,Channel Islands,7.11,0,0,0.528,0.368,0.246,0.172
+female,27,2nd,Cherbourg,Spain,13.1702,1,0,0.912,0.906,0.89,0.992
+female,30,2nd,Cherbourg,Spain,13.1702,1,0,0.912,0.892,0.886,0.988
+male,65,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.258,0.08,0.062
+male,23,3rd,Southampton,United States,13.18,1,0,0.414,0.222,0.332,0.286
+female,22,3rd,Southampton,United States,13.18,1,0,0.484,0.392,0.804,0.986
+female,23,1st,Cherbourg,United States,83.0302,0,1,0.966,0.994,0.996,0.994
+male,18,3rd,Southampton,Sweden,7.1506,0,0,0.54,0.256,0.208,0.118
+male,25,2nd,Southampton,United States,13,0,0,0.508,0.064,0.284,0.174
+male,16,3rd,Southampton,Sweden,7.1506,0,0,0.54,0.258,0.226,0.166
+male,45,3rd,Southampton,Sweden,6.1906,0,0,0.512,0.418,0.216,0.04
+male,29,3rd,Cherbourg,X,7.0406,0,0,0.366,0.384,0.428,0.396
+male,15,3rd,Cherbourg,Lebanon,7.0407,1,1,0.518,0.4,0.462,0.598
+male,22,3rd,Cherbourg,Lebanon,7.0407,1,1,0.518,0.408,0.408,0.498
+male,48,3rd,Southampton,England,7.05,0,0,0.516,0.436,0.21,0.17
+female,5,3rd,Southampton,United States,12.0906,0,0,0.68,0.492,0.882,0.878
+male,21,2nd,Southampton,Sweden,13,0,0,0.508,0.018,0.272,0.11
+female,39,1st,Cherbourg,United States,247.1006,0,0,0.942,0.984,0.99,0.984
+male,37,3rd,Southampton,X,7.01,0,0,0.506,0.5,0.196,0.044
+female,54,1st,Cherbourg,United States,78.0504,1,0,0.958,0.988,0.994,0.988
+female,36,1st,Cherbourg,United States,31.1307,0,0,0.8,0.956,0.632,0.956
+male,38,3rd,Southampton,England,15.02,0,0,0.498,0.52,0.206,0.066
+male,18,2nd,Southampton,Norway,13,0,0,0.508,0.016,0.252,0.118
+male,46,3rd,Southampton,England,7.05,0,0,0.516,0.406,0.206,0.03
+male,26,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.296,0.248,0.172
+male,49,1st,Southampton,England,221.1507,0,0,0.448,0.214,0.168,0.214
+male,32,2nd,Southampton,England,26,1,0,0.472,0.144,0.338,0.264
+male,18,2nd,Southampton,England,10.1,0,0,0.518,0.016,0.24,0.118
+male,34,3rd,Southampton,X,7.01,0,0,0.506,0.508,0.236,0.132
+male,18,3rd,Southampton,Sweden,7.1511,0,0,0.586,0.256,0.236,0.118
+female,48,1st,Cherbourg,United States,31.1308,0,0,0.886,0.982,0.844,0.982
+female,22,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.56,0.864,0.96
+female,42,1st,Cherbourg,United States,110.1708,0,0,0.948,0.986,0.988,0.986
+male,28,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.282,0.232,0.148
+male,48,3rd,Queenstown,Ireland,6.19,0,0,0.362,0.32,0.202,0.144
+male,36,1st,Southampton,Canada,26.0509,0,0,0.618,0.068,0.538,0.068
+male,19,3rd,Queenstown,Ireland,7.1707,0,0,0.412,0.208,0.238,0.126
+male,20,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.21,0.244,0.122
+male,32,3rd,Southampton,X,56.0911,0,0,0.51,0.566,0.29,0.152
+female,20,3rd,Southampton,England,34.0706,2,2,0.092,0.182,0.884,0.892
+female,7,3rd,Southampton,England,34.0706,2,2,0.092,0.132,0.796,0.752
+male,23,3rd,Southampton,England,8.01,0,0,0.578,0.276,0.238,0.122
+male,18,3rd,Southampton,England,34.0706,2,2,0.188,0.07,0.398,0.402
+female,54,3rd,Southampton,Scotland,34.0706,1,3,0.16,0.18,0.876,0.92
+male,14,3rd,Southampton,England,34.0706,1,3,0.214,0.084,0.498,0.528
+male,30,1st,Southampton,United States,27.15,0,0,0.538,0.106,0.3,0.106
+female,24,1st,Southampton,Canada,263,3,2,0.752,0.894,0.934,0.894
+female,28,1st,Southampton,Canada,263,3,2,0.752,0.906,0.936,0.906
+female,23,1st,Southampton,Canada,263,3,2,0.752,0.9,0.934,0.9
+male,19,1st,Southampton,Canada,263,3,2,0.528,0.262,0.204,0.262
+male,64,1st,Southampton,Canada,263,1,4,0.604,0.12,0.066,0.12
+female,60,1st,Southampton,Canada,263,1,4,0.708,0.858,0.844,0.858
+male,28,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.282,0.232,0.148
+male,38,2nd,Southampton,United States,13,0,0,0.508,0.144,0.206,0.066
+female,32,1st,Cherbourg,England,56.1807,0,0,0.948,0.986,0.988,0.986
+male,37,1st,Southampton,England,26.11,0,0,0.574,0.044,0.364,0.044
+male,49,1st,Southampton,United States,133.13,2,0,0.602,0.43,0.582,0.43
+male,43,1st,Cherbourg,United States,27.1405,1,0,0.602,0.198,0.504,0.198
+female,42,1st,Southampton,United States,133.13,1,0,0.906,0.974,0.992,0.974
+female,22,1st,Cherbourg,Switzerland,49.1,0,2,0.972,0.992,0.996,0.992
+male,60,1st,Cherbourg,Switzerland,79.04,1,1,0.71,0.394,0.486,0.394
+female,48,1st,Cherbourg,Switzerland,79.04,1,1,0.952,0.988,0.994,0.988
+male,39,2nd,Belfast,England,22,0,0,0.434,0.1,0.208,0.06
+male,39,1st,Southampton,England,89,0,0,0.446,0.036,0.048,0.036
+female,38,2nd,Southampton,India,13,0,0,0.91,0.87,0.856,0.952
+male,37,1st,Southampton,England,53.02,1,0,0.518,0.142,0.248,0.142
+female,35,1st,Southampton,England,53.02,1,0,0.906,0.98,0.994,0.98
+male,36,2nd,Southampton,England,26,0,0,0.472,0.126,0.264,0.068
+male,38,2nd,Southampton,England,21,1,0,0.476,0.112,0.278,0.17
+male,33,2nd,Southampton,England,21,1,0,0.476,0.12,0.312,0.246
+male,29,3rd,Queenstown,Ireland,7.141,0,0,0.378,0.302,0.218,0.12
+male,23,3rd,Southampton,England,14.1,0,0,0.476,0.276,0.262,0.122
+female,39,2nd,Southampton,England,13,0,0,0.91,0.888,0.906,0.962
+male,19,2nd,Southampton,England,26,0,0,0.472,0.016,0.234,0.118
+male,26,2nd,Southampton,Channel Islands,10.1,0,0,0.518,0.076,0.27,0.174
+male,47,1st,Southampton,England,38.1,0,0,0.472,0.08,0.138,0.08
+female,38,3rd,Cherbourg,United States,7.0407,0,0,0.866,0.598,0.89,0.984
+male,21,3rd,Cherbourg,Lebanon,7.0406,0,0,0.366,0.29,0.454,0.354
+male,30,3rd,Cherbourg,Bulgaria,7.1711,0,0,0.422,0.38,0.402,0.364
+female,22,1st,Cherbourg,United States,59.08,0,1,0.968,0.994,1,0.994
+female,44,1st,Cherbourg,United States,59.08,0,1,0.968,0.994,0.998,0.994
+female,35,1st,Southampton,X,211.1,0,0,0.902,0.972,0.982,0.972
+male,23,1st,Cherbourg,X,79.04,0,0,0.47,0.296,0.17,0.296
+male,47,2nd,Southampton,England,10.1,0,0,0.518,0.12,0.246,0.08
+male,19,2nd,Southampton,England,11.1,1,0,0.498,0.042,0.306,0.234
+male,21,2nd,Southampton,England,11.1,1,0,0.498,0.046,0.316,0.25
+male,24,2nd,Southampton,England,13.1,0,0,0.496,0.056,0.27,0.172
+male,23,3rd,Southampton,Wales,8.01,0,0,0.578,0.276,0.238,0.122
+male,31,2nd,Southampton,Ireland,13,0,0,0.508,0.104,0.22,0.124
+male,24,2nd,Southampton,England,13,0,0,0.508,0.056,0.27,0.172
+female,17,3rd,Queenstown,Ireland,7.1408,0,0,0.786,0.536,0.876,0.95
+male,30,2nd,Southampton,Argentina,13,0,0,0.508,0.078,0.222,0.106
+female,18,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.546,0.894,0.958
+male,47,1st,Cherbourg,United States,89.0201,1,0,0.51,0.27,0.364,0.27
+female,40,1st,Cherbourg,United States,89.0201,1,0,0.958,0.988,0.998,0.988
+male,71,1st,Cherbourg,United States,34.1301,0,0,0.602,0.084,0.058,0.084
+male,9,3rd,Southampton,England,20.1006,0,2,0.612,0.434,0.692,0.708
+male,33,3rd,Southampton,England,20.1006,1,1,0.49,0.236,0.322,0.344
+male,41,3rd,Southampton,X,7.17,0,0,0.556,0.428,0.204,0.028
+female,31,3rd,Southampton,England,20.1006,1,1,0.514,0.378,0.852,0.978
+male,9,3rd,Southampton,England,46.18,5,2,0.01,0.034,0.454,0.49
+male,1,3rd,Southampton,England,46.18,5,2,0.01,0.11,0.484,0.516
+male,11,3rd,Southampton,England,46.18,5,2,0.01,0.03,0.446,0.476
+female,10,3rd,Southampton,England,46.18,5,2,0.02,0.06,0.668,0.678
+female,16,3rd,Southampton,England,46.18,5,2,0.02,0.104,0.72,0.74
+male,14,3rd,Southampton,England,46.18,5,2,0.01,0.014,0.376,0.392
+male,42,3rd,Southampton,England,46.18,1,6,0.194,0.052,0.28,0.3
+female,43,3rd,Southampton,England,46.18,1,6,0.178,0.13,0.78,0.83
+male,53,1st,Southampton,United States,28.1,0,0,0.558,0.208,0.518,0.208
+female,19,1st,Southampton,England,153.0903,0,0,0.908,0.974,0.98,0.974
+male,38,1st,Southampton,Canada,30,0,1,0.63,0.144,0.152,0.144
+female,59,1st,Southampton,England,153.0903,0,1,0.914,0.966,0.982,0.966
+male,52,2nd,Southampton,South Africa,13,0,0,0.508,0.16,0.252,0.21
+female,45,1st,Cherbourg,United States,63.0702,0,1,0.968,0.99,0.996,0.99
+male,23,1st,Cherbourg,United States,63.0702,0,1,0.824,0.564,0.644,0.564
+male,20,engineering crew,Southampton,England,0,0,0,0.33,0.226,0.27,0.112
+male,41,3rd,Southampton,England,8.01,0,0,0.578,0.428,0.21,0.028
+male,32,3rd,Southampton,Norway,8.0615,0,0,0.578,0.566,0.238,0.152
+male,25,3rd,Southampton,England,8.01,0,0,0.578,0.372,0.254,0.174
+male,46,1st,Cherbourg,France,79.04,0,0,0.47,0.116,0.066,0.116
+male,19,3rd,Southampton,Finland,9.1611,0,0,0.578,0.256,0.248,0.118
+male,37,3rd,Southampton,Finland,7.1806,2,0,0.464,0.298,0.312,0.216
+male,28,3rd,Southampton,Finland,7.1806,2,0,0.464,0.214,0.306,0.272
+male,19,3rd,Southampton,Sweden,7.1506,0,0,0.54,0.256,0.218,0.118
+female,24,3rd,Southampton,Switzerland,8.17,0,0,0.562,0.426,0.86,0.976
+male,28,3rd,Southampton,Norway,6.1904,1,0,0.43,0.276,0.282,0.272
+male,19,3rd,Southampton,Norway,6.1904,1,0,0.43,0.208,0.25,0.234
+male,28,3rd,Southampton,Finland,15.17,1,0,0.452,0.276,0.33,0.272
+female,24,3rd,Southampton,Finland,15.17,1,0,0.496,0.43,0.832,0.986
+male,30,2nd,Southampton,England,13,0,0,0.508,0.078,0.222,0.106
+male,0.5833333333,2nd,Southampton,United States,14.1,1,1,0.706,0.706,0.63,0.666
+female,23,2nd,Southampton,United States,14.1,0,2,0.92,0.938,0.892,0.958
+male,19,3rd,Southampton,Belgium,9.1,0,0,0.572,0.256,0.248,0.118
+male,27,3rd,Cherbourg,Lebanon,7.0407,0,0,0.382,0.398,0.45,0.434
+male,18,3rd,Cherbourg,Lebanon,7.0406,0,0,0.366,0.282,0.444,0.366
+male,35,3rd,Cherbourg,Lebanon,7.0407,0,0,0.382,0.394,0.344,0.344
+male,41,3rd,Southampton,United States,14.0202,2,0,0.34,0.254,0.308,0.21
+male,26,3rd,Southampton,Denmark,7.1701,1,0,0.5,0.302,0.322,0.342
+male,21,3rd,Southampton,Denmark,7.1701,0,0,0.556,0.26,0.242,0.11
+female,45,3rd,Southampton,United States,14.0202,1,0,0.47,0.422,0.808,0.97
+male,45,2nd,Southampton,United States,13,0,0,0.508,0.112,0.236,0.04
+male,25,1st,Cherbourg,United States,55.081,1,0,0.594,0.374,0.594,0.374
+female,21,1st,Cherbourg,United States,55.081,1,0,0.958,0.99,0.996,0.99
+female,17,3rd,Queenstown,Ireland,7.1408,0,0,0.786,0.536,0.876,0.95
+female,21,3rd,Southampton,England,7.11,0,0,0.682,0.382,0.87,0.974
+female,6,2nd,Southampton,Scotland,33,0,1,0.992,0.91,0.914,0.886
+male,48,1st,Cherbourg,United States,76.1407,1,0,0.504,0.328,0.418,0.328
+female,49,1st,Cherbourg,United States,76.1407,1,0,0.958,0.988,0.996,0.988
+male,39,2nd,Southampton,Scotland,33,0,1,0.768,0.124,0.116,0.122
+male,37,1st,Southampton,England,42.08,0,0,0.392,0.044,0.02,0.044
+male,62,2nd,Southampton,England,10.1,0,0,0.518,0.142,0.11,0.078
+male,45,1st,Southampton,United States,83.0906,1,0,0.566,0.11,0.166,0.11
+female,35,1st,Southampton,United States,83.0906,1,0,0.912,0.98,0.994,0.98
+male,45,2nd,Southampton,England,10.1,0,0,0.518,0.112,0.252,0.04
+male,46,1st,Southampton,England,89,0,0,0.446,0.03,0.048,0.03
+male,33,2nd,Southampton,England,22,0,0,0.486,0.134,0.254,0.13
+female,7,2nd,Southampton,England,26.05,0,2,0.988,0.896,0.898,0.844
+male,47,2nd,Southampton,England,26.05,1,1,0.754,0.096,0.29,0.244
+male,29,3rd,Queenstown,Ireland,6.1702,0,0,0.36,0.302,0.212,0.12
+female,48,2nd,Southampton,England,26.05,1,1,0.974,0.938,0.942,0.986
+male,27,1st,Cherbourg,Egypt,76.1407,0,0,0.542,0.434,0.46,0.434
+male,45,1st,Southampton,England,30,0,0,0.572,0.04,0.442,0.04
+female,24,1st,Cherbourg,United States,83.0302,0,0,0.952,0.988,0.99,0.988
+male,55,1st,Southampton,Canada,93.1,1,1,0.708,0.108,0.14,0.108
+female,52,1st,Southampton,Canada,93.1,1,1,0.908,0.978,0.982,0.978
+male,42,1st,Southampton,England,42.1,0,0,0.392,0.032,0.014,0.032
+female,33,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.544,0.852,0.956
+male,27,3rd,Southampton,Sweden,6.1906,0,0,0.512,0.358,0.228,0.176
+male,24,3rd,Southampton,X,56.0911,0,0,0.51,0.368,0.274,0.172
+female,20,3rd,Queenstown,Ireland,6.15,0,0,0.638,0.538,0.826,0.962
+female,16,3rd,Southampton,Finland,7.1806,0,0,0.61,0.424,0.878,0.958
+female,23,3rd,Southampton,Finland,7.1806,0,0,0.61,0.39,0.86,0.972
+female,22,3rd,Southampton,Sweden,8.1903,0,0,0.574,0.396,0.852,0.974
+male,30,3rd,Southampton,Hungary,7.1711,0,0,0.556,0.404,0.194,0.106
+female,28,3rd,Southampton,Sweden,7.1506,0,0,0.608,0.426,0.88,0.972
+female,21,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.536,0.862,0.962
+female,24,2nd,Southampton,England,65,1,2,0.932,0.946,0.902,0.896
+female,24,2nd,Southampton,England,65,1,2,0.932,0.946,0.902,0.896
+male,50,2nd,Southampton,England,65,1,2,0.644,0.058,0.3,0.296
+female,50,2nd,Southampton,India,65,1,2,0.932,0.93,0.94,0.936
+female,56,2nd,Southampton,India,16,0,0,0.924,0.822,0.93,0.946
+male,24,2nd,Southampton,England,73.1,2,0,0.348,0.02,0.304,0.302
+male,30,2nd,Southampton,England,73.1,2,0,0.348,0.034,0.246,0.246
+male,21,2nd,Southampton,England,73.1,2,0,0.348,0.016,0.252,0.252
+male,44,1st,Southampton,England,51.1703,0,0,0.378,0.032,0.018,0.032
+female,18,2nd,Southampton,Finland,13,1,1,0.63,0.902,0.636,0.95
+male,55,1st,Southampton,England,50,0,0,0.38,0.078,0.03,0.078
+female,17,1st,Cherbourg,United States,57.1907,0,1,0.968,0.994,1,0.994
+female,44,1st,Cherbourg,United States,57.1907,0,1,0.968,0.994,0.998,0.994
+female,2,3rd,Southampton,Finland,12.0509,0,1,0.722,0.428,0.804,0.804
+female,22,3rd,Southampton,Finland,12.0509,1,1,0.486,0.372,0.732,0.976
+female,20,2nd,Southampton,England,23,2,1,0.928,0.91,0.918,0.948
+male,24,2nd,Southampton,England,11.1,2,1,0.634,0.196,0.302,0.354
+male,36,2nd,Southampton,England,13,0,0,0.508,0.126,0.236,0.068
+female,54,2nd,Southampton,England,23,1,3,0.932,0.914,0.896,0.92
+male,50,2nd,Southampton,England,13,0,0,0.508,0.164,0.21,0.188
+female,51,1st,Cherbourg,United States,77.1902,1,0,0.958,0.982,0.988,0.982
+female,29,2nd,Southampton,England,26,1,0,0.936,0.872,0.886,0.97
+male,44,2nd,Southampton,England,26,1,0,0.472,0.084,0.324,0.112
+male,43,3rd,Southampton,Sweden,6.09,0,0,0.498,0.418,0.216,0.03
+male,18,3rd,Southampton,Norway,22.1006,0,0,0.428,0.256,0.236,0.118
+male,42,1st,Southampton,United States,52,1,0,0.476,0.13,0.18,0.13
+female,35,1st,Southampton,United States,52,1,0,0.916,0.98,0.992,0.98
+male,40,1st,Southampton,United States,26.11,0,0,0.574,0.036,0.322,0.036
+female,27,3rd,Southampton,Finland,7.1806,0,0,0.61,0.458,0.902,0.976
+male,21,2nd,Southampton,England,73.1,0,0,0.386,0.018,0.11,0.11
+male,22,3rd,Queenstown,X,7.15,0,0,0.386,0.212,0.246,0.114
+male,41,2nd,Southampton,Japan,13,0,0,0.508,0.122,0.21,0.028
+female,26,3rd,Southampton,England,8.01,0,0,0.632,0.458,0.906,0.97
+male,63,2nd,Southampton,England,26,1,0,0.472,0.078,0.144,0.104
+female,61,2nd,Southampton,England,26,1,0,0.936,0.682,0.7,0.884
+male,38,1st,Southampton,United States,100,1,0,0.578,0.17,0.418,0.17
+female,31,1st,Southampton,United States,100,1,0,0.914,0.976,0.996,0.976
+male,43,1st,Cherbourg,United States,30.1311,0,0,0.6,0.14,0.218,0.14
+male,42,3rd,Southampton,Norway,7.13,0,0,0.534,0.418,0.216,0.032
+male,21,2nd,Southampton,X,22,0,0,0.486,0.018,0.256,0.11
+male,34,2nd,Southampton,England,12.0506,0,0,0.53,0.142,0.27,0.132
+male,34,3rd,Southampton,England,7.1709,0,0,0.558,0.508,0.26,0.132
+male,11,3rd,Cherbourg,X,18.1509,0,0,0.408,0.342,0.562,0.492
+female,18,3rd,Cherbourg,Syria,7.0407,0,0,0.866,0.566,0.912,0.982
+male,33,3rd,Cherbourg,Lebanon,14.0902,0,0,0.376,0.414,0.374,0.362
+female,39,1st,Southampton,X,80,0,0,0.924,0.962,0.976,0.962
+female,17,2nd,Southampton,Channel Islands,10.1,0,0,0.932,0.882,0.894,0.96
+male,32,3rd,Southampton,X,7.1711,0,0,0.556,0.566,0.238,0.152
+female,17,3rd,Southampton,United States,7.1806,1,0,0.448,0.346,0.72,0.97
+female,25,3rd,Southampton,Finland,7.1806,1,0,0.448,0.426,0.728,0.978
+female,50,1st,Cherbourg,United States,28.1403,0,0,0.85,0.956,0.678,0.956
+male,49,1st,Southampton,England,89,0,0,0.446,0.214,0.274,0.214
+male,20,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.258,0.24,0.112
+female,16,3rd,Cherbourg,X,14.0901,1,0,0.594,0.544,0.772,0.986
+female,19,3rd,Cherbourg,X,14.0901,1,0,0.594,0.542,0.738,0.988
+female,24,2nd,Southampton,England,27,2,1,0.968,0.932,0.956,0.966
+male,42,2nd,Southampton,South Africa,27,1,0,0.474,0.088,0.338,0.13
+male,30,3rd,Cherbourg,Croatia (Modern),7.1711,0,0,0.422,0.38,0.402,0.364
+male,21,3rd,Southampton,Sweden,7.1511,0,0,0.586,0.26,0.262,0.11
+male,21,3rd,Southampton,X,7.01,0,0,0.506,0.26,0.226,0.11
+male,46,2nd,Southampton,Wales,15,0,0,0.492,0.106,0.21,0.03
+male,24,2nd,Southampton,England,31.1,2,0,0.418,0.02,0.37,0.302
+male,21,2nd,Southampton,England,31.1,2,0,0.418,0.016,0.33,0.252
+male,32,2nd,Southampton,England,10.1,0,0,0.518,0.142,0.26,0.152
+male,20,3rd,Southampton,Denmark,7.1701,0,0,0.556,0.258,0.238,0.112
+male,48,3rd,Southampton,Denmark,7.0101,0,0,0.51,0.436,0.208,0.17
+male,17,3rd,Southampton,Denmark,7.1701,1,0,0.5,0.204,0.274,0.262
+female,26,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.614,0.912,0.962
+female,23,2nd,Cherbourg,United States,13.151,0,0,0.942,0.89,0.908,0.978
+male,29,3rd,Southampton,Norway,8.0203,0,0,0.58,0.4,0.224,0.114
+male,34,3rd,Southampton,Finland,6.0911,0,0,0.498,0.508,0.224,0.132
+male,22,3rd,Southampton,Sweden,7.1511,0,0,0.586,0.258,0.254,0.11
+male,33,3rd,Southampton,Sweden,8.1301,0,0,0.574,0.52,0.23,0.13
+male,31,3rd,Southampton,United States,7.1506,0,0,0.54,0.5,0.192,0.124
+male,29,3rd,Southampton,United States,7.1701,0,0,0.556,0.4,0.21,0.114
+male,26,3rd,Southampton,Sweden,7.1506,0,0,0.54,0.376,0.24,0.174
+male,4,3rd,Southampton,X,11.0208,1,1,0.572,0.454,0.728,0.69
+female,1,3rd,Southampton,X,11.0208,1,1,0.482,0.38,0.67,0.774
+male,49,3rd,Southampton,United States,13,0,0,0.544,0.44,0.22,0.214
+male,33,3rd,Southampton,United States,7.1506,0,0,0.54,0.52,0.22,0.13
+female,26,3rd,Southampton,X,11.0208,0,2,0.602,0.336,0.846,0.918
+male,19,3rd,Southampton,United States,13,0,0,0.544,0.256,0.258,0.118
+male,8,3rd,Southampton,England,23.09,1,2,0.206,0.276,0.646,0.752
+female,7,3rd,Southampton,England,23.09,1,2,0.16,0.19,0.762,0.748
+male,35,3rd,Southampton,Scotland,23.09,1,2,0.206,0.156,0.358,0.452
+female,36,3rd,Southampton,Scotland,23.09,1,2,0.16,0.296,0.834,0.928
+male,46,1st,Southampton,United States,26,0,0,0.486,0.03,0.2,0.03
+male,23,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.276,0.236,0.122
+male,25,3rd,Southampton,Sweden,7.1701,0,0,0.556,0.372,0.258,0.174
+male,27,3rd,Southampton,Sweden,7.1701,0,0,0.556,0.358,0.242,0.176
+male,39,3rd,Cherbourg,Lebanon,7.0407,0,2,0.532,0.344,0.274,0.372
+male,50,1st,Southampton,England,26,0,0,0.486,0.188,0.184,0.188
+female,20,3rd,Southampton,Finland,9.161,1,0,0.434,0.346,0.716,0.98
+female,21,3rd,Southampton,Finland,9.161,1,0,0.434,0.356,0.716,0.986
+male,32,3rd,Southampton,Finland,7.1806,0,0,0.584,0.566,0.246,0.152
+male,17,3rd,Southampton,Finland,7.0206,0,0,0.51,0.256,0.21,0.148
+male,21,3rd,Southampton,Norway,8.0808,0,0,0.576,0.26,0.246,0.11
+male,34,2nd,Southampton,Russia,26,1,0,0.472,0.12,0.34,0.226
+female,24,2nd,Southampton,Russia,26,1,0,0.936,0.88,0.946,0.986
+male,30,3rd,Southampton,Hungary,7.1711,0,0,0.556,0.404,0.194,0.106
+male,21,3rd,Southampton,Sweden,7.1511,0,0,0.586,0.26,0.262,0.11
+male,33,3rd,Southampton,Sweden,7.1701,0,0,0.556,0.52,0.232,0.13
+male,22,3rd,Southampton,Sweden,7.1005,0,0,0.52,0.258,0.23,0.11
+female,22,2nd,Southampton,United States,21,0,0,0.816,0.854,0.84,0.974
+female,5,3rd,Cherbourg,Slovenia,13.0804,0,1,0.804,0.698,0.882,0.94
+male,39,3rd,Cherbourg,United States,13.0804,0,1,0.764,0.428,0.4,0.316
+male,19,3rd,Cherbourg,Greece,7.0407,0,0,0.382,0.282,0.45,0.36
+female,46,2nd,Queenstown,Ireland,12.07,0,0,0.934,0.862,0.906,0.946
+male,23,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.226,0.246,0.122
+male,35,2nd,Queenstown,Ireland,12.07,0,0,0.444,0.118,0.258,0.126
+male,39,3rd,Southampton,United States,7.05,0,0,0.516,0.472,0.19,0.036
+male,33,1st,Southampton,England,211.1,0,0,0.444,0.13,0.126,0.13
+female,20,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.538,0.878,0.962
+female,22,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.56,0.864,0.96
+male,19,3rd,Southampton,Scotland,8.01,0,0,0.578,0.256,0.234,0.118
+male,44,3rd,Queenstown,Ireland,7.1607,0,0,0.418,0.306,0.234,0.044
+male,44,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.302,0.032
+female,49,2nd,Southampton,England,13.1,0,0,0.922,0.872,0.922,0.962
+male,24,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.334,0.276,0.168
+male,58,1st,Cherbourg,United States,29.14,0,0,0.634,0.12,0.072,0.12
+male,41,1st,Southampton,United States,51.1703,1,0,0.45,0.112,0.094,0.112
+female,40,1st,Southampton,United States,51.1703,1,0,0.918,0.97,0.974,0.97
+male,25,3rd,Cherbourg,Lebanon,14.0901,1,0,0.438,0.284,0.47,0.374
+female,20,3rd,Cherbourg,Lebanon,14.0901,1,0,0.594,0.532,0.736,0.986
+male,25,3rd,Queenstown,Ireland,7.15,1,0,0.35,0.268,0.308,0.288
+male,22,3rd,Queenstown,Ireland,7.15,1,0,0.35,0.194,0.282,0.216
+male,22,3rd,Queenstown,Ireland,7.1409,0,0,0.382,0.212,0.246,0.114
+male,42,1st,Southampton,United States,52.1101,1,0,0.532,0.13,0.34,0.13
+female,45,1st,Southampton,United States,52.1101,1,0,0.906,0.97,0.992,0.97
+female,4,3rd,Southampton,Switzerland,22,0,2,0.6,0.402,0.896,0.826
+female,26,3rd,Southampton,Switzerland,22,1,1,0.52,0.392,0.82,0.952
+female,23,3rd,Southampton,Switzerland,8.1303,2,0,0.36,0.344,0.732,0.964
+male,29,3rd,Southampton,Switzerland,22,3,1,0.16,0.282,0.404,0.292
+male,26,3rd,Southampton,Switzerland,8.1303,2,0,0.442,0.216,0.32,0.314
+male,52,2nd,Queenstown,United States,12.07,0,0,0.444,0.124,0.256,0.166
+male,41,1st,Southampton,United States,26.11,0,0,0.574,0.028,0.284,0.028
+female,1,3rd,Southampton,Sweden,12.0308,1,1,0.448,0.38,0.632,0.774
+male,18,3rd,Southampton,Sweden,7.1701,1,1,0.508,0.132,0.29,0.334
+female,36,3rd,Southampton,Sweden,12.0308,0,2,0.606,0.322,0.802,0.966
+male,41,2nd,Belfast,Northern Ireland,22,0,0,0.434,0.098,0.222,0.056
+male,30,3rd,Cherbourg,Bulgaria,7.1711,0,0,0.422,0.38,0.402,0.364
+male,25,3rd,Cherbourg,Turkey,7.0407,0,0,0.382,0.38,0.436,0.404
+female,29,1st,Southampton,X,211.0609,0,0,0.91,0.974,0.99,0.974
+male,23,2nd,Southampton,England,22,0,0,0.486,0.028,0.248,0.122
+male,26,3rd,Southampton,Scotland,7.11,0,0,0.528,0.376,0.238,0.174
+male,31,2nd,Southampton,Sweden,10.1,0,0,0.518,0.104,0.222,0.124
+male,35,3rd,Cherbourg,Lebanon,7.0406,0,0,0.366,0.394,0.338,0.344
+male,35,2nd,Southampton,United States,26,1,1,0.78,0.144,0.322,0.356
+female,34,2nd,Southampton,United States,26,1,1,0.946,0.912,0.82,0.976
+female,37,3rd,Southampton,Finland,9.1109,0,0,0.57,0.474,0.86,0.958
+male,31,2nd,Queenstown,Ireland,10.1402,0,0,0.432,0.09,0.218,0.128
+male,38,3rd,Southampton,China/Hong Kong,56.0911,0,0,0.51,0.52,0.152,0.066
+male,23,3rd,Southampton,X,56.0911,0,0,0.51,0.276,0.218,0.122
+female,22,3rd,Southampton,Sweden,7.05,0,0,0.734,0.396,0.882,0.974
+male,17,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.214,0.238,0.152
+male,32,3rd,Southampton,X,56.0911,0,0,0.51,0.566,0.29,0.152
+female,1,2nd,Cherbourg,France,41.1107,1,2,0.984,0.918,0.902,0.848
+female,3,2nd,Cherbourg,France,41.1107,1,2,0.984,0.924,0.914,0.86
+male,25,2nd,Cherbourg,France,41.1107,1,2,0.666,0.19,0.462,0.486
+female,22,2nd,Cherbourg,France,41.1107,1,2,0.984,0.958,0.97,0.972
+male,29,3rd,Southampton,United States,9.0908,0,0,0.564,0.4,0.232,0.114
+male,29,3rd,Southampton,Sweden,7.1506,0,0,0.54,0.4,0.206,0.114
+male,22,3rd,Southampton,Sweden,7.1506,0,0,0.54,0.258,0.232,0.11
+female,49,1st,Southampton,United States,25.1807,0,0,0.904,0.962,0.96,0.962
+male,5,3rd,Southampton,X,25.0904,3,1,0.058,0.11,0.472,0.488
+female,3,3rd,Southampton,X,25.0904,3,1,0.04,0.156,0.66,0.682
+female,8,3rd,Southampton,X,25.0904,3,1,0.04,0.124,0.718,0.778
+female,12,3rd,Southampton,X,25.0904,3,1,0.04,0.146,0.752,0.832
+female,40,3rd,Southampton,X,25.0904,0,4,0.194,0.172,0.792,0.878
+female,17,2nd,Cherbourg,Switzerland,12,0,0,0.96,0.898,0.91,0.976
+male,32,3rd,Southampton,Finland,7.1806,0,0,0.584,0.566,0.246,0.152
+female,31,2nd,Southampton,Scotland,33,0,0,0.944,0.882,0.936,0.976
+female,39,2nd,Southampton,England,10.1,0,0,0.932,0.888,0.898,0.962
+female,18,3rd,Queenstown,Ireland,15.1,1,0,0.648,0.506,0.828,0.964
+male,20,3rd,Queenstown,Ireland,15.1,1,0,0.344,0.19,0.29,0.2
+female,27,1st,Cherbourg,France,106.0806,0,0,0.952,0.986,0.986,0.986
+male,41,3rd,Southampton,England,24.03,0,0,0.392,0.428,0.21,0.028
+male,35,1st,Cherbourg,X,512.0607,0,0,0.61,0.344,0.52,0.344
+male,37,2nd,Southampton,Canada,12.1706,0,0,0.518,0.128,0.22,0.044
+male,30,1st,Cherbourg,United States,27.1405,0,0,0.558,0.364,0.358,0.364
+male,25,2nd,Southampton,England,10.1,0,0,0.518,0.064,0.274,0.174
+male,24,3rd,Southampton,Belgium,9.1,0,0,0.572,0.368,0.252,0.172
+female,25,3rd,Southampton,Sweden,7.1506,0,0,0.608,0.43,0.89,0.97
+female,45,3rd,Southampton,England,7.15,0,0,0.656,0.41,0.886,0.956
+male,42,1st,Southampton,Sweden,26.11,0,0,0.574,0.032,0.308,0.032
+male,36,3rd,Southampton,Sweden,15.11,1,0,0.432,0.368,0.31,0.168
+female,30,3rd,Southampton,Sweden,15.11,1,0,0.444,0.406,0.8,0.974
+male,20,3rd,Southampton,Finland,7.1806,1,0,0.56,0.224,0.344,0.25
+female,55,1st,Cherbourg,Sweden,27.1405,0,0,0.93,0.974,0.93,0.974
+male,21,3rd,Queenstown,Ireland,7.1707,0,0,0.412,0.222,0.254,0.122
+female,16,1st,Cherbourg,France,39.08,0,1,0.964,0.994,0.982,0.994
+female,50,1st,Cherbourg,United States,39.08,0,1,0.964,0.984,0.946,0.984
+male,61,2nd,Queenstown,Ireland,12.07,0,0,0.444,0.106,0.1,0.08
+male,28,3rd,Southampton,X,56.0911,0,0,0.51,0.366,0.272,0.154
+male,27,3rd,Southampton,Austria,9.1,0,0,0.572,0.358,0.258,0.176
+male,25,3rd,Southampton,Latvia,7.05,0,0,0.516,0.372,0.248,0.174
+female,34,3rd,Southampton,England,16.02,1,0,0.462,0.49,0.884,0.978
+male,31,3rd,Southampton,England,16.02,1,0,0.45,0.346,0.302,0.244
+male,19,3rd,Southampton,England,7.1707,0,0,0.552,0.256,0.232,0.118
+female,21,1st,Cherbourg,United States,77.1902,0,0,0.952,0.982,0.986,0.982
+male,29,1st,Southampton,United States,30,0,0,0.572,0.114,0.362,0.114
+male,30,1st,Southampton,United States,45.1,0,0,0.376,0.106,0.054,0.106
+male,50,2nd,Southampton,England,26,1,0,0.472,0.132,0.3,0.292
+female,43,2nd,Southampton,England,26,1,0,0.936,0.88,0.908,0.972
+male,20,3rd,Southampton,England,7.05,0,0,0.516,0.258,0.226,0.112
+male,29,3rd,Southampton,Croatia (Modern),8.1303,0,0,0.574,0.4,0.222,0.114
+male,50,3rd,Southampton,Sweden,7.0101,0,0,0.51,0.428,0.2,0.188
+female,23,3rd,Southampton,United States,7.1701,0,0,0.574,0.39,0.87,0.972
+male,32,3rd,Southampton,Sweden,7.1107,0,0,0.53,0.566,0.25,0.152
+female,59,1st,Cherbourg,France,146.1005,0,0,0.944,0.968,0.976,0.968
+male,30,3rd,Cherbourg,Greece,6.0809,0,0,0.352,0.38,0.366,0.364
+male,44,3rd,Southampton,X,7.1711,0,0,0.556,0.422,0.236,0.032
+male,20,3rd,Southampton,Scotland,7.11,0,0,0.528,0.258,0.228,0.112
+female,57,2nd,Southampton,England,10.1,0,0,0.932,0.772,0.756,0.93
+female,21,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.536,0.862,0.962
+female,16,1st,Southampton,United States,211.0609,0,1,0.926,0.976,0.982,0.976
+male,24,3rd,Southampton,Norway,7.021,0,0,0.528,0.368,0.242,0.172
+male,22,3rd,Southampton,Finland,7.0206,0,0,0.51,0.258,0.23,0.11
+male,30,1st,Southampton,United States,26,0,0,0.486,0.106,0.208,0.106
+female,20,3rd,Queenstown,Ireland,7.1707,0,0,0.73,0.538,0.872,0.962
+female,20,1st,Southampton,England,86.1,0,0,0.926,0.974,0.986,0.974
+male,34,3rd,Southampton,England,8.01,0,0,0.578,0.508,0.248,0.132
+male,29,3rd,Southampton,Finland,7.1806,0,0,0.584,0.4,0.214,0.114
+male,25,2nd,Cherbourg,France,15,0,0,0.42,0.16,0.43,0.404
+male,1,2nd,Cherbourg,France,37,0,2,0.828,0.794,0.83,0.852
+male,45,2nd,Cherbourg,France,37,1,1,0.694,0.152,0.39,0.358
+female,24,2nd,Cherbourg,France,37,1,1,0.98,0.936,0.972,0.982
+male,18,3rd,Cherbourg,Lebanon,7.0407,0,0,0.382,0.282,0.46,0.366
+female,32,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.544,0.822,0.956
+male,30,2nd,Cherbourg,United States,15.1107,0,0,0.44,0.178,0.41,0.364
+female,28,3rd,Queenstown,Ireland,7.1409,0,0,0.788,0.58,0.892,0.956
+male,25,3rd,Cherbourg,Turkey,7.0407,0,0,0.382,0.38,0.436,0.404
+male,29,1st,Cherbourg,France,29.14,0,0,0.634,0.396,0.572,0.396
+male,23,3rd,Southampton,Yugoslavia,7.1711,0,0,0.556,0.276,0.236,0.122
+male,35,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.508,0.25,0.136
+male,33,3rd,Cherbourg,Slovenia,7.1711,0,0,0.422,0.414,0.376,0.362
+male,18,1st,Southampton,United States,53.02,1,0,0.518,0.232,0.27,0.232
+female,18,1st,Southampton,Scotland,53.02,1,0,0.906,0.97,0.974,0.97
+male,30,3rd,Cherbourg,Bulgaria,7.1711,0,0,0.422,0.38,0.402,0.364
+male,23,2nd,Southampton,England,13,0,0,0.508,0.028,0.266,0.122
+male,36,2nd,Southampton,England,16,0,0,0.51,0.126,0.258,0.068
+female,24,1st,Cherbourg,Belgium,49.1001,0,0,0.952,0.988,0.982,0.988
+male,46,1st,Southampton,Canada,75.041,0,0,0.422,0.03,0.03,0.03
+female,25,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.602,0.908,0.962
+male,55,1st,Southampton,United States,51.1703,0,0,0.378,0.078,0.038,0.078
+male,19,3rd,Queenstown,United States,7.15,0,0,0.386,0.208,0.234,0.126
+female,29,3rd,Queenstown,Ireland,23.05,2,0,0.69,0.63,0.906,0.94
+female,26,3rd,Queenstown,Ireland,23.05,2,0,0.69,0.636,0.912,0.95
+male,24,3rd,Queenstown,Ireland,23.05,2,0,0.43,0.324,0.412,0.248
+male,32,2nd,Southampton,Australia,13.1,0,0,0.496,0.142,0.26,0.152
+male,32,2nd,Southampton,Canada,13,0,0,0.508,0.142,0.256,0.152
+female,31,3rd,Queenstown,Ireland,7.1508,0,0,0.78,0.598,0.862,0.962
+male,20,3rd,Queenstown,Ireland,15.1,0,0,0.386,0.21,0.262,0.122
+male,35,1st,Southampton,Ireland,26.0509,0,0,0.618,0.136,0.59,0.136
+female,22,3rd,Queenstown,Ireland,7.1707,0,0,0.73,0.56,0.88,0.96
+female,17,3rd,Queenstown,United States,8,0,0,0.772,0.536,0.876,0.95
+female,42,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.454,0.822,0.95
+male,46,2nd,Southampton,Channel Islands,26,0,0,0.472,0.106,0.2,0.03
+male,19,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.208,0.234,0.126
+male,27,3rd,Southampton,England,16.02,1,0,0.45,0.286,0.34,0.316
+female,19,3rd,Southampton,England,16.02,1,0,0.462,0.348,0.816,0.98
+female,32,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.544,0.822,0.956
+female,62,3rd,Southampton,England,8.01,0,0,0.632,0.39,0.696,0.898
+male,22,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.212,0.246,0.114
+female,32,3rd,Southampton,England,8.01,0,0,0.632,0.47,0.846,0.972
+female,13,2nd,Southampton,England,19.1,0,1,0.972,0.928,0.962,0.964
+female,42,2nd,Southampton,England,19.1,0,1,0.972,0.936,0.95,0.974
+male,19,2nd,Southampton,England,10.1,0,0,0.518,0.016,0.25,0.118
+male,48,3rd,Southampton,Italy,8.01,0,0,0.578,0.436,0.22,0.17
+male,28,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.282,0.232,0.148
+male,31,2nd,Southampton,England,13,0,0,0.508,0.104,0.22,0.124
+male,28,1st,Cherbourg,United States,82.0305,1,0,0.482,0.274,0.246,0.274
+female,25,1st,Cherbourg,United States,82.0305,1,0,0.954,0.99,0.99,0.99
+male,21,3rd,Southampton,Norway,7.1506,0,0,0.54,0.26,0.236,0.11
+male,28,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.366,0.234,0.154
+male,23,3rd,Southampton,England,8.01,0,0,0.578,0.276,0.238,0.122
+male,65,1st,Cherbourg,United States,26.11,0,0,0.57,0.086,0.026,0.086
+male,48,2nd,Southampton,Denmark,13,0,0,0.508,0.162,0.22,0.17
+male,44,1st,Queenstown,United States,90,2,0,0.452,0.138,0.15,0.138
+female,33,1st,Queenstown,United States,90,1,0,0.916,0.972,0.976,0.972
+female,37,1st,Queenstown,United States,90,1,0,0.916,0.962,0.972,0.962
+male,24,3rd,Southampton,X,7.1711,0,0,0.556,0.368,0.24,0.172
+male,21,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.26,0.244,0.11
+male,72,2nd,Southampton,England,10.1,0,0,0.518,0.118,0.086,0.06
+male,23,3rd,Southampton,X,7.1711,0,0,0.556,0.276,0.236,0.122
+female,23,3rd,Queenstown,Ireland,7.1707,0,0,0.73,0.572,0.9,0.964
+male,30,1st,Cherbourg,United States,57.15,1,0,0.572,0.284,0.49,0.284
+male,27,3rd,Southampton,Norway,7.13,0,0,0.534,0.358,0.244,0.176
+male,55,1st,Southampton,Canada,30.1,0,0,0.582,0.078,0.174,0.078
+male,27,2nd,Southampton,England,13,0,0,0.508,0.07,0.276,0.176
+male,47,1st,Southampton,United States,42.08,0,0,0.392,0.08,0.062,0.08
+male,19,3rd,Southampton,England,8.01,0,0,0.578,0.256,0.234,0.118
+male,7,3rd,Southampton,X,12.0906,0,1,0.784,0.464,0.692,0.586
+female,29,3rd,Southampton,X,12.0906,0,1,0.734,0.412,0.856,0.976
+female,28,3rd,Queenstown,Ireland,24.03,1,0,0.592,0.62,0.916,0.962
+male,28,3rd,Queenstown,Ireland,24.03,1,0,0.306,0.224,0.31,0.212
+male,54,2nd,Southampton,United States,14,0,0,0.494,0.142,0.196,0.14
+male,38,2nd,Southampton,England,26,0,0,0.472,0.144,0.24,0.066
+male,34,3rd,Southampton,England,8.01,0,0,0.578,0.508,0.248,0.132
+male,30,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.294,0.19,0.112
+male,29,3rd,Southampton,Norway,7.1506,0,0,0.54,0.4,0.206,0.114
+female,35,3rd,Cherbourg,Lebanon,7.0407,0,0,0.866,0.602,0.898,0.978
+male,28,3rd,Southampton,England,8.01,0,0,0.578,0.366,0.234,0.154
+male,4,3rd,Cherbourg,Lebanon,15.0411,1,1,0.764,0.678,0.81,0.742
+male,7,3rd,Cherbourg,Lebanon,15.0411,1,1,0.764,0.578,0.728,0.71
+female,25,3rd,Cherbourg,Lebanon,15.0411,0,2,0.812,0.632,0.914,0.966
+male,17,2nd,Southampton,England,10.1,0,0,0.518,0.028,0.242,0.148
+female,21,3rd,Queenstown,Ireland,7.1408,0,0,0.786,0.536,0.87,0.962
+female,25,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.602,0.908,0.962
+male,22,3rd,Southampton,England,8.01,0,0,0.578,0.258,0.246,0.11
+female,18,3rd,Queenstown,Ireland,15.1,1,0,0.648,0.506,0.828,0.964
+female,25,3rd,Queenstown,Ireland,15.1,1,0,0.648,0.634,0.872,0.972
+female,31,3rd,Queenstown,Ireland,15.1,0,0,0.728,0.598,0.912,0.962
+female,22,3rd,Cherbourg,Lebanon,7.0406,0,0,0.86,0.604,0.904,0.976
+male,18,3rd,Southampton,Sweden,7.15,0,0,0.536,0.256,0.208,0.118
+male,63,2nd,Queenstown,Ireland,9.1309,0,0,0.424,0.098,0.088,0.06
+male,22,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.258,0.244,0.11
+female,15,3rd,Cherbourg,Lebanon,7.0406,0,0,0.86,0.592,0.91,0.97
+male,17,3rd,Cherbourg,Lebanon,7.0407,0,0,0.382,0.276,0.448,0.388
+female,1,3rd,Cherbourg,Lebanon,15.141,0,2,0.876,0.656,0.914,0.886
+male,21,3rd,Cherbourg,Lebanon,15.141,1,1,0.814,0.432,0.604,0.528
+female,19,3rd,Cherbourg,Lebanon,15.141,1,1,0.85,0.602,0.902,0.984
+male,36,3rd,Southampton,England,8.01,0,0,0.578,0.506,0.232,0.068
+male,32,3rd,Southampton,X,7.1711,0,0,0.556,0.566,0.238,0.152
+male,20,3rd,Cherbourg,Lebanon,7.0407,0,0,0.382,0.286,0.464,0.356
+male,28,2nd,Cherbourg,United States,30.0105,1,0,0.468,0.084,0.526,0.274
+female,14,2nd,Cherbourg,Lebanon,30.0105,1,0,0.94,0.916,0.896,0.984
+male,20,3rd,Cherbourg,Lebanon,7.0406,0,0,0.366,0.286,0.458,0.356
+male,36,1st,Cherbourg,United States,29.14,0,1,0.708,0.39,0.208,0.39
+female,21,3rd,Queenstown,Ireland,7.15,0,0,0.776,0.536,0.862,0.962
+male,2,2nd,Southampton,France,26,1,1,0.78,0.722,0.76,0.672
+male,3,2nd,Southampton,France,26,1,1,0.78,0.728,0.766,0.682
+male,32,2nd,Southampton,Slovakia (Modern day),26,0,2,0.728,0.192,0.276,0.298
+male,22,3rd,Southampton,X,7.1711,0,0,0.556,0.258,0.244,0.11
+male,26,2nd,Southampton,England,13,0,0,0.508,0.076,0.282,0.174
+female,31,1st,Cherbourg,United States,113.0506,1,0,0.958,0.99,0.996,0.99
+female,23,1st,Cherbourg,United States,113.0506,1,0,0.958,0.988,0.988,0.988
+male,58,1st,Cherbourg,United States,113.0506,0,2,0.874,0.222,0.198,0.222
+female,19,1st,Southampton,United States,26.0508,0,2,0.922,0.958,0.964,0.958
+male,19,2nd,Southampton,England,36.15,1,1,0.792,0.164,0.356,0.308
+male,60,1st,Southampton,England,26,0,0,0.486,0.088,0.034,0.088
+female,29,3rd,Southampton,Finland,7.1806,0,0,0.61,0.434,0.864,0.974
+male,28,3rd,Southampton,Sweden,8.01,0,0,0.578,0.366,0.234,0.154
+female,18,3rd,Southampton,Sweden,7.1506,0,0,0.608,0.418,0.88,0.968
+female,26,3rd,Southampton,Sweden,7.1701,0,0,0.574,0.458,0.902,0.97
+male,21,3rd,Southampton,Sweden,7.1701,0,0,0.556,0.26,0.242,0.11
+male,11,3rd,Cherbourg,Lebanon,11.041,1,0,0.62,0.344,0.682,0.442
+female,14,3rd,Cherbourg,Lebanon,11.041,1,0,0.774,0.594,0.884,0.984
+male,41,3rd,Southampton,Finland,7.0206,0,0,0.51,0.428,0.196,0.028
+male,39,3rd,Southampton,United States,7.1806,0,0,0.584,0.472,0.222,0.036
+male,20,3rd,Cherbourg,Lebanon,7.0407,0,0,0.382,0.286,0.464,0.356
+male,27,2nd,Southampton,Scotland,13.1,0,0,0.496,0.07,0.274,0.176
+male,21,3rd,Southampton,England,7.16,0,0,0.564,0.26,0.25,0.11
+male,20,1st,Cherbourg,Germany,13.1703,0,0,0.668,0.356,0.598,0.356
+female,29,2nd,Southampton,United States,10.1,0,0,0.932,0.874,0.894,0.974
+female,22,3rd,Southampton,Sweden,7.15,0,0,0.656,0.396,0.876,0.974
+male,60,3rd,Southampton,Norway,6.0409,0,0,0.498,0.366,0.056,0.088
+male,21,3rd,Queenstown,Ireland,7.1607,0,0,0.418,0.222,0.266,0.122
+female,26,3rd,Queenstown,Ireland,15.1,1,0,0.648,0.644,0.864,0.97
+male,27,3rd,Queenstown,Ireland,15.1,1,0,0.344,0.24,0.306,0.25
+male,18,3rd,Queenstown,Ireland,7.1408,0,0,0.384,0.212,0.238,0.13
+male,17,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.214,0.238,0.152
+male,23,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.226,0.246,0.122
+male,23,3rd,Southampton,Sweden,9.0406,0,0,0.582,0.276,0.238,0.122
+female,24,3rd,Queenstown,Ireland,7.1707,0,0,0.73,0.598,0.912,0.968
+female,22,3rd,Southampton,Sweden,7.1506,0,0,0.608,0.396,0.868,0.974
+male,21,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.222,0.26,0.122
+female,16,3rd,Queenstown,Ireland,7.1607,0,0,0.78,0.544,0.9,0.95
+female,39,1st,Cherbourg,Spain,108.18,0,0,0.95,0.984,0.988,0.984
+male,9,3rd,Southampton,Norway,3.0305,0,1,0.75,0.462,0.62,0.566
+male,28,3rd,Southampton,Norway,22.1006,0,0,0.428,0.366,0.258,0.154
+male,42,3rd,Southampton,United States,8.0801,0,1,0.744,0.262,0.192,0.112
+male,27,3rd,Southampton,Norway,7.0603,0,0,0.516,0.358,0.234,0.176
+female,31,3rd,Southampton,Sweden,7.1701,0,0,0.574,0.472,0.87,0.976
+male,28,3rd,Southampton,Sweden,7.1701,0,0,0.556,0.366,0.232,0.154
+male,32,3rd,Southampton,Sweden,7.1506,0,0,0.54,0.566,0.244,0.152
+male,20,3rd,Southampton,Norway,9.0406,0,0,0.582,0.258,0.244,0.112
+male,29,1st,Cherbourg,France,25.141,0,0,0.596,0.396,0.504,0.396
+female,23,3rd,Southampton,Croatia,8.1303,0,0,0.554,0.39,0.844,0.972
+female,20,3rd,Southampton,Croatia,8.1303,0,0,0.554,0.384,0.838,0.974
+male,20,3rd,Southampton,Croatia,8.1303,0,0,0.574,0.258,0.242,0.112
+male,16,3rd,Southampton,Sweden,9.0404,0,0,0.574,0.258,0.244,0.166
+female,22,1st,Southampton,United States,61.1907,0,1,0.938,0.982,0.992,0.982
+male,64,1st,Southampton,United States,61.1907,0,1,0.622,0.04,0.058,0.04
+female,21,3rd,Queenstown,Ireland,7.1207,0,0,0.678,0.536,0.834,0.962
+male,38,2nd,Southampton,United States,13,0,0,0.508,0.144,0.206,0.066
+male,36,1st,Cherbourg,Cuba,27.1405,0,0,0.558,0.224,0.214,0.224
+male,22,2nd,Southampton,England,10.1,0,0,0.518,0.02,0.26,0.11
+male,27,2nd,Cherbourg,Spain,13.1703,0,0,0.576,0.194,0.582,0.434
+male,23,2nd,Southampton,Canada,10.1,0,0,0.518,0.028,0.252,0.122
+male,29,2nd,Cherbourg,Spain,13.1702,0,0,0.576,0.19,0.566,0.396
+male,2,3rd,Southampton,Sweden,21.0106,3,1,0.104,0.124,0.516,0.498
+male,6,3rd,Southampton,Sweden,21.0106,3,1,0.104,0.106,0.482,0.486
+female,3,3rd,Southampton,Sweden,21.0106,3,1,0.114,0.156,0.646,0.682
+female,8,3rd,Southampton,Sweden,21.0106,3,1,0.114,0.124,0.704,0.778
+female,29,3rd,Southampton,Sweden,21.0106,0,4,0.4,0.228,0.776,0.868
+male,1,3rd,Southampton,Finland,39.1309,4,1,0.016,0.09,0.456,0.462
+male,15,3rd,Southampton,United States,39.1309,4,1,0.016,0.054,0.334,0.324
+male,7,3rd,Southampton,Finland,39.1309,4,1,0.016,0.078,0.442,0.46
+male,2,3rd,Southampton,Finland,39.1309,4,1,0.016,0.084,0.45,0.46
+male,16,3rd,Southampton,Finland,39.1309,4,1,0.016,0.056,0.306,0.292
+female,41,3rd,Southampton,Finland,39.1309,0,5,0.222,0.154,0.79,0.85
+male,17,2nd,Southampton,Channel Islands,10.1,0,0,0.518,0.028,0.242,0.148
+male,21,2nd,Belfast,Northern Ireland,22,0,0,0.434,0.02,0.276,0.116
+female,59,2nd,Southampton,United States,26,0,1,0.99,0.906,0.926,0.966
+male,30,1st,Belfast,England,89,0,0,0.362,0.09,0.048,0.09
+male,40,1st,Southampton,England,28.1,0,0,0.558,0.036,0.28,0.036
+male,21,3rd,Southampton,Slovenia,8.1303,0,0,0.574,0.26,0.246,0.11
+male,20,3rd,Southampton,England,14.1,0,0,0.476,0.258,0.266,0.112
+male,32,3rd,Southampton,Croatia,7.1711,0,0,0.556,0.566,0.238,0.152
+male,23,1st,Southampton,Canada,93.1,0,0,0.446,0.122,0.102,0.122
+male,0.5833333333,3rd,Southampton,England,13.1506,1,1,0.358,0.39,0.582,0.666
+female,4,3rd,Southampton,England,13.1506,1,1,0.384,0.366,0.634,0.816
+female,26,3rd,Southampton,England,13.1506,0,2,0.558,0.336,0.81,0.918
+male,32,3rd,Southampton,England,7,0,0,0.506,0.566,0.228,0.152
+female,22,1st,Southampton,England,66.12,1,0,0.904,0.986,0.99,0.986
+male,29,1st,Southampton,England,66.12,1,0,0.484,0.204,0.208,0.204
+male,28,3rd,Southampton,Norway,7.1506,0,0,0.54,0.366,0.224,0.154
+male,24,3rd,Southampton,England,8.01,0,0,0.578,0.368,0.24,0.172
+male,21,3rd,Southampton,Finland,7.1806,0,0,0.584,0.26,0.252,0.11
+male,25,3rd,Southampton,Finland,7.1806,0,0,0.584,0.372,0.258,0.174
+female,22,1st,Cherbourg,Spain,108.18,1,0,0.958,0.988,0.99,0.988
+male,24,1st,Cherbourg,Spain,108.18,1,0,0.462,0.236,0.188,0.236
+male,19,2nd,Southampton,England,10.1,0,0,0.518,0.016,0.25,0.118
+male,24,3rd,Southampton,England,7.05,0,0,0.516,0.368,0.232,0.172
+male,39,2nd,Cherbourg,France,15.01,0,0,0.42,0.136,0.25,0.16
+female,33,1st,Southampton,Canada,93.1,0,0,0.924,0.972,0.986,0.972
+male,25,3rd,Southampton,Sweden,7.1506,1,0,0.474,0.286,0.328,0.352
+male,41,2nd,Southampton,Germany,13,0,0,0.508,0.122,0.21,0.028
+female,28,3rd,Southampton,Croatia,7.1711,0,0,0.576,0.426,0.866,0.972
+male,4,3rd,Cherbourg,Lebanon,22.0702,1,1,0.738,0.678,0.812,0.742
+female,2,3rd,Cherbourg,Lebanon,22.0702,1,1,0.86,0.666,0.908,0.868
+male,24,3rd,Southampton,England,8.01,0,0,0.578,0.368,0.24,0.172
+female,28,3rd,Queenstown,Ireland,8.0209,0,0,0.748,0.58,0.852,0.956
+male,19,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.256,0.232,0.118
+male,29,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.4,0.212,0.114
+female,18,3rd,Southampton,Sweden,7.1506,0,0,0.608,0.418,0.88,0.968
+male,25,3rd,Southampton,Sweden,7.1506,1,0,0.474,0.286,0.328,0.352
+male,52,1st,Southampton,Canada,30.1,0,0,0.582,0.21,0.51,0.21
+female,21,2nd,Southampton,England,21,0,1,0.962,0.924,0.946,0.97
+female,19,2nd,Southampton,England,26,0,0,0.92,0.886,0.942,0.974
+male,43,2nd,Southampton,England,21,0,1,0.766,0.112,0.188,0.108
+male,33,3rd,Southampton,Poland,8.01,0,0,0.578,0.52,0.23,0.13
+female,32,2nd,Southampton,Poland,13,0,0,0.91,0.876,0.882,0.972
+male,27,3rd,Southampton,X,7.1711,0,0,0.556,0.358,0.244,0.176
+male,17,3rd,Southampton,Croatia,8.1303,0,0,0.574,0.256,0.228,0.148
+male,24,3rd,Southampton,Croatia,8.1303,0,0,0.574,0.368,0.24,0.172
+male,24,2nd,Southampton,England,13,0,0,0.508,0.056,0.27,0.172
+male,30,2nd,Cherbourg,United States,12.1409,0,0,0.598,0.178,0.496,0.364
+male,46,1st,Southampton,United States,52,0,0,0.392,0.03,0.034,0.03
+female,56,1st,Cherbourg,United States,83.0302,0,1,0.966,0.984,0.996,0.984
+male,27,2nd,Cherbourg,United States,15,0,0,0.42,0.194,0.466,0.434
+male,16,3rd,Cherbourg,X,8.1403,0,0,0.442,0.274,0.486,0.4
+female,2,2nd,Southampton,X,26,1,1,0.946,0.84,0.796,0.736
+female,8,2nd,Southampton,X,26,1,1,0.946,0.918,0.874,0.896
+female,33,2nd,Southampton,X,26,0,2,0.984,0.936,0.962,0.964
+male,27,3rd,Southampton,X,7.1711,0,0,0.556,0.358,0.244,0.176
+male,21,3rd,Cherbourg,Lebanon,7.0406,0,0,0.366,0.29,0.454,0.354
+female,63,3rd,Southampton,Norway,8.0203,0,0,0.616,0.366,0.636,0.75
+male,30,3rd,Cherbourg,Lebanon,7.0407,0,0,0.382,0.38,0.38,0.364
+male,18,3rd,Southampton,Wales,7.05,0,0,0.516,0.256,0.21,0.118
+male,36,2nd,Southampton,England,10.1,0,0,0.518,0.126,0.244,0.068
+male,38,3rd,Southampton,Bosnia,7.1711,0,0,0.556,0.52,0.202,0.066
+male,33,2nd,Southampton,Channel Islands,21,1,0,0.476,0.12,0.312,0.246
+female,30,2nd,Southampton,Channel Islands,21,3,0,0.728,0.844,0.858,0.93
+male,37,1st,Cherbourg,Netherlands,89,0,0,0.478,0.18,0.116,0.18
+female,29,2nd,Southampton,Spain,13,0,0,0.91,0.874,0.902,0.974
+male,21,3rd,Southampton,England,8.01,0,0,0.578,0.26,0.246,0.11
+male,33,1st,Cherbourg,United States,39.12,0,0,0.598,0.362,0.482,0.362
+male,10,3rd,Queenstown,Ireland,29.0206,4,1,0.01,0.066,0.406,0.396
+male,4,3rd,Queenstown,Ireland,29.0206,4,1,0.01,0.078,0.428,0.428
+male,7,3rd,Queenstown,Ireland,29.0206,4,1,0.01,0.074,0.412,0.42
+male,2,3rd,Queenstown,Ireland,29.0206,4,1,0.01,0.06,0.43,0.41
+male,8,3rd,Queenstown,Ireland,29.0206,4,1,0.01,0.074,0.412,0.418
+female,39,3rd,Queenstown,Ireland,29.0206,0,5,0.292,0.208,0.732,0.842
+male,23,2nd,Cherbourg,X,15,0,0,0.42,0.112,0.426,0.296
+male,0.75,2nd,Southampton,England,18.15,1,1,0.814,0.74,0.794,0.686
+male,3,2nd,Southampton,England,18.15,1,1,0.814,0.728,0.802,0.682
+female,24,2nd,Southampton,England,18.15,2,3,0.904,0.918,0.9,0.904
+female,58,2nd,Southampton,England,10.1,0,0,0.932,0.794,0.782,0.944
+male,22,1st,Cherbourg,X,135.1208,0,0,0.46,0.306,0.16,0.306
+female,22,3rd,Southampton,Finland,39.1309,0,0,0.374,0.396,0.922,0.974
+male,35,3rd,Southampton,Finland,7.0206,0,0,0.51,0.508,0.238,0.136
+female,22,3rd,Queenstown,Ireland,7.1405,0,0,0.79,0.56,0.882,0.96
+male,69,3rd,Southampton,England,14.1,0,0,0.476,0.342,0.076,0.06
+female,64,3rd,Southampton,England,14.1,0,0,0.57,0.358,0.65,0.764
+female,43,1st,Southampton,United States,211.0609,0,1,0.926,0.974,0.986,0.974
+male,50,3rd,Southampton,England,14.1,1,0,0.398,0.316,0.302,0.292
+female,48,3rd,Southampton,England,14.1,1,0,0.422,0.414,0.756,0.978
+male,45,1st,Cherbourg,England,247.1006,0,0,0.464,0.144,0.104,0.144
+male,31,1st,Southampton,United States,50.0911,0,0,0.384,0.124,0.07,0.124
+male,18,2nd,Southampton,England,10.1,0,0,0.518,0.016,0.24,0.118
+male,30,3rd,Southampton,Wales,8.01,0,0,0.578,0.404,0.194,0.106
+male,45,1st,Southampton,United States,26.11,0,0,0.574,0.04,0.388,0.04
+male,49,3rd,Southampton,Norway,7.1506,0,0,0.54,0.44,0.21,0.214
+male,39,1st,Southampton,United States,50,0,0,0.38,0.036,0.012,0.036
+female,2,3rd,Southampton,Finland,20.0403,1,1,0.464,0.34,0.736,0.736
+female,41,3rd,Southampton,Finland,20.0403,0,2,0.598,0.24,0.918,0.964
+male,18,3rd,Southampton,Finland,20.0403,1,1,0.474,0.132,0.344,0.334
+female,33,1st,Cherbourg,France,27.1405,0,0,0.93,0.984,0.944,0.984
+male,46,1st,Cherbourg,United States,79,0,0,0.47,0.116,0.066,0.116
+male,36,1st,Southampton,Canada,40.0206,0,0,0.424,0.068,0.08,0.068
+female,33,1st,Southampton,England,86.1,0,0,0.926,0.972,0.986,0.972
+female,26,3rd,Southampton,Austria,8.01,0,0,0.632,0.458,0.906,0.97
+male,46,1st,Cherbourg,United States,59.08,1,0,0.492,0.182,0.208,0.182
+female,54,1st,Cherbourg,United States,59.08,1,0,0.958,0.988,0.992,0.988
+male,55,3rd,Southampton,England,8.01,0,0,0.578,0.368,0.114,0.078
+male,59,1st,Southampton,Peru,26.11,0,0,0.574,0.082,0.054,0.082
+female,22,2nd,Southampton,Channel Islands,10.1,0,0,0.932,0.854,0.87,0.974
+male,17,3rd,Southampton,England,8.01,0,0,0.578,0.256,0.232,0.148
+male,24,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.334,0.276,0.168
+male,30,3rd,Queenstown,Ireland,24.03,0,0,0.324,0.294,0.196,0.112
+male,13,1st,Cherbourg,United States,262.0706,2,2,0.842,0.758,0.814,0.758
+female,18,1st,Cherbourg,United States,262.0706,2,2,0.934,0.972,0.982,0.972
+female,21,1st,Cherbourg,United States,262.0706,2,2,0.934,0.972,0.98,0.972
+male,61,1st,Cherbourg,United States,262.0706,1,3,0.704,0.238,0.138,0.238
+female,48,1st,Cherbourg,United States,262.0706,1,3,0.904,0.97,0.974,0.97
+male,30,3rd,Cherbourg,Lebanon,7.0407,0,0,0.382,0.38,0.38,0.364
+male,27,3rd,Cherbourg,Lebanon,7.0406,0,0,0.366,0.398,0.442,0.434
+male,47,1st,Southampton,England,30.1,0,0,0.582,0.08,0.464,0.08
+male,19,3rd,Queenstown,Ireland,7.1407,0,0,0.386,0.208,0.24,0.126
+male,17,3rd,Southampton,England,7.111,0,0,0.528,0.256,0.212,0.148
+male,43,3rd,Southampton,Norway,7.05,0,0,0.516,0.418,0.222,0.03
+male,13,3rd,Southampton,England,69.11,8,2,0.022,0.004,0.422,0.418
+male,5,3rd,Southampton,England,69.11,8,2,0.022,0.038,0.492,0.488
+female,8,3rd,Southampton,England,69.11,8,2,0.022,0.03,0.616,0.618
+female,14,3rd,Southampton,England,69.11,8,2,0.022,0.048,0.672,0.676
+female,10,3rd,Southampton,England,69.11,8,2,0.022,0.028,0.636,0.638
+female,21,3rd,Southampton,England,69.11,8,2,0.022,0.06,0.688,0.692
+male,18,3rd,Southampton,England,69.11,8,2,0.022,0.004,0.274,0.272
+male,17,3rd,Southampton,England,69.11,8,2,0.022,0.004,0.306,0.304
+male,20,3rd,Southampton,England,69.11,8,2,0.022,0.01,0.246,0.242
+male,45,3rd,Southampton,England,69.11,1,9,0.224,0.052,0.268,0.266
+female,45,3rd,Southampton,England,69.11,1,9,0.182,0.104,0.792,0.802
+female,24,1st,Cherbourg,X,69.06,0,0,0.95,0.988,0.99,0.988
+male,24,3rd,Southampton,Sweden,9.0606,0,0,0.582,0.368,0.24,0.172
+female,21,3rd,Southampton,Norway,7.13,0,0,0.712,0.382,0.888,0.974
+male,43,1st,Southampton,United States,26,0,0,0.486,0.03,0.272,0.03
+male,29,3rd,Southampton,United States,7.1806,0,0,0.584,0.4,0.214,0.114
+male,17,3rd,Cherbourg,Lebanon,21.1307,2,0,0.358,0.18,0.428,0.352
+male,40,3rd,Cherbourg,Lebanon,21.1307,2,0,0.358,0.204,0.378,0.234
+male,16,3rd,Cherbourg,Lebanon,21.1307,2,0,0.358,0.184,0.44,0.366
+female,1,3rd,Southampton,Sweden,16.14,1,1,0.592,0.38,0.804,0.774
+female,4,3rd,Southampton,Sweden,16.14,1,1,0.592,0.366,0.814,0.816
+female,24,3rd,Southampton,Sweden,16.14,0,2,0.686,0.332,0.952,0.95
+male,21,3rd,Southampton,Belgium,9.1,0,0,0.572,0.26,0.26,0.11
+male,19,3rd,Southampton,England,8.01,0,0,0.578,0.256,0.234,0.118
+male,24,3rd,Southampton,England,8.01,0,0,0.578,0.368,0.24,0.172
+male,22,3rd,Queenstown,Ireland,7.1406,0,0,0.386,0.212,0.25,0.114
+female,35,1st,Cherbourg,Germany,57.15,1,0,0.958,0.99,0.996,0.99
+male,29,3rd,Southampton,Belgium,9.1,0,0,0.572,0.4,0.236,0.114
+male,22,2nd,Southampton,England,13,0,0,0.508,0.02,0.274,0.11
+male,42,3rd,Southampton,X,7.1711,0,0,0.556,0.418,0.222,0.032
+male,28,2nd,Southampton,England,13,0,0,0.508,0.07,0.266,0.154
+male,10,3rd,Cherbourg,Lebanon,4,0,0,0.316,0.35,0.52,0.494
+female,30,1st,Southampton,X,31,0,0,0.888,0.976,0.918,0.976
+male,34,1st,Southampton,United States,26.11,0,0,0.574,0.132,0.488,0.132
+male,35,3rd,Southampton,Ireland,13,0,0,0.544,0.508,0.268,0.136
+male,29,2nd,Southampton,England,26,0,0,0.472,0.076,0.23,0.114
+male,27,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.284,0.244,0.17
+male,19,3rd,Cherbourg,X,7.0406,0,0,0.366,0.282,0.442,0.36
+male,55,3rd,Southampton,England,15.02,0,0,0.498,0.368,0.114,0.078
+female,25,2nd,Southampton,United States,26,0,1,0.99,0.922,0.952,0.962
+male,26,3rd,Cherbourg,Lebanon,7.0406,0,0,0.366,0.384,0.438,0.446
+female,20,3rd,Queenstown,Ireland,7.1607,0,0,0.78,0.538,0.888,0.962
+male,22,3rd,Southampton,England,8.01,0,0,0.578,0.258,0.246,0.11
+female,40,1st,Southampton,United States,153.0903,0,0,0.908,0.966,0.988,0.966
+female,17,2nd,Southampton,Finland,13,0,2,0.896,0.936,0.878,0.968
+male,35,1st,Southampton,United States,26.0509,0,0,0.618,0.136,0.59,0.136
+female,39,1st,Cherbourg,United States,55.18,1,0,0.958,0.986,0.992,0.986
+male,51,1st,Cherbourg,United States,55.18,1,0,0.582,0.24,0.32,0.24
+male,40,3rd,Southampton,England,8.01,0,0,0.578,0.452,0.212,0.036
+male,56,1st,Southampton,Switzerland,35.1,0,0,0.532,0.112,0.256,0.112
+female,20,2nd,Southampton,England,36.15,0,0,0.946,0.89,0.958,0.974
+female,30,2nd,Southampton,Finland,13,0,0,0.91,0.878,0.888,0.976
+male,22,3rd,Cherbourg,Turkey,7.0407,0,0,0.382,0.29,0.434,0.306
+male,20,3rd,Southampton,England,8.01,0,0,0.578,0.258,0.242,0.112
+male,40,3rd,Southampton,Bosnia,7.1711,0,0,0.556,0.452,0.21,0.036
+male,21,3rd,Southampton,United States,7.1806,0,0,0.584,0.26,0.252,0.11
+female,18,3rd,Southampton,Finland,6.0911,0,0,0.732,0.418,0.898,0.968
+male,59,2nd,Southampton,Sweden,13.1,0,0,0.496,0.122,0.064,0.082
+male,5,3rd,Southampton,United States,27.18,3,2,0.024,0.102,0.5,0.544
+male,11,3rd,Southampton,United States,27.18,3,2,0.024,0.064,0.476,0.506
+female,9,3rd,Southampton,United States,27.18,3,2,0.028,0.098,0.738,0.75
+female,2,3rd,Southampton,United States,27.18,3,2,0.028,0.162,0.62,0.594
+female,43,3rd,Southampton,Sweden,27.18,1,4,0.148,0.146,0.798,0.866
+male,40,3rd,Southampton,Sweden,27.18,1,4,0.168,0.08,0.29,0.308
+male,42,3rd,Southampton,X,7.1711,0,0,0.556,0.418,0.222,0.032
+female,30,2nd,Queenstown,Canada,12.07,0,0,0.934,0.864,0.896,0.962
+male,35,2nd,Southampton,England,10.1,0,0,0.518,0.14,0.264,0.136
+male,20,3rd,Southampton,England,8.01,0,0,0.578,0.258,0.242,0.112
+male,28,1st,Southampton,United States,35.1,0,0,0.532,0.154,0.354,0.154
+male,56,1st,Southampton,England,26.11,0,0,0.574,0.112,0.148,0.112
+male,37,3rd,Southampton,Croatia,8.1303,0,0,0.574,0.5,0.204,0.044
+female,49,2nd,Southampton,England,13,0,0,0.91,0.872,0.916,0.962
+male,56,1st,Cherbourg,France,30.1311,0,0,0.6,0.13,0.092,0.13
+male,24,1st,Cherbourg,United States,60,1,0,0.48,0.236,0.25,0.236
+male,57,1st,Southampton,England,26,0,0,0.486,0.086,0.046,0.086
+female,18,1st,Cherbourg,United States,60,1,0,0.952,0.988,0.988,0.988
+female,18,3rd,Queenstown,Ireland,7.1408,0,0,0.786,0.546,0.894,0.958
+male,27,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.284,0.244,0.17
+male,24,1st,Southampton,United States,82.0504,1,0,0.572,0.328,0.456,0.328
+female,23,1st,Southampton,United States,82.0504,1,0,0.912,0.984,0.998,0.984
+male,25,2nd,Southampton,England,13,0,0,0.508,0.064,0.284,0.174
+male,19,3rd,Southampton,Norway,7.13,0,0,0.534,0.256,0.226,0.118
+male,31,3rd,Southampton,England,8.01,0,0,0.578,0.5,0.198,0.124
+male,23,3rd,Southampton,England,8.01,0,0,0.578,0.276,0.238,0.122
+male,6,1st,Cherbourg,United States,134.1,0,2,0.89,0.854,0.892,0.854
+male,45,1st,Cherbourg,United States,134.1,1,1,0.728,0.358,0.444,0.358
+female,39,1st,Cherbourg,United States,134.1,1,1,0.95,0.99,0.996,0.99
+female,48,1st,Cherbourg,United States,146.1005,1,0,0.946,0.988,0.986,0.988
+male,57,1st,Cherbourg,United States,146.1005,1,0,0.446,0.182,0.082,0.182
+male,31,3rd,Southampton,England,8.01,0,0,0.578,0.5,0.198,0.124
+male,32,1st,Southampton,Switzerland,30.1,0,0,0.582,0.152,0.452,0.152
+male,23,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.276,0.236,0.122
+male,33,3rd,Cherbourg,Croatia,8.1309,0,0,0.442,0.414,0.386,0.362
+female,24,3rd,Southampton,England,7.11,0,0,0.682,0.426,0.898,0.976
+male,22,3rd,Southampton,England,8.01,0,0,0.578,0.258,0.246,0.11
+male,42,2nd,Cherbourg,United States,15,0,0,0.42,0.13,0.274,0.142
+male,62,1st,Southampton,England,26.11,0,0,0.574,0.078,0.05,0.078
+male,54,1st,Cherbourg,United States,55.081,1,0,0.594,0.274,0.466,0.274
+female,43,1st,Cherbourg,Ireland,55.081,1,0,0.958,0.988,0.994,0.988
+female,52,1st,Cherbourg,United States,78.0504,1,0,0.958,0.986,0.992,0.986
+male,64,1st,Cherbourg,United States,27.1405,0,0,0.558,0.086,0.026,0.086
+male,24,2nd,Southampton,England,10.1,0,0,0.518,0.056,0.258,0.172
+female,61,1st,Southampton,United States,80,0,0,0.924,0.94,0.952,0.94
+male,59,3rd,Southampton,England,13,0,0,0.544,0.362,0.064,0.082
+male,19,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.256,0.232,0.118
+female,22,3rd,Southampton,Finland,9.1609,0,0,0.568,0.396,0.852,0.974
+male,30,3rd,Southampton,Finland,7.1806,0,0,0.584,0.404,0.202,0.106
+male,67,1st,Southampton,United States,221.1507,1,0,0.516,0.1,0.08,0.1
+female,63,1st,Southampton,Germany,221.1507,1,0,0.772,0.666,0.438,0.666
+male,27,3rd,Southampton,Croatia,8.1303,0,0,0.574,0.358,0.244,0.176
+female,2,3rd,Southampton,United States,10.0903,0,1,0.566,0.428,0.73,0.804
+female,29,3rd,Southampton,Sweden,10.0903,1,1,0.414,0.35,0.652,0.966
+male,20,3rd,Southampton,England,8.01,0,0,0.578,0.258,0.242,0.112
+male,44,3rd,Southampton,Finland,7.1806,0,0,0.584,0.422,0.262,0.032
+male,25,3rd,Southampton,England,7.01,0,0,0.506,0.372,0.24,0.174
+male,61,1st,Southampton,England,32.0605,0,0,0.508,0.08,0.04,0.08
+male,74,3rd,Southampton,Sweden,7.1506,0,0,0.54,0.342,0.068,0.06
+male,14,3rd,Southampton,Sweden,9.0406,0,0,0.582,0.338,0.398,0.252
+male,24,3rd,Southampton,Sweden,7.1511,0,0,0.586,0.368,0.256,0.172
+male,19,2nd,Southampton,England,13,0,0,0.508,0.016,0.258,0.118
+male,14,2nd,Southampton,England,65,0,0,0.388,0.094,0.256,0.252
+female,46,1st,Southampton,United States,25.1807,0,0,0.904,0.954,0.954,0.954
+male,0.4166666667,3rd,Cherbourg,Lebanon,8.1004,0,1,0.752,0.676,0.766,0.788
+male,30,3rd,Cherbourg,Lebanon,6.0809,1,0,0.414,0.258,0.408,0.284
+female,16,3rd,Cherbourg,Lebanon,8.1004,1,1,0.788,0.594,0.838,0.984
+female,18,1st,Southampton,United States,79.13,0,2,0.912,0.966,0.974,0.966
+male,52,1st,Southampton,United States,79.13,1,1,0.692,0.224,0.268,0.224
+female,39,1st,Southampton,United States,79.13,1,1,0.904,0.984,0.988,0.984
+male,48,1st,Southampton,United States,52,1,0,0.476,0.328,0.438,0.328
+male,40,2nd,Southampton,England,22,0,0,0.486,0.122,0.202,0.036
+female,49,1st,Southampton,United States,52,1,0,0.916,0.978,0.996,0.978
+male,25,3rd,Southampton,Sweden,7.1511,0,0,0.586,0.372,0.278,0.174
+male,49,1st,Cherbourg,United States,110.1708,1,1,0.708,0.326,0.218,0.326
+male,17,1st,Cherbourg,United States,110.1708,0,2,0.884,0.728,0.766,0.728
+female,39,1st,Cherbourg,United States,110.1708,1,1,0.952,0.99,0.996,0.99
+male,34,3rd,Southampton,England,8.01,0,0,0.578,0.508,0.248,0.132
+male,34,3rd,Cherbourg,X,6.0809,0,0,0.352,0.394,0.356,0.35
+male,16,3rd,Cherbourg,X,7.0406,0,0,0.366,0.274,0.438,0.4
+male,37,3rd,Southampton,Scotland,8.01,0,0,0.578,0.5,0.204,0.044
+female,38,1st,Cherbourg,United States,80,0,0,0.944,0.984,0.978,0.984
+male,37,3rd,Southampton,England,16.02,1,0,0.45,0.356,0.292,0.142
+female,33,3rd,Southampton,England,16.02,1,0,0.462,0.5,0.884,0.982
+male,32,3rd,Southampton,Finland,7.1806,0,0,0.584,0.566,0.246,0.152
+male,20,3rd,Queenstown,Ireland,7.15,0,0,0.386,0.21,0.244,0.122
+male,23,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.276,0.236,0.122
+male,22,3rd,Southampton,England,8.01,0,0,0.578,0.258,0.246,0.11
+female,48,2nd,Southampton,Ireland,10.1,0,0,0.932,0.866,0.902,0.962
+male,41,3rd,Southampton,England,8.01,0,0,0.578,0.428,0.21,0.028
+male,20,3rd,Cherbourg,Lebanon,7.0407,0,0,0.382,0.286,0.464,0.356
+male,26,3rd,Southampton,Sweden,13,0,0,0.544,0.376,0.282,0.174
+male,25,3rd,Southampton,Bulgaria,7.1711,0,0,0.556,0.372,0.254,0.174
+male,23,2nd,Southampton,England,13,0,0,0.508,0.028,0.266,0.122
+female,27,2nd,Southampton,Scotland,12.13,0,0,0.932,0.878,0.918,0.976
+female,27,2nd,Southampton,England,10.1,0,0,0.932,0.878,0.91,0.976
+male,31,1st,Cherbourg,United States,28.1009,0,0,0.622,0.37,0.516,0.37
+male,8,3rd,Cherbourg,Lebanon,15.0411,1,1,0.764,0.594,0.758,0.712
+female,9,3rd,Cherbourg,Lebanon,15.0411,1,1,0.706,0.622,0.854,0.944
+female,27,3rd,Cherbourg,Lebanon,15.0411,0,2,0.812,0.634,0.914,0.98
+male,36,3rd,Southampton,Croatia,7.1711,0,0,0.556,0.506,0.232,0.068
+female,18,3rd,Southampton,Finland,9.161,0,0,0.572,0.418,0.884,0.968
+female,63,3rd,Southampton,Finland,9.1109,0,0,0.57,0.366,0.658,0.75
+female,26,2nd,Southampton,England,21,1,0,0.738,0.872,0.758,0.976
+male,29,2nd,Southampton,England,21,1,0,0.476,0.072,0.286,0.204
+male,39,1st,Cherbourg,Mexico,27.1405,0,0,0.558,0.16,0.168,0.16
+male,10,3rd,Southampton,England,14.1,1,1,0.348,0.268,0.5,0.612
+male,9,3rd,Southampton,England,14.1,1,1,0.348,0.352,0.56,0.642
+male,35,3rd,Southampton,England,14.1,0,2,0.458,0.282,0.268,0.326
+male,28,3rd,Southampton,Belgium,9.1,0,0,0.572,0.366,0.248,0.154
+male,46,3rd,Southampton,Belgium,9,0,0,0.574,0.406,0.218,0.03
+male,61,1st,Southampton,United States,33.1,0,0,0.512,0.08,0.044,0.08
+female,18,3rd,Southampton,Belgium,18,2,0,0.342,0.304,0.814,0.95
+male,31,3rd,Southampton,Belgium,18,3,0,0.224,0.29,0.348,0.266
+male,15,3rd,Southampton,Belgium,18,2,0,0.36,0.162,0.374,0.322
+female,31,3rd,Southampton,Belgium,18,1,0,0.38,0.444,0.826,0.976
+male,35,3rd,Southampton,Belgium,9.1,0,0,0.572,0.508,0.262,0.136
+male,28,3rd,Southampton,Belgium,9.1,0,0,0.572,0.366,0.248,0.154
+female,10,3rd,Southampton,Belgium,24.03,0,2,0.266,0.28,0.886,0.914
+male,36,3rd,Southampton,Belgium,24.03,1,1,0.318,0.222,0.31,0.346
+female,30,3rd,Southampton,Belgium,24.03,1,1,0.254,0.336,0.846,0.97
+male,23,3rd,Southampton,Belgium,9.1,0,0,0.572,0.276,0.25,0.122
+male,22,3rd,Cherbourg,Turkey,7.0406,0,0,0.366,0.29,0.43,0.306
+male,40,2nd,Southampton,United States,13,0,0,0.508,0.122,0.21,0.036
+male,20,3rd,Southampton,Sweden,7.1701,0,0,0.556,0.258,0.238,0.112
+female,14,3rd,Southampton,Sweden,7.1701,0,0,0.574,0.418,0.836,0.946
+male,21,3rd,Southampton,Slovenia,7.1711,0,0,0.556,0.26,0.244,0.11
+male,22,3rd,Southampton,Belgium,9,0,0,0.574,0.258,0.246,0.11
+male,48,1st,Southampton,United States,34,0,0,0.512,0.17,0.22,0.17
+female,36,2nd,Southampton,England,21,0,0,0.816,0.89,0.91,0.956
+female,37,1st,Cherbourg,X,512.0607,0,0,0.944,0.974,0.986,0.974
+male,35,3rd,Southampton,England,8.01,0,0,0.578,0.508,0.25,0.136
+male,47,2nd,Southampton,England,21,1,0,0.476,0.106,0.31,0.206
+female,32,2nd,Southampton,England,21,0,0,0.816,0.876,0.856,0.972
+male,23,2nd,Southampton,England,10.1,1,0,0.502,0.056,0.32,0.286
+male,31,3rd,Southampton,England,7.11,0,0,0.528,0.5,0.192,0.124
+male,63,1st,Cherbourg,United States,75.05,1,0,0.482,0.124,0.13,0.124
+female,60,1st,Cherbourg,England,75.05,1,0,0.954,0.976,0.976,0.976
+male,19,2nd,Belfast,Northern Ireland,22,0,0,0.434,0.018,0.266,0.124
+female,12,2nd,Southampton,Scotland,15.15,0,0,0.932,0.872,0.922,0.944
+female,40,2nd,Southampton,Scotland,15.15,0,0,0.932,0.892,0.954,0.966
+male,23,3rd,Cherbourg,Lebanon,7.0406,0,0,0.366,0.298,0.414,0.296
+female,37,2nd,Southampton,England,13,0,0,0.91,0.894,0.892,0.958
+male,66,3rd,Southampton,England,8.01,0,0,0.578,0.344,0.08,0.06
+male,59,1st,Southampton,United States,26.11,0,0,0.574,0.082,0.054,0.082
+male,37,2nd,Southampton,Hungary,26,1,0,0.472,0.1,0.302,0.142
+female,37,2nd,Southampton,England,26,1,0,0.936,0.902,0.912,0.964
+male,2,2nd,Southampton,England,23,1,1,0.796,0.722,0.768,0.672
+female,4,2nd,Southampton,England,23,1,1,0.918,0.896,0.836,0.816
+female,29,2nd,Southampton,England,23,0,2,0.97,0.934,0.944,0.954
+male,27,3rd,Southampton,Sweden,7.1511,0,0,0.586,0.358,0.272,0.176
+female,0.8333333333,2nd,Southampton,England,27.15,1,2,0.97,0.838,0.782,0.678
+female,4,2nd,Southampton,England,27.15,1,2,0.97,0.878,0.812,0.73
+male,36,2nd,Southampton,England,27.15,1,2,0.69,0.11,0.386,0.436
+female,33,2nd,Southampton,England,27.15,1,2,0.97,0.932,0.908,0.936
+male,65,2nd,Southampton,England,10.1,0,0,0.518,0.12,0.092,0.06
+male,26,2nd,Southampton,England,12.1706,0,0,0.518,0.076,0.278,0.174
+male,31,2nd,Southampton,England,13,0,0,0.508,0.104,0.22,0.124
+male,54,1st,Southampton,United States,77.0509,0,1,0.58,0.06,0.07,0.06
+male,21,1st,Southampton,United States,77.0509,0,1,0.58,0.166,0.156,0.166
+female,55,1st,Cherbourg,X,135.1208,0,0,0.946,0.974,0.978,0.974
+male,57,1st,Southampton,United States,164.1704,1,1,0.658,0.112,0.064,0.112
+female,31,1st,Southampton,United States,164.1704,0,2,0.832,0.96,0.932,0.96
+female,45,1st,Southampton,United States,164.1704,1,1,0.808,0.982,0.954,0.982
+male,51,3rd,Southampton,Sweden,7.15,0,0,0.536,0.424,0.238,0.208
+male,50,1st,Southampton,United States,211.1,1,1,0.636,0.208,0.144,0.208
+male,27,1st,Southampton,United States,211.1,0,2,0.688,0.284,0.12,0.284
+female,50,1st,Southampton,United States,211.1,1,1,0.834,0.976,0.956,0.976
+male,18,3rd,Southampton,Finland,6.0911,1,0,0.428,0.204,0.244,0.232
+male,21,3rd,Southampton,Finland,6.0911,1,0,0.428,0.212,0.268,0.25
+female,47,3rd,Southampton,England,7,1,0,0.634,0.424,0.84,0.976
+female,30,2nd,Southampton,England,26,1,0,0.936,0.888,0.902,0.974
+female,21,1st,Southampton,United States,26.11,0,0,0.926,0.974,0.964,0.974
+male,37,3rd,Cherbourg,X,8.1403,0,0,0.442,0.364,0.292,0.18
+male,21,3rd,Southampton,Wales,7.11,0,0,0.528,0.26,0.232,0.11
+male,51,1st,Cherbourg,Switzerland,61.0707,0,1,0.812,0.214,0.21,0.214
+male,23,2nd,Southampton,England,13,0,0,0.508,0.028,0.266,0.122
+male,43,1st,Southampton,United States,35,0,0,0.518,0.03,0.154,0.03
+male,28,3rd,Southampton,England,8.01,0,0,0.578,0.366,0.234,0.154
+male,28,3rd,Southampton,Wales,16.02,0,0,0.504,0.366,0.278,0.154
+male,21,1st,Cherbourg,Switzerland,61.0707,0,1,0.812,0.632,0.694,0.632
+female,31,1st,Cherbourg,X,134.1,0,0,0.948,0.986,0.992,0.986
+male,21,3rd,Southampton,South Africa,7.05,0,0,0.516,0.26,0.23,0.11
+male,17,3rd,Southampton,Switzerland,8.1303,0,0,0.574,0.256,0.228,0.148
+male,54,3rd,Southampton,England,7.05,0,0,0.516,0.392,0.192,0.14
+male,36,3rd,Southampton,Belgium,9.1,0,0,0.572,0.506,0.242,0.068
+male,32,2nd,Southampton,England,22,0,0,0.486,0.142,0.262,0.152
+male,46,1st,Southampton,England,35.1,0,0,0.532,0.03,0.25,0.03
+female,26,2nd,Southampton,England,13.1,0,0,0.922,0.87,0.898,0.97
+male,62,1st,Southampton,Canada,26.11,0,0,0.574,0.078,0.05,0.078
+male,27,3rd,Cherbourg,Lebanon,14.0901,1,0,0.438,0.272,0.462,0.314
+female,15,3rd,Cherbourg,Lebanon,14.0901,1,0,0.594,0.588,0.824,0.982
+female,36,1st,Cherbourg,United States,135.1208,0,0,0.946,0.956,0.972,0.956
+male,26,3rd,Cherbourg,Lebanon,7.0406,0,0,0.366,0.384,0.438,0.446
+male,45,3rd,Cherbourg,Lebanon,7.0407,0,0,0.382,0.306,0.306,0.144
+female,23,3rd,Cherbourg,Lebanon,22.0702,0,2,0.852,0.634,0.946,0.988
+female,24,2nd,Southampton,France,13,0,0,0.91,0.858,0.866,0.976
+male,22,3rd,Cherbourg,Turkey,7.0406,0,0,0.366,0.29,0.43,0.306
+male,27,3rd,Cherbourg,Turkey,7.0406,0,0,0.366,0.398,0.442,0.434
+male,25,3rd,Cherbourg,Lebanon,7.0406,0,0,0.366,0.38,0.434,0.404
+male,29,3rd,Southampton,Germany,7.1706,0,0,0.552,0.4,0.21,0.114
+male,21,victualling crew,Southampton,England,0,0,0,0.358,0.228,0.278,0.11
+male,34,engineering crew,Southampton,England,0,0,0,0.33,0.412,0.304,0.132
+male,26,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,20,victualling crew,Southampton,Channel Islands,0,0,0,0.358,0.226,0.27,0.112
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+male,22,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.278,0.11
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,17,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.262,0.148
+male,26,victualling crew,Southampton,England,0,0,0,0.358,0.312,0.294,0.174
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,36,victualling crew,Southampton,England,0,0,0,0.358,0.408,0.296,0.068
+male,36,engineering crew,Belfast,England,0,0,0,0.304,0.304,0.312,0.078
+male,41,victualling crew,Belfast,England,0,0,0,0.318,0.274,0.304,0.056
+male,40,deck crew,Southampton,England,0,0,0,0.728,0.432,0.28,0.036
+male,48,victualling crew,Southampton,England,0,0,0,0.358,0.37,0.276,0.17
+male,19,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.26,0.118
+male,35,deck crew,Southampton,England,0,0,0,0.728,0.522,0.312,0.136
+male,26,victualling crew,Southampton,England,0,0,0,0.358,0.312,0.294,0.174
+male,41,victualling crew,Southampton,Ireland,0,0,0,0.358,0.338,0.274,0.028
+male,26,restaurant staff,Southampton,England,0,0,0,0.33,0.264,0.294,0.174
+male,21,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.11
+male,23,victualling crew,Southampton,England,0,0,0,0.358,0.242,0.278,0.122
+male,37,victualling crew,Belfast,England,0,0,0,0.318,0.308,0.304,0.068
+male,28,victualling crew,Southampton,England,0,0,0,0.358,0.304,0.282,0.154
+male,33,victualling crew,Southampton,England,0,0,0,0.358,0.428,0.292,0.13
+male,36,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.312,0.078
+male,46,engineering crew,Southampton,Wales,0,0,0,0.33,0.314,0.286,0.03
+male,46,deck crew,Southampton,England,0,0,0,0.728,0.424,0.286,0.03
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,19,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.26,0.118
+male,24,restaurant staff,Southampton,England,0,0,0,0.33,0.26,0.276,0.172
+male,34,engineering crew,Southampton,England,0,0,0,0.33,0.412,0.304,0.132
+male,19,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.26,0.118
+male,41,victualling crew,Southampton,England,0,0,0,0.358,0.338,0.274,0.028
+male,42,victualling crew,Belfast,England,0,0,0,0.318,0.272,0.312,0.06
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,36,victualling crew,Southampton,England,0,0,0,0.358,0.408,0.296,0.068
+male,29,engineering crew,Southampton,England,0,0,0,0.33,0.318,0.26,0.114
+male,40,victualling crew,Southampton,England,0,0,0,0.358,0.36,0.28,0.036
+male,40,engineering crew,Southampton,England,0,0,0,0.33,0.344,0.28,0.036
+male,16,victualling crew,Southampton,England,0,0,0,0.358,0.228,0.272,0.166
+male,28,engineering crew,Southampton,England,0,0,0,0.33,0.298,0.282,0.154
+male,33,engineering crew,Southampton,England,0,0,0,0.33,0.416,0.292,0.13
+male,34,victualling crew,Belfast,England,0,0,0,0.318,0.32,0.334,0.126
+male,36,victualling crew,Southampton,England,0,0,0,0.358,0.408,0.296,0.068
+male,32,victualling crew,Southampton,England,0,0,0,0.358,0.458,0.304,0.152
+male,26,victualling crew,Southampton,England,0,0,0,0.358,0.312,0.294,0.174
+male,27,restaurant staff,Southampton,England,0,0,0,0.33,0.252,0.292,0.176
+male,53,victualling crew,Southampton,England,0,0,0,0.358,0.358,0.298,0.208
+male,55,victualling crew,Southampton,Scotland,0,0,0,0.358,0.302,0.174,0.078
+male,33,restaurant staff,Southampton,England,0,0,0,0.33,0.366,0.292,0.13
+male,35,engineering crew,Belfast,Northern Ireland,0,0,0,0.304,0.31,0.334,0.126
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,35,victualling crew,Southampton,England,0,0,0,0.358,0.416,0.312,0.136
+male,19,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.26,0.118
+male,51,engineering crew,Belfast,England,0,0,0,0.304,0.28,0.254,0.148
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,30,victualling crew,Southampton,England,0,0,0,0.358,0.332,0.24,0.106
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+female,33,victualling crew,Southampton,England,0,0,0,0.73,0.69,0.946,0.972
+male,47,engineering crew,Southampton,England,0,0,0,0.33,0.326,0.302,0.08
+male,22,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.278,0.11
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,39,engineering crew,Southampton,England,0,0,0,0.33,0.358,0.266,0.036
+male,40,victualling crew,Belfast,England,0,0,0,0.318,0.29,0.29,0.058
+male,26,restaurant staff,Southampton,England,0,0,0,0.33,0.264,0.294,0.174
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+male,28,restaurant staff,Southampton,England,0,0,0,0.33,0.256,0.282,0.154
+male,20,engineering crew,Southampton,England,0,0,0,0.33,0.226,0.27,0.112
+male,20,engineering crew,Southampton,England,0,0,0,0.33,0.226,0.27,0.112
+male,20,engineering crew,Southampton,England,0,0,0,0.33,0.226,0.27,0.112
+male,34,victualling crew,Belfast,England,0,0,0,0.318,0.32,0.334,0.126
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,28,engineering crew,Southampton,England,0,0,0,0.33,0.298,0.282,0.154
+male,41,engineering crew,Southampton,England,0,0,0,0.33,0.328,0.274,0.028
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,26,engineering crew,Belfast,England,0,0,0,0.304,0.236,0.33,0.144
+male,37,engineering crew,Southampton,England,0,0,0,0.33,0.388,0.266,0.044
+male,32,engineering crew,Southampton,Northern Ireland,0,0,0,0.33,0.442,0.304,0.152
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+female,45,victualling crew,Southampton,Switzerland,0,0,0,0.73,0.634,0.964,0.956
+male,26,restaurant staff,Southampton,England,0,0,0,0.33,0.264,0.294,0.174
+male,30,victualling crew,Southampton,England,0,0,0,0.358,0.332,0.24,0.106
+male,43,restaurant staff,Southampton,England,0,0,0,0.33,0.286,0.3,0.03
+male,59,victualling crew,Southampton,Scotland,0,0,0,0.358,0.296,0.122,0.082
+male,27,restaurant staff,Southampton,England,0,0,0,0.33,0.252,0.292,0.176
+male,40,victualling crew,Belfast,England,0,0,0,0.318,0.29,0.29,0.058
+male,38,victualling crew,Southampton,England,0,0,0,0.358,0.42,0.264,0.066
+male,33,victualling crew,Belfast,England,0,0,0,0.318,0.334,0.326,0.122
+male,46,engineering crew,Southampton,England,0,0,0,0.33,0.314,0.286,0.03
+male,24,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.276,0.172
+female,31,restaurant staff,Southampton,England,0,0,0,0.774,0.666,0.93,0.976
+male,28,deck crew,Belfast,England,0,0,0,0.784,0.432,0.326,0.126
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+male,36,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.312,0.078
+male,39,engineering crew,Southampton,England,0,0,0,0.33,0.358,0.266,0.036
+male,29,deck crew,Southampton,England,0,0,0,0.728,0.442,0.26,0.114
+male,43,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.3,0.03
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,52,victualling crew,Belfast,England,0,0,0,0.318,0.29,0.258,0.146
+male,34,engineering crew,Southampton,England,0,0,0,0.33,0.412,0.304,0.132
+male,43,deck crew,Southampton,England,0,0,0,0.728,0.428,0.3,0.03
+male,22,victualling crew,Belfast,England,0,0,0,0.318,0.196,0.332,0.106
+male,42,deck crew,Belfast,England,0,0,0,0.784,0.422,0.312,0.06
+male,38,victualling crew,Southampton,X,0,0,0,0.358,0.42,0.264,0.066
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,28,victualling crew,Southampton,England,0,0,0,0.358,0.304,0.282,0.154
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,33,victualling crew,Belfast,England,0,0,0,0.318,0.334,0.326,0.122
+male,34,victualling crew,Belfast,Wales,0,0,0,0.318,0.32,0.334,0.126
+male,28,engineering crew,Southampton,Wales,0,0,0,0.33,0.298,0.282,0.154
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,41,victualling crew,Belfast,England,0,0,0,0.318,0.274,0.304,0.056
+male,34,victualling crew,Southampton,England,0,0,0,0.358,0.422,0.304,0.132
+male,26,deck crew,Southampton,England,0,0,0,0.728,0.458,0.294,0.174
+male,22,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.278,0.11
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+male,21,victualling crew,Belfast,England,0,0,0,0.318,0.19,0.332,0.116
+male,18,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.256,0.118
+male,30,victualling crew,Belfast,England,0,0,0,0.318,0.266,0.304,0.09
+male,31,victualling crew,Belfast,Ireland,0,0,0,0.318,0.324,0.32,0.108
+male,20,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.27,0.112
+male,29,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.26,0.114
+male,35,engineering crew,Southampton,England,0,0,0,0.33,0.406,0.312,0.136
+male,35,engineering crew,Southampton,England,0,0,0,0.33,0.406,0.312,0.136
+male,23,victualling crew,Southampton,England,0,0,0,0.358,0.242,0.278,0.122
+male,22,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.278,0.11
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+male,45,victualling crew,Southampton,England,0,0,0,0.358,0.334,0.3,0.04
+male,30,engineering crew,Belfast,Northern Ireland,0,0,0,0.304,0.24,0.304,0.09
+male,25,victualling crew,Southampton,Australia,0,0,0,0.358,0.308,0.294,0.174
+male,40,engineering crew,Southampton,England,0,0,0,0.33,0.344,0.28,0.036
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,27,engineering crew,Southampton,England,0,0,0,0.33,0.292,0.292,0.176
+male,46,engineering crew,Southampton,England,0,0,0,0.33,0.314,0.286,0.03
+male,33,victualling crew,Belfast,England,0,0,0,0.318,0.334,0.326,0.122
+male,32,restaurant staff,Southampton,Italy,0,0,0,0.33,0.388,0.304,0.152
+male,44,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.302,0.032
+male,34,victualling crew,Southampton,England,0,0,0,0.358,0.422,0.304,0.132
+male,37,engineering crew,Southampton,England,0,0,0,0.33,0.388,0.266,0.044
+female,33,victualling crew,Southampton,England,0,0,0,0.73,0.69,0.946,0.972
+male,28,victualling crew,Southampton,England,0,0,0,0.358,0.304,0.282,0.154
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,39,victualling crew,Belfast,England,0,0,0,0.318,0.302,0.284,0.06
+male,21,victualling crew,Southampton,England,0,0,0,0.358,0.228,0.278,0.11
+male,25,restaurant staff,Southampton,England,0,0,0,0.33,0.262,0.294,0.174
+male,32,victualling crew,Southampton,England,0,0,0,0.358,0.458,0.304,0.152
+male,25,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.294,0.174
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,28,victualling crew,Belfast,England,0,0,0,0.318,0.238,0.326,0.126
+male,37,engineering crew,Belfast,England,0,0,0,0.304,0.298,0.304,0.068
+male,29,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.26,0.114
+male,50,victualling crew,Southampton,England,0,0,0,0.358,0.366,0.27,0.188
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,34,victualling crew,Southampton,England,0,0,0,0.358,0.422,0.304,0.132
+male,40,engineering crew,Southampton,Ireland,0,0,0,0.33,0.344,0.28,0.036
+male,33,deck crew,Southampton,England,0,0,0,0.728,0.532,0.292,0.13
+male,31,deck crew,Southampton,England,0,0,0,0.728,0.464,0.246,0.124
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,29,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.26,0.114
+male,58,engineering crew,Belfast,Ireland,0,0,0,0.304,0.254,0.172,0.088
+male,33,victualling crew,Southampton,England,0,0,0,0.358,0.428,0.292,0.13
+male,17,victualling crew,Southampton,Northern Ireland,0,0,0,0.358,0.226,0.262,0.148
+male,38,engineering crew,Southampton,England,0,0,0,0.33,0.408,0.264,0.066
+male,34,engineering crew,Southampton,England,0,0,0,0.33,0.412,0.304,0.132
+male,25,victualling crew,Belfast,England,0,0,0,0.318,0.248,0.32,0.14
+male,32,victualling crew,Southampton,England,0,0,0,0.358,0.458,0.304,0.152
+male,45,victualling crew,Southampton,England,0,0,0,0.358,0.334,0.3,0.04
+male,26,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,26,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,28,engineering crew,Southampton,England,0,0,0,0.33,0.298,0.282,0.154
+male,27,victualling crew,Southampton,England,0,0,0,0.358,0.298,0.292,0.176
+male,33,engineering crew,Southampton,England,0,0,0,0.33,0.416,0.292,0.13
+male,19,restaurant staff,Southampton,England,0,0,0,0.33,0.178,0.26,0.118
+male,36,engineering crew,Southampton,England,0,0,0,0.33,0.398,0.296,0.068
+male,28,deck crew,Southampton,England,0,0,0,0.728,0.446,0.282,0.154
+male,49,engineering crew,Southampton,England,0,0,0,0.33,0.374,0.278,0.214
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,28,restaurant staff,Southampton,France,0,0,0,0.33,0.256,0.282,0.154
+male,30,victualling crew,Southampton,England,0,0,0,0.358,0.332,0.24,0.106
+male,27,engineering crew,Belfast,England,0,0,0,0.304,0.22,0.326,0.14
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,20,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.27,0.112
+male,43,victualling crew,Belfast,England,0,0,0,0.318,0.274,0.33,0.062
+male,45,engineering crew,Belfast,England,0,0,0,0.304,0.264,0.316,0.068
+male,21,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.11
+male,33,victualling crew,Southampton,England,0,0,0,0.358,0.428,0.292,0.13
+male,39,victualling crew,Belfast,England,0,0,0,0.318,0.302,0.284,0.06
+male,45,victualling crew,Southampton,England,0,0,0,0.358,0.334,0.3,0.04
+male,44,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.302,0.032
+male,17,restaurant staff,Southampton,England,0,0,0,0.33,0.178,0.262,0.148
+male,30,victualling crew,Southampton,England,0,0,0,0.358,0.332,0.24,0.106
+male,35,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.334,0.126
+male,49,victualling crew,Belfast,England,0,0,0,0.318,0.312,0.25,0.16
+male,38,victualling crew,Belfast,Scotland,0,0,0,0.318,0.324,0.3,0.076
+male,35,engineering crew,Southampton,England,0,0,0,0.33,0.406,0.312,0.136
+male,26,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,18,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.256,0.118
+male,18,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.256,0.118
+male,32,victualling crew,Belfast,England,0,0,0,0.318,0.356,0.358,0.136
+male,26,victualling crew,Belfast,Wales,0,0,0,0.318,0.248,0.33,0.144
+male,33,engineering crew,Southampton,England,0,0,0,0.33,0.416,0.292,0.13
+male,29,victualling crew,Belfast,England,0,0,0,0.318,0.26,0.308,0.1
+male,39,deck crew,Southampton,England,0,0,0,0.728,0.43,0.266,0.036
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,19,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.26,0.118
+male,18,restaurant staff,Southampton,England,0,0,0,0.33,0.176,0.256,0.118
+male,35,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.334,0.126
+male,20,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.27,0.112
+male,29,victualling crew,Belfast,England,0,0,0,0.318,0.26,0.308,0.1
+male,38,victualling crew,Southampton,England,0,0,0,0.358,0.42,0.264,0.066
+male,20,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.27,0.112
+male,27,engineering crew,Southampton,England,0,0,0,0.33,0.292,0.292,0.176
+male,37,engineering crew,Southampton,England,0,0,0,0.33,0.388,0.266,0.044
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,34,engineering crew,Southampton,England,0,0,0,0.33,0.412,0.304,0.132
+male,49,victualling crew,Southampton,England,0,0,0,0.358,0.384,0.278,0.214
+male,39,engineering crew,Belfast,England,0,0,0,0.304,0.29,0.284,0.06
+male,44,victualling crew,Belfast,England,0,0,0,0.318,0.27,0.32,0.06
+male,27,engineering crew,Southampton,Guyana,0,0,0,0.33,0.292,0.292,0.176
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,39,victualling crew,Belfast,England,0,0,0,0.318,0.302,0.284,0.06
+male,17,restaurant staff,Southampton,Italy,0,0,0,0.33,0.178,0.262,0.148
+male,35,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.334,0.126
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,20,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.27,0.112
+male,22,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.278,0.11
+male,27,engineering crew,Southampton,England,0,0,0,0.33,0.292,0.292,0.176
+male,36,engineering crew,Belfast,Ireland,0,0,0,0.304,0.304,0.312,0.078
+male,48,victualling crew,Southampton,England,0,0,0,0.358,0.37,0.276,0.17
+male,38,engineering crew,Southampton,England,0,0,0,0.33,0.408,0.264,0.066
+male,24,engineering crew,Belfast,India,0,0,0,0.304,0.236,0.318,0.126
+male,33,victualling crew,Southampton,England,0,0,0,0.358,0.428,0.292,0.13
+male,41,engineering crew,Southampton,England,0,0,0,0.33,0.328,0.274,0.028
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,44,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.302,0.032
+male,23,victualling crew,Southampton,England,0,0,0,0.358,0.242,0.278,0.122
+male,23,victualling crew,Southampton,England,0,0,0,0.358,0.242,0.278,0.122
+male,39,victualling crew,Southampton,England,0,0,0,0.358,0.372,0.266,0.036
+male,39,victualling crew,Southampton,Wales,0,0,0,0.358,0.372,0.266,0.036
+male,48,victualling crew,Southampton,England,0,0,0,0.358,0.37,0.276,0.17
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,29,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.26,0.114
+male,34,victualling crew,Southampton,England,0,0,0,0.358,0.422,0.304,0.132
+male,18,engineering crew,Belfast,Northern Ireland,0,0,0,0.304,0.186,0.312,0.128
+male,43,victualling crew,Belfast,England,0,0,0,0.318,0.274,0.33,0.062
+male,25,deck crew,Southampton,England,0,0,0,0.728,0.462,0.294,0.174
+male,27,deck crew,Southampton,England,0,0,0,0.728,0.462,0.292,0.176
+male,27,victualling crew,Belfast,England,0,0,0,0.318,0.232,0.326,0.14
+male,33,engineering crew,Southampton,England,0,0,0,0.33,0.416,0.292,0.13
+male,38,victualling crew,Belfast,England,0,0,0,0.318,0.324,0.3,0.076
+male,22,victualling crew,Belfast,England,0,0,0,0.318,0.196,0.332,0.106
+male,39,engineering crew,Belfast,England,0,0,0,0.304,0.29,0.284,0.06
+male,37,victualling crew,Belfast,England,0,0,0,0.318,0.308,0.304,0.068
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,29,victualling crew,Belfast,England,0,0,0,0.318,0.26,0.308,0.1
+male,42,victualling crew,Southampton,England,0,0,0,0.358,0.334,0.286,0.032
+male,33,engineering crew,Southampton,England,0,0,0,0.33,0.416,0.292,0.13
+male,39,engineering crew,Southampton,England,0,0,0,0.33,0.358,0.266,0.036
+male,30,restaurant staff,Southampton,England,0,0,0,0.33,0.284,0.24,0.106
+male,19,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.26,0.118
+male,23,restaurant staff,Southampton,England,0,0,0,0.33,0.196,0.278,0.122
+male,21,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.11
+male,29,engineering crew,Belfast,England,0,0,0,0.304,0.236,0.308,0.1
+male,52,engineering crew,Southampton,England,0,0,0,0.33,0.354,0.306,0.21
+male,24,deck crew,Belfast,England,0,0,0,0.784,0.44,0.318,0.126
+male,26,victualling crew,Belfast,England,0,0,0,0.318,0.248,0.33,0.144
+male,46,deck crew,Belfast,Ireland,0,0,0,0.784,0.41,0.3,0.06
+male,22,victualling crew,Southampton,Wales,0,0,0,0.358,0.226,0.278,0.11
+male,33,victualling crew,Southampton,England,0,0,0,0.358,0.428,0.292,0.13
+male,44,victualling crew,Southampton,England,0,0,0,0.358,0.332,0.302,0.032
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,33,engineering crew,Southampton,England,0,0,0,0.33,0.416,0.292,0.13
+male,27,deck crew,Southampton,England,0,0,0,0.728,0.462,0.292,0.176
+male,37,engineering crew,Belfast,England,0,0,0,0.304,0.298,0.304,0.068
+male,27,victualling crew,Southampton,England,0,0,0,0.358,0.298,0.292,0.176
+male,28,victualling crew,Southampton,England,0,0,0,0.358,0.304,0.282,0.154
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,30,engineering crew,Belfast,Scotland,0,0,0,0.304,0.24,0.304,0.09
+male,21,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.11
+male,45,victualling crew,Belfast,England,0,0,0,0.318,0.272,0.316,0.068
+male,29,engineering crew,Southampton,England,0,0,0,0.33,0.318,0.26,0.114
+male,37,restaurant staff,Southampton,England,0,0,0,0.33,0.352,0.266,0.044
+male,32,victualling crew,Southampton,England,0,0,0,0.358,0.458,0.304,0.152
+male,26,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,36,victualling crew,Southampton,England,0,0,0,0.358,0.408,0.296,0.068
+male,31,restaurant staff,Southampton,England,0,0,0,0.33,0.346,0.246,0.124
+male,32,victualling crew,Southampton,England,0,0,0,0.358,0.458,0.304,0.152
+male,38,victualling crew,Belfast,England,0,0,0,0.318,0.324,0.3,0.076
+male,38,victualling crew,Southampton,England,0,0,0,0.358,0.42,0.264,0.066
+male,61,engineering crew,Southampton,England,0,0,0,0.33,0.31,0.172,0.08
+male,36,engineering crew,Southampton,England,0,0,0,0.33,0.398,0.296,0.068
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+female,45,victualling crew,Southampton,England,0,0,0,0.73,0.634,0.964,0.956
+male,28,victualling crew,Southampton,England,0,0,0,0.358,0.304,0.282,0.154
+male,29,engineering crew,Southampton,England,0,0,0,0.33,0.318,0.26,0.114
+male,41,engineering crew,Southampton,England,0,0,0,0.33,0.328,0.274,0.028
+male,40,victualling crew,Belfast,England,0,0,0,0.318,0.29,0.29,0.058
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,26,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,28,engineering crew,Belfast,Northern Ireland,0,0,0,0.304,0.224,0.326,0.126
+male,43,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.3,0.03
+female,45,victualling crew,Southampton,England,0,0,0,0.73,0.634,0.964,0.956
+male,24,restaurant staff,Southampton,England,0,0,0,0.33,0.26,0.276,0.172
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,30,victualling crew,Southampton,England,0,0,0,0.358,0.332,0.24,0.106
+male,29,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.26,0.114
+male,37,victualling crew,Southampton,United States,0,0,0,0.358,0.398,0.266,0.044
+male,35,engineering crew,Belfast,Northern Ireland,0,0,0,0.304,0.31,0.334,0.126
+male,31,deck crew,Belfast,England,0,0,0,0.784,0.446,0.32,0.108
+male,22,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.278,0.11
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,41,victualling crew,Southampton,England,0,0,0,0.358,0.338,0.274,0.028
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,47,victualling crew,Southampton,England,0,0,0,0.358,0.344,0.302,0.08
+male,25,victualling crew,Belfast,England,0,0,0,0.318,0.248,0.32,0.14
+male,54,engineering crew,Southampton,Ireland,0,0,0,0.33,0.314,0.254,0.14
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,39,deck crew,Southampton,England,0,0,0,0.728,0.43,0.266,0.036
+male,21,victualling crew,Southampton,England,0,0,0,0.358,0.228,0.278,0.11
+male,21,victualling crew,Southampton,England,0,0,0,0.358,0.228,0.278,0.11
+male,40,victualling crew,Belfast,England,0,0,0,0.318,0.29,0.29,0.058
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,19,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.26,0.118
+male,17,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.262,0.148
+male,29,engineering crew,Southampton,England,0,0,0,0.33,0.318,0.26,0.114
+male,17,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.262,0.148
+male,39,engineering crew,Southampton,England,0,0,0,0.33,0.358,0.266,0.036
+male,40,victualling crew,Southampton,England,0,0,0,0.358,0.36,0.28,0.036
+male,38,engineering crew,Belfast,England,0,0,0,0.304,0.312,0.3,0.076
+male,54,engineering crew,Southampton,England,0,0,0,0.33,0.314,0.254,0.14
+male,32,victualling crew,Southampton,England,0,0,0,0.358,0.458,0.304,0.152
+male,21,victualling crew,Southampton,England,0,0,0,0.358,0.228,0.278,0.11
+male,34,engineering crew,Belfast,Northern Ireland,0,0,0,0.304,0.312,0.334,0.126
+male,23,victualling crew,Southampton,England,0,0,0,0.358,0.242,0.278,0.122
+male,52,victualling crew,Southampton,England,0,0,0,0.358,0.368,0.306,0.21
+male,43,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.3,0.03
+male,45,victualling crew,Belfast,England,0,0,0,0.318,0.272,0.316,0.068
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,30,victualling crew,Southampton,England,0,0,0,0.358,0.332,0.24,0.106
+male,43,deck crew,Belfast,England,0,0,0,0.784,0.424,0.33,0.062
+male,28,engineering crew,Southampton,England,0,0,0,0.33,0.298,0.282,0.154
+male,40,victualling crew,Belfast,England,0,0,0,0.318,0.29,0.29,0.058
+male,26,victualling crew,Southampton,England,0,0,0,0.358,0.312,0.294,0.174
+male,33,engineering crew,Belfast,England,0,0,0,0.304,0.32,0.326,0.122
+male,45,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.3,0.04
+male,37,victualling crew,Belfast,England,0,0,0,0.318,0.308,0.304,0.068
+male,29,deck crew,Southampton,England,0,0,0,0.728,0.442,0.26,0.114
+male,36,victualling crew,Southampton,England,0,0,0,0.358,0.408,0.296,0.068
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,43,victualling crew,Belfast,England,0,0,0,0.318,0.274,0.33,0.062
+male,40,victualling crew,Southampton,England,0,0,0,0.358,0.36,0.28,0.036
+male,36,victualling crew,Southampton,England,0,0,0,0.358,0.408,0.296,0.068
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+male,25,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.294,0.174
+male,19,victualling crew,Belfast,England,0,0,0,0.318,0.186,0.316,0.124
+male,29,engineering crew,Belfast,England,0,0,0,0.304,0.236,0.308,0.1
+male,26,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,46,engineering crew,Belfast,England,0,0,0,0.304,0.258,0.3,0.06
+male,43,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.3,0.03
+male,29,deck crew,Belfast,England,0,0,0,0.784,0.43,0.308,0.1
+male,22,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.278,0.11
+male,28,victualling crew,Belfast,England,0,0,0,0.318,0.238,0.326,0.126
+male,24,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.276,0.172
+male,29,deck crew,Belfast,England,0,0,0,0.784,0.43,0.308,0.1
+male,29,engineering crew,Southampton,England,0,0,0,0.33,0.318,0.26,0.114
+male,15,victualling crew,Southampton,England,0,0,0,0.358,0.248,0.29,0.208
+male,40,deck crew,Southampton,England,0,0,0,0.728,0.432,0.28,0.036
+male,33,deck crew,Southampton,England,0,0,0,0.728,0.532,0.292,0.13
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,36,engineering crew,Belfast,England,0,0,0,0.304,0.304,0.312,0.078
+male,38,victualling crew,Belfast,England,0,0,0,0.318,0.324,0.3,0.076
+male,31,victualling crew,Belfast,England,0,0,0,0.318,0.324,0.32,0.108
+male,34,victualling crew,Southampton,England,0,0,0,0.358,0.422,0.304,0.132
+male,18,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.256,0.118
+male,32,victualling crew,Southampton,England,0,0,0,0.358,0.458,0.304,0.152
+male,53,deck crew,Southampton,England,0,0,0,0.728,0.492,0.298,0.208
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,27,engineering crew,Southampton,England,0,0,0,0.33,0.292,0.292,0.176
+male,41,engineering crew,Southampton,England,0,0,0,0.33,0.328,0.274,0.028
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,28,deck crew,Belfast,England,0,0,0,0.784,0.432,0.326,0.126
+male,19,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.26,0.118
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,19,engineering crew,Southampton,England,0,0,0,0.33,0.224,0.26,0.118
+male,21,victualling crew,Southampton,England,0,0,0,0.358,0.228,0.278,0.11
+male,20,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.27,0.112
+male,33,engineering crew,Southampton,England,0,0,0,0.33,0.416,0.292,0.13
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,22,victualling crew,Belfast,England,0,0,0,0.318,0.196,0.332,0.106
+male,59,engineering crew,Southampton,England,0,0,0,0.33,0.282,0.122,0.082
+male,38,restaurant staff,Southampton,France,0,0,0,0.33,0.366,0.264,0.066
+male,27,engineering crew,Southampton,Wales,0,0,0,0.33,0.292,0.292,0.176
+male,35,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.334,0.126
+male,29,restaurant staff,Southampton,England,0,0,0,0.33,0.282,0.26,0.114
+male,28,restaurant staff,Southampton,England,0,0,0,0.33,0.256,0.282,0.154
+male,55,victualling crew,Belfast,England,0,0,0,0.318,0.256,0.176,0.08
+male,25,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.294,0.174
+female,24,victualling crew,Southampton,England,0,0,0,0.73,0.63,0.916,0.976
+male,23,deck crew,Belfast,England,0,0,0,0.784,0.416,0.338,0.112
+male,38,engineering crew,Southampton,England,0,0,0,0.33,0.408,0.264,0.066
+male,41,victualling crew,Belfast,England,0,0,0,0.318,0.274,0.304,0.056
+male,17,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.262,0.148
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+male,29,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.26,0.114
+male,32,deck crew,Southampton,England,0,0,0,0.728,0.55,0.304,0.152
+male,21,victualling crew,Southampton,England,0,0,0,0.358,0.228,0.278,0.11
+male,24,restaurant staff,Southampton,England,0,0,0,0.33,0.26,0.276,0.172
+male,32,victualling crew,Belfast,England,0,0,0,0.318,0.356,0.358,0.136
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+male,38,engineering crew,Southampton,England,0,0,0,0.33,0.408,0.264,0.066
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,40,engineering crew,Southampton,England,0,0,0,0.33,0.344,0.28,0.036
+male,44,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.302,0.032
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,30,victualling crew,Southampton,England,0,0,0,0.358,0.332,0.24,0.106
+male,18,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.256,0.118
+male,23,engineering crew,Belfast,Scotland,0,0,0,0.304,0.196,0.338,0.112
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,43,engineering crew,Belfast,England,0,0,0,0.304,0.264,0.33,0.062
+male,37,engineering crew,Southampton,England,0,0,0,0.33,0.388,0.266,0.044
+male,30,victualling crew,Southampton,England,0,0,0,0.358,0.332,0.24,0.106
+male,44,engineering crew,Belfast,England,0,0,0,0.304,0.262,0.32,0.06
+male,28,victualling crew,Southampton,England,0,0,0,0.358,0.304,0.282,0.154
+male,26,engineering crew,Southampton,Scotland,0,0,0,0.33,0.304,0.294,0.174
+male,36,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.312,0.078
+male,34,victualling crew,Southampton,Ireland,0,0,0,0.358,0.422,0.304,0.132
+male,35,victualling crew,Southampton,England,0,0,0,0.358,0.416,0.312,0.136
+male,18,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.256,0.118
+male,28,victualling crew,Southampton,Ireland,0,0,0,0.358,0.304,0.282,0.154
+male,20,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.27,0.112
+male,42,deck crew,Southampton,England,0,0,0,0.728,0.426,0.286,0.032
+male,48,victualling crew,Southampton,England,0,0,0,0.358,0.37,0.276,0.17
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,36,victualling crew,Southampton,England,0,0,0,0.358,0.408,0.296,0.068
+male,43,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.3,0.03
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,33,victualling crew,Southampton,England,0,0,0,0.358,0.428,0.292,0.13
+male,49,victualling crew,Southampton,England,0,0,0,0.358,0.384,0.278,0.214
+male,21,victualling crew,Southampton,England,0,0,0,0.358,0.228,0.278,0.11
+male,43,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.3,0.03
+male,20,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.27,0.112
+male,41,engineering crew,Southampton,England,0,0,0,0.33,0.328,0.274,0.028
+male,46,victualling crew,Belfast,England,0,0,0,0.318,0.268,0.3,0.06
+male,34,victualling crew,Southampton,England,0,0,0,0.358,0.422,0.304,0.132
+male,55,victualling crew,Belfast,England,0,0,0,0.318,0.256,0.176,0.08
+female,40,victualling crew,Southampton,England,0,0,0,0.73,0.654,0.96,0.966
+male,36,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.312,0.078
+male,22,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.278,0.11
+female,50,victualling crew,Southampton,England,0,0,0,0.73,0.632,0.938,0.95
+male,18,engineering crew,Southampton,England,0,0,0,0.33,0.222,0.256,0.118
+male,29,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.26,0.114
+male,41,deck crew,Southampton,England,0,0,0,0.728,0.428,0.274,0.028
+male,35,victualling crew,Southampton,England,0,0,0,0.358,0.416,0.312,0.136
+male,25,victualling crew,Belfast,United States,0,0,0,0.318,0.248,0.32,0.14
+male,26,victualling crew,Belfast,England,0,0,0,0.318,0.248,0.33,0.144
+male,27,victualling crew,Southampton,England,0,0,0,0.358,0.298,0.292,0.176
+male,24,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.276,0.172
+male,20,engineering crew,Southampton,England,0,0,0,0.33,0.226,0.27,0.112
+male,47,engineering crew,Southampton,England,0,0,0,0.33,0.326,0.302,0.08
+male,38,deck crew,Belfast,England,0,0,0,0.784,0.462,0.3,0.076
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,40,victualling crew,Belfast,England,0,0,0,0.318,0.29,0.29,0.058
+male,41,victualling crew,Belfast,England,0,0,0,0.318,0.274,0.304,0.056
+male,29,engineering crew,Southampton,England,0,0,0,0.33,0.318,0.26,0.114
+male,33,victualling crew,Southampton,England,0,0,0,0.358,0.428,0.292,0.13
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+male,36,engineering crew,Southampton,England,0,0,0,0.33,0.398,0.296,0.068
+male,20,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.27,0.112
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+male,29,deck crew,Belfast,Wales,0,0,0,0.784,0.43,0.308,0.1
+male,25,deck crew,Southampton,England,0,0,0,0.728,0.462,0.294,0.174
+male,31,victualling crew,Belfast,England,0,0,0,0.318,0.324,0.32,0.108
+male,45,victualling crew,Southampton,England,0,0,0,0.358,0.334,0.3,0.04
+male,26,deck crew,Southampton,Ireland,0,0,0,0.728,0.458,0.294,0.174
+male,24,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.276,0.172
+male,34,victualling crew,Southampton,England,0,0,0,0.358,0.422,0.304,0.132
+male,32,engineering crew,Belfast,Scotland,0,0,0,0.304,0.334,0.358,0.136
+male,36,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.312,0.078
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,40,victualling crew,Southampton,England,0,0,0,0.358,0.36,0.28,0.036
+male,50,victualling crew,Southampton,United States,0,0,0,0.358,0.366,0.27,0.188
+male,27,engineering crew,Southampton,England,0,0,0,0.33,0.292,0.292,0.176
+male,27,victualling crew,Southampton,Scotland,0,0,0,0.358,0.298,0.292,0.176
+male,21,victualling crew,Southampton,England,0,0,0,0.358,0.228,0.278,0.11
+female,28,victualling crew,Southampton,England,0,0,0,0.73,0.646,0.934,0.972
+male,40,engineering crew,Southampton,England,0,0,0,0.33,0.344,0.28,0.036
+female,20,restaurant staff,Southampton,England,0,0,0,0.774,0.614,0.888,0.974
+female,39,victualling crew,Southampton,Channel Islands,0,0,0,0.73,0.664,0.956,0.962
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,39,engineering crew,Southampton,England,0,0,0,0.33,0.358,0.266,0.036
+male,30,deck crew,Southampton,England,0,0,0,0.728,0.434,0.24,0.106
+male,29,deck crew,Southampton,Wales,0,0,0,0.728,0.442,0.26,0.114
+male,20,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.27,0.112
+male,25,restaurant staff,Southampton,England,0,0,0,0.33,0.262,0.294,0.174
+male,30,deck crew,Belfast,England,0,0,0,0.784,0.42,0.304,0.09
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,59,engineering crew,Southampton,England,0,0,0,0.33,0.282,0.122,0.082
+male,31,victualling crew,Belfast,England,0,0,0,0.318,0.324,0.32,0.108
+male,28,engineering crew,Southampton,England,0,0,0,0.33,0.298,0.282,0.154
+male,53,victualling crew,Belfast,England,0,0,0,0.318,0.284,0.256,0.15
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,38,engineering crew,Southampton,England,0,0,0,0.33,0.408,0.264,0.066
+male,23,engineering crew,Southampton,X,0,0,0,0.33,0.244,0.278,0.122
+male,38,victualling crew,Southampton,England,0,0,0,0.358,0.42,0.264,0.066
+male,47,deck crew,Southampton,Ireland,0,0,0,0.728,0.444,0.302,0.08
+male,38,engineering crew,Southampton,England,0,0,0,0.33,0.408,0.264,0.066
+male,36,victualling crew,Belfast,Scotland,0,0,0,0.318,0.314,0.312,0.078
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+male,29,engineering crew,Southampton,England,0,0,0,0.33,0.318,0.26,0.114
+male,34,engineering crew,Southampton,England,0,0,0,0.33,0.412,0.304,0.132
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,36,deck crew,Southampton,Ireland,0,0,0,0.728,0.48,0.296,0.068
+male,17,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.262,0.148
+male,38,engineering crew,Southampton,England,0,0,0,0.33,0.408,0.264,0.066
+male,21,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.11
+male,30,victualling crew,Belfast,England,0,0,0,0.318,0.266,0.304,0.09
+female,40,victualling crew,Southampton,England,0,0,0,0.73,0.654,0.96,0.966
+male,23,victualling crew,Belfast,England,0,0,0,0.318,0.208,0.338,0.112
+male,21,victualling crew,Belfast,England,0,0,0,0.318,0.19,0.332,0.116
+male,36,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.312,0.078
+male,44,victualling crew,Belfast,England,0,0,0,0.318,0.27,0.32,0.06
+male,26,engineering crew,Belfast,Northern Ireland,0,0,0,0.304,0.236,0.33,0.144
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,22,engineering crew,Belfast,Northern Ireland,0,0,0,0.304,0.188,0.332,0.106
+male,34,victualling crew,Southampton,England,0,0,0,0.358,0.422,0.304,0.132
+male,27,engineering crew,Belfast,Ireland,0,0,0,0.304,0.22,0.326,0.14
+male,28,victualling crew,Southampton,England,0,0,0,0.358,0.304,0.282,0.154
+male,28,engineering crew,Southampton,England,0,0,0,0.33,0.298,0.282,0.154
+male,26,engineering crew,Belfast,Scotland,0,0,0,0.304,0.236,0.33,0.144
+male,32,engineering crew,Belfast,Northern Ireland,0,0,0,0.304,0.334,0.358,0.136
+male,51,victualling crew,Southampton,England,0,0,0,0.358,0.37,0.3,0.208
+male,46,engineering crew,Southampton,England,0,0,0,0.33,0.314,0.286,0.03
+male,53,victualling crew,Belfast,Lebanon,0,0,0,0.318,0.284,0.256,0.15
+male,19,engineering crew,Southampton,England,0,0,0,0.33,0.224,0.26,0.118
+male,20,restaurant staff,Southampton,Spain,0,0,0,0.33,0.18,0.27,0.112
+male,23,restaurant staff,Southampton,England,0,0,0,0.33,0.196,0.278,0.122
+male,24,deck crew,Belfast,England,0,0,0,0.784,0.44,0.318,0.126
+male,39,victualling crew,Southampton,England,0,0,0,0.358,0.372,0.266,0.036
+male,32,deck crew,Southampton,England,0,0,0,0.728,0.55,0.304,0.152
+male,29,engineering crew,Southampton,England,0,0,0,0.33,0.318,0.26,0.114
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,44,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.302,0.032
+male,42,victualling crew,Southampton,England,0,0,0,0.358,0.334,0.286,0.032
+male,27,engineering crew,Southampton,England,0,0,0,0.33,0.292,0.292,0.176
+male,26,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,28,victualling crew,Belfast,England,0,0,0,0.318,0.238,0.326,0.126
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,36,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.312,0.078
+male,24,engineering crew,Belfast,Scotland,0,0,0,0.304,0.236,0.318,0.126
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+male,20,victualling crew,Southampton,Scotland,0,0,0,0.358,0.226,0.27,0.112
+male,39,deck crew,Belfast,Scotland,0,0,0,0.784,0.428,0.284,0.06
+male,42,restaurant staff,Southampton,Italy,0,0,0,0.33,0.288,0.286,0.032
+male,26,victualling crew,Southampton,England,0,0,0,0.358,0.312,0.294,0.174
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,33,engineering crew,Southampton,England,0,0,0,0.33,0.416,0.292,0.13
+male,39,victualling crew,Southampton,England,0,0,0,0.358,0.372,0.266,0.036
+male,48,deck crew,Belfast,Australia,0,0,0,0.784,0.418,0.246,0.134
+male,46,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.286,0.03
+male,35,victualling crew,Southampton,England,0,0,0,0.358,0.416,0.312,0.136
+male,30,engineering crew,Southampton,Scotland,0,0,0,0.33,0.32,0.24,0.106
+male,42,engineering crew,Southampton,England,0,0,0,0.33,0.322,0.286,0.032
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,21,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.11
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,29,engineering crew,Southampton,England,0,0,0,0.33,0.318,0.26,0.114
+male,44,victualling crew,Belfast,England,0,0,0,0.318,0.27,0.32,0.06
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+male,27,victualling crew,Southampton,England,0,0,0,0.358,0.298,0.292,0.176
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,27,deck crew,Belfast,Channel Islands,0,0,0,0.784,0.444,0.326,0.14
+male,63,deck crew,Belfast,England,0,0,0,0.784,0.27,0.176,0.062
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,39,victualling crew,Southampton,Scotland,0,0,0,0.358,0.372,0.266,0.036
+male,32,victualling crew,Belfast,England,0,0,0,0.318,0.356,0.358,0.136
+male,27,deck crew,Southampton,England,0,0,0,0.728,0.462,0.292,0.176
+male,36,engineering crew,Southampton,England,0,0,0,0.33,0.398,0.296,0.068
+male,43,victualling crew,Southampton,Wales,0,0,0,0.358,0.33,0.3,0.03
+male,17,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.262,0.148
+male,19,restaurant staff,Southampton,England,0,0,0,0.33,0.178,0.26,0.118
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,29,engineering crew,Southampton,England,0,0,0,0.33,0.318,0.26,0.114
+male,29,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.26,0.114
+male,45,engineering crew,Belfast,England,0,0,0,0.304,0.264,0.316,0.068
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+male,27,engineering crew,Belfast,England,0,0,0,0.304,0.22,0.326,0.14
+male,18,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.256,0.118
+male,45,deck crew,Southampton,England,0,0,0,0.728,0.428,0.3,0.04
+male,24,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.276,0.172
+male,28,engineering crew,Southampton,England,0,0,0,0.33,0.298,0.282,0.154
+male,25,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.294,0.174
+male,21,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.278,0.11
+male,39,engineering crew,Southampton,England,0,0,0,0.33,0.358,0.266,0.036
+male,34,victualling crew,Southampton,England,0,0,0,0.358,0.422,0.304,0.132
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,49,victualling crew,Belfast,England,0,0,0,0.318,0.312,0.25,0.16
+male,20,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.27,0.112
+male,17,restaurant staff,Southampton,England,0,0,0,0.33,0.178,0.262,0.148
+male,22,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.278,0.11
+male,37,deck crew,Belfast,England,0,0,0,0.784,0.45,0.304,0.068
+male,20,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.27,0.112
+male,48,victualling crew,Southampton,England,0,0,0,0.358,0.37,0.276,0.17
+male,32,victualling crew,Southampton,England,0,0,0,0.358,0.458,0.304,0.152
+male,19,engineering crew,Southampton,England,0,0,0,0.33,0.224,0.26,0.118
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,26,deck crew,Southampton,England,0,0,0,0.728,0.458,0.294,0.174
+male,25,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.294,0.174
+male,30,victualling crew,Southampton,Germany,0,0,0,0.358,0.332,0.24,0.106
+male,23,victualling crew,Belfast,England,0,0,0,0.318,0.208,0.338,0.112
+male,27,engineering crew,Southampton,England,0,0,0,0.33,0.292,0.292,0.176
+male,25,victualling crew,Belfast,England,0,0,0,0.318,0.248,0.32,0.14
+male,35,restaurant staff,Southampton,England,0,0,0,0.33,0.37,0.312,0.136
+male,17,restaurant staff,Southampton,England,0,0,0,0.33,0.178,0.262,0.148
+male,33,restaurant staff,Southampton,England,0,0,0,0.33,0.366,0.292,0.13
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,34,deck crew,Belfast,England,0,0,0,0.784,0.49,0.334,0.126
+male,18,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.256,0.118
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,28,restaurant staff,Southampton,England,0,0,0,0.33,0.256,0.282,0.154
+male,33,deck crew,Southampton,Channel Islands,0,0,0,0.728,0.532,0.292,0.13
+male,33,engineering crew,Southampton,England,0,0,0,0.33,0.416,0.292,0.13
+male,36,victualling crew,Southampton,England,0,0,0,0.358,0.408,0.296,0.068
+male,34,victualling crew,Southampton,England,0,0,0,0.358,0.422,0.304,0.132
+male,22,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.278,0.11
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,23,victualling crew,Southampton,England,0,0,0,0.358,0.242,0.278,0.122
+male,20,engineering crew,Southampton,England,0,0,0,0.33,0.226,0.27,0.112
+male,17,restaurant staff,Southampton,England,0,0,0,0.33,0.178,0.262,0.148
+female,36,victualling crew,Southampton,England,0,0,0,0.73,0.666,0.92,0.956
+male,23,victualling crew,Southampton,England,0,0,0,0.358,0.242,0.278,0.122
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,21,victualling crew,Southampton,England,0,0,0,0.358,0.228,0.278,0.11
+male,46,victualling crew,Belfast,England,0,0,0,0.318,0.268,0.3,0.06
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,23,victualling crew,Southampton,England,0,0,0,0.358,0.242,0.278,0.122
+male,20,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.27,0.112
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,44,victualling crew,Belfast,England,0,0,0,0.318,0.27,0.32,0.06
+male,29,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.26,0.114
+male,29,engineering crew,Southampton,England,0,0,0,0.33,0.318,0.26,0.114
+male,50,victualling crew,Belfast,England,0,0,0,0.318,0.292,0.246,0.146
+male,38,victualling crew,Belfast,Channel Islands,0,0,0,0.318,0.324,0.3,0.076
+male,21,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.278,0.11
+male,32,victualling crew,Belfast,England,0,0,0,0.318,0.356,0.358,0.136
+male,20,engineering crew,Southampton,England,0,0,0,0.33,0.226,0.27,0.112
+male,55,victualling crew,Southampton,England,0,0,0,0.358,0.302,0.174,0.078
+male,34,engineering crew,Southampton,England,0,0,0,0.33,0.412,0.304,0.132
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,31,victualling crew,Belfast,England,0,0,0,0.318,0.324,0.32,0.108
+male,22,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.278,0.11
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,25,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.294,0.174
+male,19,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.26,0.118
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,36,engineering crew,Southampton,England,0,0,0,0.33,0.398,0.296,0.068
+male,22,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.278,0.11
+male,30,victualling crew,Southampton,England,0,0,0,0.358,0.332,0.24,0.106
+male,22,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.278,0.11
+male,29,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.26,0.114
+male,19,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.26,0.118
+male,37,victualling crew,Belfast,England,0,0,0,0.318,0.308,0.304,0.068
+male,40,victualling crew,Belfast,Wales,0,0,0,0.318,0.29,0.29,0.058
+male,35,engineering crew,Southampton,England,0,0,0,0.33,0.406,0.312,0.136
+female,41,victualling crew,Southampton,England,0,0,0,0.73,0.648,0.962,0.958
+male,30,victualling crew,Southampton,England,0,0,0,0.358,0.332,0.24,0.106
+female,41,victualling crew,Southampton,England,0,0,0,0.73,0.648,0.962,0.958
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,27,victualling crew,Southampton,Ireland,0,0,0,0.358,0.298,0.292,0.176
+male,36,victualling crew,Southampton,England,0,0,0,0.358,0.408,0.296,0.068
+male,23,restaurant staff,Southampton,England,0,0,0,0.33,0.196,0.278,0.122
+male,26,engineering crew,Belfast,England,0,0,0,0.304,0.236,0.33,0.144
+male,49,restaurant staff,Southampton,England,0,0,0,0.33,0.328,0.278,0.214
+male,31,victualling crew,Belfast,England,0,0,0,0.318,0.324,0.32,0.108
+male,32,deck crew,Belfast,England,0,0,0,0.784,0.504,0.358,0.136
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,58,victualling crew,Belfast,England,0,0,0,0.318,0.272,0.172,0.088
+male,17,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.262,0.148
+male,27,engineering crew,Southampton,England,0,0,0,0.33,0.292,0.292,0.176
+male,28,victualling crew,Southampton,Channel Islands,0,0,0,0.358,0.304,0.282,0.154
+male,33,victualling crew,Southampton,Canada,0,0,0,0.358,0.428,0.292,0.13
+male,24,restaurant staff,Southampton,Italy,0,0,0,0.33,0.26,0.276,0.172
+male,25,restaurant staff,Southampton,England,0,0,0,0.33,0.262,0.294,0.174
+male,47,victualling crew,Southampton,Wales,0,0,0,0.358,0.344,0.302,0.08
+male,30,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.24,0.106
+male,24,restaurant staff,Southampton,England,0,0,0,0.33,0.26,0.276,0.172
+male,26,victualling crew,Southampton,England,0,0,0,0.358,0.312,0.294,0.174
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,23,victualling crew,Southampton,England,0,0,0,0.358,0.242,0.278,0.122
+male,31,deck crew,Southampton,England,0,0,0,0.728,0.464,0.246,0.124
+male,33,deck crew,Southampton,England,0,0,0,0.728,0.532,0.292,0.13
+male,42,restaurant staff,Southampton,Italy,0,0,0,0.33,0.288,0.286,0.032
+male,41,engineering crew,Southampton,Northern Ireland,0,0,0,0.33,0.328,0.274,0.028
+male,28,engineering crew,Southampton,England,0,0,0,0.33,0.298,0.282,0.154
+male,20,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.27,0.112
+male,55,victualling crew,Southampton,England,0,0,0,0.358,0.302,0.174,0.078
+male,25,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.294,0.174
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,40,engineering crew,Southampton,England,0,0,0,0.33,0.344,0.28,0.036
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+male,24,restaurant staff,Southampton,England,0,0,0,0.33,0.26,0.276,0.172
+male,25,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.294,0.174
+male,42,victualling crew,Southampton,England,0,0,0,0.358,0.334,0.286,0.032
+male,40,victualling crew,Belfast,England,0,0,0,0.318,0.29,0.29,0.058
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,20,engineering crew,Southampton,England,0,0,0,0.33,0.226,0.27,0.112
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,19,engineering crew,Southampton,England,0,0,0,0.33,0.224,0.26,0.118
+male,29,victualling crew,Belfast,England,0,0,0,0.318,0.26,0.308,0.1
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,24,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.276,0.172
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+male,37,deck crew,Southampton,Northern Ireland,0,0,0,0.728,0.46,0.266,0.044
+male,23,victualling crew,Southampton,England,0,0,0,0.358,0.242,0.278,0.122
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,41,victualling crew,Belfast,England,0,0,0,0.318,0.274,0.304,0.056
+male,33,victualling crew,Southampton,England,0,0,0,0.358,0.428,0.292,0.13
+male,36,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.312,0.078
+female,28,victualling crew,Southampton,Northern Ireland,0,0,0,0.73,0.646,0.934,0.972
+male,31,engineering crew,Belfast,England,0,0,0,0.304,0.296,0.32,0.108
+female,30,victualling crew,Southampton,England,0,0,0,0.73,0.644,0.93,0.976
+male,40,engineering crew,Southampton,England,0,0,0,0.33,0.344,0.28,0.036
+male,29,victualling crew,Belfast,Scotland,0,0,0,0.318,0.26,0.308,0.1
+male,62,deck crew,Southampton,England,0,0,0,0.728,0.318,0.168,0.078
+male,22,engineering crew,Southampton,England,0,0,0,0.33,0.228,0.278,0.11
+female,45,victualling crew,Southampton,England,0,0,0,0.73,0.634,0.964,0.956
+male,40,victualling crew,Southampton,England,0,0,0,0.358,0.36,0.28,0.036
+male,38,victualling crew,Southampton,England,0,0,0,0.358,0.42,0.264,0.066
+male,27,engineering crew,Southampton,England,0,0,0,0.33,0.292,0.292,0.176
+male,20,victualling crew,Belfast,England,0,0,0,0.318,0.188,0.322,0.118
+male,39,engineering crew,Belfast,Scotland,0,0,0,0.304,0.29,0.284,0.06
+male,24,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.276,0.172
+male,35,victualling crew,Southampton,X,0,0,0,0.358,0.416,0.312,0.136
+male,33,victualling crew,Southampton,England,0,0,0,0.358,0.428,0.292,0.13
+male,26,deck crew,Southampton,England,0,0,0,0.728,0.458,0.294,0.174
+female,22,victualling crew,Southampton,England,0,0,0,0.73,0.592,0.868,0.974
+male,41,engineering crew,Southampton,England,0,0,0,0.33,0.328,0.274,0.028
+male,26,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,21,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.11
+male,36,engineering crew,Southampton,England,0,0,0,0.33,0.398,0.296,0.068
+male,38,victualling crew,Southampton,England,0,0,0,0.358,0.42,0.264,0.066
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+female,47,victualling crew,Southampton,England,0,0,0,0.73,0.634,0.962,0.954
+male,36,victualling crew,Belfast,England,0,0,0,0.318,0.314,0.312,0.078
+male,30,engineering crew,Southampton,X,0,0,0,0.33,0.32,0.24,0.106
+male,28,victualling crew,Belfast,Scotland,0,0,0,0.318,0.238,0.326,0.126
+male,20,engineering crew,Southampton,England,0,0,0,0.33,0.226,0.27,0.112
+male,33,victualling crew,Southampton,England,0,0,0,0.358,0.428,0.292,0.13
+male,29,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.26,0.114
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,19,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.26,0.118
+male,35,victualling crew,Southampton,England,0,0,0,0.358,0.416,0.312,0.136
+male,34,victualling crew,Belfast,England,0,0,0,0.318,0.32,0.334,0.126
+male,31,victualling crew,Belfast,England,0,0,0,0.318,0.324,0.32,0.108
+male,28,engineering crew,Southampton,England,0,0,0,0.33,0.298,0.282,0.154
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,48,victualling crew,Belfast,Northern Ireland,0,0,0,0.318,0.296,0.246,0.134
+male,45,victualling crew,Belfast,England,0,0,0,0.318,0.272,0.316,0.068
+male,24,deck crew,Southampton,England,0,0,0,0.728,0.45,0.276,0.172
+male,20,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.27,0.112
+male,24,deck crew,Southampton,England,0,0,0,0.728,0.45,0.276,0.172
+male,22,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.278,0.11
+male,40,deck crew,Southampton,England,0,0,0,0.728,0.432,0.28,0.036
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,42,engineering crew,Southampton,England,0,0,0,0.33,0.322,0.286,0.032
+male,49,engineering crew,Southampton,England,0,0,0,0.33,0.374,0.278,0.214
+male,19,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.26,0.118
+male,28,engineering crew,Southampton,England,0,0,0,0.33,0.298,0.282,0.154
+male,32,victualling crew,Southampton,England,0,0,0,0.358,0.458,0.304,0.152
+male,19,deck crew,Southampton,England,0,0,0,0.728,0.38,0.26,0.118
+male,27,victualling crew,Southampton,England,0,0,0,0.358,0.298,0.292,0.176
+male,23,restaurant staff,Southampton,England,0,0,0,0.33,0.196,0.278,0.122
+male,35,victualling crew,Southampton,England,0,0,0,0.358,0.416,0.312,0.136
+male,17,victualling crew,Southampton,England,0,0,0,0.358,0.226,0.262,0.148
+male,46,victualling crew,Southampton,England,0,0,0,0.358,0.33,0.286,0.03
+male,23,victualling crew,Southampton,England,0,0,0,0.358,0.242,0.278,0.122
+male,30,victualling crew,Belfast,England,0,0,0,0.318,0.266,0.304,0.09
+male,24,engineering crew,Southampton,England,0,0,0,0.33,0.312,0.276,0.172
+male,25,victualling crew,Belfast,England,0,0,0,0.318,0.248,0.32,0.14
+male,35,engineering crew,Southampton,England,0,0,0,0.33,0.406,0.312,0.136
+male,39,victualling crew,Southampton,England,0,0,0,0.358,0.372,0.266,0.036
+male,25,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.294,0.174
+male,44,engineering crew,Southampton,England,0,0,0,0.33,0.32,0.302,0.032
+male,25,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,27,restaurant staff,Southampton,England,0,0,0,0.33,0.252,0.292,0.176
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+male,29,victualling crew,Belfast,England,0,0,0,0.318,0.26,0.308,0.1
+male,28,victualling crew,Southampton,England,0,0,0,0.358,0.304,0.282,0.154
+male,30,victualling crew,Southampton,Scotland,0,0,0,0.358,0.332,0.24,0.106
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,39,engineering crew,Southampton,England,0,0,0,0.33,0.358,0.266,0.036
+male,37,engineering crew,Belfast,Ireland,0,0,0,0.304,0.298,0.304,0.068
+male,42,victualling crew,Southampton,England,0,0,0,0.358,0.334,0.286,0.032
+male,28,victualling crew,Belfast,England,0,0,0,0.318,0.238,0.326,0.126
+male,17,restaurant staff,Southampton,England,0,0,0,0.33,0.178,0.262,0.148
+male,20,restaurant staff,Southampton,Italy,0,0,0,0.33,0.18,0.27,0.112
+male,35,restaurant staff,Southampton,England,0,0,0,0.33,0.37,0.312,0.136
+male,38,engineering crew,Southampton,Netherlands,0,0,0,0.33,0.408,0.264,0.066
+male,36,engineering crew,Southampton,England,0,0,0,0.33,0.398,0.296,0.068
+male,38,victualling crew,Southampton,England,0,0,0,0.358,0.42,0.264,0.066
+male,33,engineering crew,Southampton,England,0,0,0,0.33,0.416,0.292,0.13
+male,34,engineering crew,Southampton,England,0,0,0,0.33,0.412,0.304,0.132
+male,21,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.278,0.11
+male,32,deck crew,Southampton,Channel Islands,0,0,0,0.728,0.55,0.304,0.152
+male,19,restaurant staff,Southampton,England,0,0,0,0.33,0.178,0.26,0.118
+male,18,restaurant staff,Southampton,England,0,0,0,0.33,0.176,0.256,0.118
+male,25,restaurant staff,Southampton,Italy,0,0,0,0.33,0.262,0.294,0.174
+male,35,restaurant staff,Southampton,England,0,0,0,0.33,0.37,0.312,0.136
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+female,36,victualling crew,Southampton,England,0,0,0,0.73,0.666,0.92,0.956
+male,48,victualling crew,Belfast,England,0,0,0,0.318,0.296,0.246,0.134
+female,32,victualling crew,Southampton,Ireland,0,0,0,0.73,0.664,0.902,0.972
+male,23,engineering crew,Belfast,England,0,0,0,0.304,0.196,0.338,0.112
+male,34,victualling crew,Belfast,England,0,0,0,0.318,0.32,0.334,0.126
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+male,40,victualling crew,Belfast,England,0,0,0,0.318,0.29,0.29,0.058
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+male,40,engineering crew,Southampton,England,0,0,0,0.33,0.344,0.28,0.036
+male,37,victualling crew,Belfast,England,0,0,0,0.318,0.308,0.304,0.068
+male,26,victualling crew,Southampton,England,0,0,0,0.358,0.312,0.294,0.174
+male,26,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,15,victualling crew,Southampton,England,0,0,0,0.358,0.248,0.29,0.208
+male,27,engineering crew,Southampton,England,0,0,0,0.33,0.292,0.292,0.176
+male,25,victualling crew,Belfast,England,0,0,0,0.318,0.248,0.32,0.14
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+male,50,victualling crew,Belfast,England,0,0,0,0.318,0.292,0.246,0.146
+male,28,engineering crew,Southampton,England,0,0,0,0.33,0.298,0.282,0.154
+male,52,victualling crew,Southampton,United States,0,0,0,0.358,0.368,0.306,0.21
+male,21,victualling crew,Southampton,England,0,0,0,0.358,0.228,0.278,0.11
+male,30,deck crew,Belfast,England,0,0,0,0.784,0.42,0.304,0.09
+male,30,victualling crew,Belfast,England,0,0,0,0.318,0.266,0.304,0.09
+male,29,victualling crew,Belfast,England,0,0,0,0.318,0.26,0.308,0.1
+male,18,victualling crew,Southampton,England,0,0,0,0.358,0.224,0.256,0.118
+male,21,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.11
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+male,27,victualling crew,Southampton,England,0,0,0,0.358,0.298,0.292,0.176
+male,28,engineering crew,Southampton,England,0,0,0,0.33,0.298,0.282,0.154
+male,32,victualling crew,Belfast,Australia,0,0,0,0.318,0.356,0.358,0.136
+male,23,engineering crew,Southampton,England,0,0,0,0.33,0.244,0.278,0.122
+male,39,victualling crew,Southampton,England,0,0,0,0.358,0.372,0.266,0.036
+male,37,victualling crew,Southampton,England,0,0,0,0.358,0.398,0.266,0.044
+male,39,deck crew,Southampton,England,0,0,0,0.728,0.43,0.266,0.036
+male,42,victualling crew,Southampton,England,0,0,0,0.358,0.334,0.286,0.032
+male,26,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,28,victualling crew,Southampton,England,0,0,0,0.358,0.304,0.282,0.154
+male,35,victualling crew,Southampton,Ireland,0,0,0,0.358,0.416,0.312,0.136
+male,59,victualling crew,Southampton,England,0,0,0,0.358,0.296,0.122,0.082
+male,34,victualling crew,Southampton,England,0,0,0,0.358,0.422,0.304,0.132
+male,28,engineering crew,Belfast,England,0,0,0,0.304,0.224,0.326,0.126
+male,53,engineering crew,Southampton,England,0,0,0,0.33,0.348,0.298,0.208
+male,38,victualling crew,Southampton,England,0,0,0,0.358,0.42,0.264,0.066
+male,36,victualling crew,Southampton,England,0,0,0,0.358,0.408,0.296,0.068
+male,39,engineering crew,Southampton,England,0,0,0,0.33,0.358,0.266,0.036
+male,31,victualling crew,Southampton,England,0,0,0,0.358,0.406,0.246,0.124
+male,39,victualling crew,Southampton,Austria,0,0,0,0.358,0.372,0.266,0.036
+male,37,engineering crew,Southampton,England,0,0,0,0.33,0.388,0.266,0.044
+male,35,engineering crew,Southampton,England,0,0,0,0.33,0.406,0.312,0.136
+male,40,engineering crew,Southampton,England,0,0,0,0.33,0.344,0.28,0.036
+male,31,engineering crew,Southampton,England,0,0,0,0.33,0.39,0.246,0.124
+male,49,victualling crew,Southampton,England,0,0,0,0.358,0.384,0.278,0.214
+male,41,victualling crew,Southampton,United States,0,0,0,0.358,0.338,0.274,0.028
+male,45,victualling crew,Southampton,England,0,0,0,0.358,0.334,0.3,0.04
+male,37,engineering crew,Southampton,England,0,0,0,0.33,0.388,0.266,0.044
+male,19,victualling crew,Belfast,England,0,0,0,0.318,0.186,0.316,0.124
+male,24,victualling crew,Southampton,England,0,0,0,0.358,0.308,0.276,0.172
+male,40,victualling crew,Southampton,England,0,0,0,0.358,0.36,0.28,0.036
+male,26,engineering crew,Southampton,England,0,0,0,0.33,0.304,0.294,0.174
+male,41,deck crew,Belfast,England,0,0,0,0.784,0.424,0.304,0.056
+male,40,victualling crew,Southampton,England,0,0,0,0.358,0.36,0.28,0.036
+male,32,engineering crew,Southampton,England,0,0,0,0.33,0.442,0.304,0.152
+male,20,restaurant staff,Southampton,England,0,0,0,0.33,0.18,0.27,0.112
+male,26,restaurant staff,Southampton,England,0,0,0,0.33,0.264,0.294,0.174
